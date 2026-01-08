@@ -1,20 +1,28 @@
 .header {
     padding: 24px 0;
 
-    &__inner {
-        display: flex;
-        align-items: center;
-        gap: 48px;
+    &__logo {
+        margin-right: 48px;
     }
+}
+
+.mobile-button {
+    display: none;
 }
 
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+    }
 
     &__list {
         display: flex;
+        margin-right: auto;
         gap: 32px;
     }
 
@@ -56,11 +64,13 @@
 
 .user-menu {
     display: flex;
+    margin-left: auto;
     gap: 16px;
 }
 
 .switcher-lang {
     position: relative;
+    max-width: 100px;
 
     &__btn {
         display: flex;
@@ -72,8 +82,14 @@
         padding: 10px 12px 10px 10px;
         transition: color 0.3s, outline 0.3s;
 
-        &::after {
-            background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
+        &.active {
+            .switcher-lang__arrow {
+                transform: rotate(180deg);
+            }
+
+            &::after {
+                background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
+            }
         }
 
         &:hover {
@@ -91,14 +107,31 @@
         }
     }
 
+    &__arrow {
+        transition: transform 0.4s;
+    }
+
     &__list {
         position: absolute;
         top: 0;
         left: 0;
+        padding: 0;
+        opacity: 0;
         z-index: -1;
-        padding: 56px 0 12px;
-        max-width: 100px;
         width: 100%;
+        pointer-events: none;
+        transition: padding 0.5s ease, opacity 0.4s;
+
+        &.active {
+            opacity: 100%;
+            padding: 56px 0 12px;
+            pointer-events: auto;
+        }
+
+        &::after {
+            padding: 1px;
+            background: linear-gradient(69.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(245.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+        }
     }
 
     &__link {
@@ -109,5 +142,127 @@
         font-weight: 700;
         gap: 6px;
         width: 100%;
+        border-radius: 16px;
+
+        position: relative;
+        z-index: 2;
+        transition: box-shadow 0.3s, inset 0.3s, color 0.3s, outline 0.3s;
+
+        &.current,
+        &.current-ru,
+        &.current-ar {
+            color: $accent;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            z-index: -2;
+            mask:
+                linear-gradient(#fff, #fff) content-box,
+                linear-gradient(#fff, #fff);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            &::after {
+                background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
+            }
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+    }
+}
+
+@media(max-width:992px) {
+    .mobile-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+        width: 44px;
+        height: 44px;
+        outline-offset: 5px;
+        border-radius: 15px;
+        transition: outline 0.3s;
+
+        &.blur-plate::after {
+            padding: 1px;
+            background: linear-gradient(53.35deg, rgba(255, 255, 255, 0) 67.32%, rgba(255, 255, 255, 0.6) 97.79%), linear-gradient(224.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+        }
+
+        &__line {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 24px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: $accent;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                border-radius: 2px;
+                background-color: $light;
+                height: 2px;
+                transition: background-color 0.3s;
+            }
+
+            &::before {
+                width: 18px;
+                top: 14px;
+            }
+
+            &::after {
+                width: 13px;
+                bottom: 14px;
+            }
+        }
+
+        &:hover {
+            .mobile-button__line {
+
+                &::before,
+                &::after {
+                    background-color: $accent;
+                }
+            }
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &:active {
+            &::after {
+                background: linear-gradient(53.35deg, $accent-opacity-00 67.32%, $accent 94.79%), linear-gradient(224.43deg, $accent-opacity-00 65.44%, $accent 100%);
+            }
+        }
+    }
+
+    .menu {
+        &__list {
+            display: none;
+        }
+    }
+
+    .user-menu {
+        margin-right: 16px;
     }
 }

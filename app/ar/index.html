@@ -44,7 +44,7 @@
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
             </a>
             <button class="mobile-button blur-plate" type="button">
                 <span class="visually-hidden">
-                    @@mobileButtonAccessibility
+                    open/close the mobile menu
                 </span>
                 <span class="mobile-button__line">
                 </span>
@@ -82,16 +82,16 @@
                 <div class="switcher-lang">
                     <button class="switcher-lang__btn blur-plate" data-lang-switcher>
                         <svg width="24" height="24">
-                            <use href="../../images/sprite.svg#flagEn"></use>
+                            <use href="../../images/sprite.svg#flagAr"></use>
                         </svg>
-                        En
+                        عر
                         <svg class="switcher-lang__arrow" width="18" height="18">
                             <use href="../../images/sprite.svg#arrow-bottom"></use>
                         </svg>
                     </button>
                     <ul class="switcher-lang__list blur-plate" data-langs-list>
                         <li class="switcher-lang__item">
-                            <a class="switcher-lang__link current" href="@@langHrefEn">
+                            <a class="switcher-lang__link @@current" href="../">
                                 <svg class="switcher-lang__icon" width="24" height="24">
                                     <use href="../../images/sprite.svg#flagEn"></use>
                                 </svg>
@@ -99,7 +99,7 @@
                             </a>
                         </li>
                         <li class="switcher-lang__item">
-                            <a class="switcher-lang__link currentAr" href="./ar/">
+                            <a class="switcher-lang__link current-ar" href="@@langHrefAr">
                                 <svg class="switcher-lang__icon" width="24" height="24">
                                     <use href="../../images/sprite.svg#flagAr"></use>
                                 </svg>
@@ -107,7 +107,7 @@
                             </a>
                         </li>
                         <li class="switcher-lang__item">
-                            <a class="switcher-lang__link currentRu" href="./ru/">
+                            <a class="switcher-lang__link @@currentRu" href="../ru/">
                                 <svg class="switcher-lang__icon" width="24" height="24">
                                     <use href="../../images/sprite.svg#flagRu"></use>
                                 </svg>
@@ -130,8 +130,8 @@
         </nav>
     </div>
 </header>
-
-    <script src="./js/main.min.js"></script>
+    
+    <script src="../js/main.min.js"></script>
 </body>
 
 </html>
