@@ -48,6 +48,172 @@
 </head>
 
 <body>
+  <main>
+      <section class="metrics section">
+        <div class="container">
+          <div class="metrics__header">
+            <h2 class="metrics__title title">Real-Time  <span class="metrics__title-accent">Performance</span></h2>
+            <ul class="metrics__list">
+              <li class="metrics__item">
+                <h4 class="metrics__item-title">Unlimited</h4>
+                <p class="metrics__item-subtitle">Bandwidth</p>
+              </li>
+              <li class="metrics__item">
+                <h4 class="metrics__item-title">No</h4>
+                <p class="metrics__item-subtitle">Throttling</p>
+              </li>
+              <li class="metrics__item">
+                <h4 class="metrics__item-title metrics__item-num"><span data-activeNum data-count-num="99.9">99.9</span>%</h4>
+                <p class="metrics__item-subtitle ">Uptime</p>
+              </li>
+              <li class="metrics__item">
+                <h4 class="metrics__item-title">
+                  <span data-activeNum data-count-num="10"></span>Gbps
+                </h4>
+                <p class="metrics__item-subtitle">Max Speed</p>
+              </li>
+            </ul>
+          </div>
+          <div class="metrics__cards">
+
+            <!-- Upload -->
+            <div class="metric-card metric-card--upload blur-plate">
+              <div class="metric-card__icon metric-card__icon--upload blur-plate">
+                <svg class="icon icon--upload" width="36" height="36">
+                  <use href="./images/sprite.svg#upload"></use>
+                </svg>
+              </div>
+              <div class="metric-card__info">
+                <p class="metric-card__label">Upload</p>
+                <span class="metric-card__note">Peak: <span data-activeNum data-count-num="500">500</span> Mbps</span>
+              </div>
+              <!-- ring -->
+              <div class="metric-card__progress-box">
+                <svg width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224.751 166.693C220.983 179.136 214.801 190.715 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.316 48.8463 196.173 42.7122 184.71C36.5781 173.248 32.7619 160.689 31.4814 147.751C30.2009 134.814 31.4811 121.75 35.2491 109.308C39.0171 96.8647 45.199 85.2858 53.4418 75.2321C61.6847 65.1783 71.827 56.8465 83.2898 50.7125C94.7526 44.5784 107.311 40.7621 120.249 39.4816C133.187 38.2011 146.25 39.4814 158.693 43.2494C171.136 47.0173 182.714 53.1992 192.768 61.4421C202.822 69.6849 211.154 79.8273 217.288 91.2901C223.422 102.753 227.238 115.312 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
+                    stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
+                  <g filter="url(#filter0_d_0_1)">
+                    <path class="metric-card__progress-upload"
+                      d="M31 138C31 114.361 39.4587 91.5021 54.8464 73.5569C70.2342 55.6118 91.5352 43.765 114.898 40.1589C138.26 36.5528 162.142 41.4254 182.225 53.8956C202.307 66.3657 217.265 85.6103 224.392 108.149"
+                      stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_0_1" x="-8" y="0" width="271.395" height="177" filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="16" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                    </filter>
+                  </defs>
+                </svg>
+
+              </div>
+              <div class="metric-card__value">
+                <span data-activeNum data-count-num="420">420</span> Mbps
+              </div>
+            </div>
+
+            <!-- download -->
+            <div class="metric-card metric-card--download blur-plate">
+              <div class="metric-card__icon metric-card__icon--download blur-plate">
+                <svg class="icon icon--download" width="36" height="36">
+                  <use href="./images/sprite.svg#download"></use>
+                </svg>
+              </div>
+              <div class="metric-card__info">
+                <p class="metric-card__label">Download</p>
+                <span class="metric-card__note">Peak: <span data-activeNum data-count-num="1000">1000</span> Mbps</span>
+              </div>
+              <!-- ring -->
+              <div class="metric-card__progress-box">
+                <svg width="371" height="188" viewBox="0 0 371 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M327.734 230.315C322.177 248.665 313.06 265.741 300.904 280.568C288.748 295.394 273.79 307.682 256.886 316.728C239.981 325.774 221.46 331.402 202.38 333.291C183.301 335.179 164.036 333.291 145.686 327.734C127.335 322.177 110.26 313.061 95.4328 300.904C80.606 288.748 68.3188 273.791 59.2726 256.886C50.2264 239.982 44.5984 221.461 42.7099 202.381C40.8215 183.301 42.7096 164.036 48.2664 145.686C53.8232 127.336 62.9399 110.26 75.096 95.4333C87.2521 80.6065 102.21 68.3192 119.114 59.273C136.019 50.2268 154.54 44.5988 173.62 42.7104C192.699 40.822 211.964 42.71 230.314 48.2669C248.665 53.8237 265.74 62.9404 280.567 75.0965C295.394 87.2526 307.681 102.21 316.727 119.115C325.774 136.019 331.402 154.54 333.29 173.62C335.179 192.7 333.29 211.965 327.734 230.315L327.734 230.315Z"
+                    stroke="white" stroke-opacity="0.06" stroke-width="20" stroke-linecap="round" />
+                  <g filter="url(#filter0_d_0_1)">
+                    <path class="metric-card__progress-download"
+                      d="M42 188C42 152.781 54.7313 118.748 77.8472 92.1758C100.963 65.6036 132.905 48.2829 167.786 43.4066C202.666 38.5303 238.134 46.4271 267.651 65.6413C297.168 84.8555 318.744 114.092 328.403 147.961"
+                      stroke="#FFD700" stroke-width="20" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_0_1" x="0" y="0" width="370.405" height="230" filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="16" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                    </filter>
+                  </defs>
+                </svg>
+
+              </div>
+              <div class="metric-card__value">
+                <span data-activeNum data-count-num="850">850</span> Mbps
+              </div>
+            </div>
+
+            <!-- Latency -->
+            <div class="metric-card metric-card--latency blur-plate">
+              <div class="metric-card__icon metric-card__icon--latency blur-plate">
+                <svg class="icon icon--latency" width="36" height="36">
+                  <use href="./images/sprite.svg#download"></use>
+                </svg>
+              </div>
+              <div class="metric-card__info">
+                <p class="metric-card__label">Latency</p>
+                <span class="metric-card__note">Excellent Connection</span>
+              </div>
+              <!-- ring -->
+              <div class="metric-card__progress-box">
+                <svg width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224.751 166.693C220.983 179.136 214.801 190.714 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.315 48.8463 196.173 42.7122 184.71C36.5781 173.247 32.7619 160.689 31.4814 147.751C30.2009 134.813 31.4811 121.75 35.2491 109.307C39.0171 96.8644 45.199 85.2856 53.4418 75.2318C61.6847 65.1781 71.827 56.8463 83.2898 50.7122C94.7526 44.5781 107.311 40.7619 120.249 39.4814C133.187 38.2009 146.25 39.4811 158.693 43.2491C171.136 47.0171 182.714 53.199 192.768 61.4418C202.822 69.6847 211.154 79.827 217.288 91.2898C223.422 102.753 227.238 115.311 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
+                    stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
+                  <g filter="url(#filter0_d_0_1)">
+                    <path class="metric-card__progress-latency"
+                      d="M31 138C31 111.744 41.4303 86.5625 59.9964 67.9964C78.5625 49.4303 103.744 39 130 39C156.256 39 181.437 49.4303 200.004 67.9964C218.57 86.5625 229 111.744 229 138"
+                      stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_0_1" x="-8" y="0" width="276" height="177" filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="16" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                    </filter>
+                  </defs>
+                </svg>
+
+              </div>
+              <div class="metric-card__value">
+                <span data-activeNum data-count-num="8">8</span> ms
+              </div>
+            </div>
+     
+
+         
+          </div>
+        </div>
+      </section>
+  </main>
     <script src="js/main.min.js"></script>
 </body>
 
