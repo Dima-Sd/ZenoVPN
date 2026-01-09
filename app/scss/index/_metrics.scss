@@ -248,6 +248,19 @@
         flex: 0 0 168px;
       }
     }
+    &__card-icon {
+      &--upload,
+      &--latency {
+        width: 60px;
+        height: 60px;
+        padding: 8px;
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+    }
   }
   .metric-card {
     &--download {
