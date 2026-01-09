@@ -313,7 +313,9 @@
 }
 @media (max-width: 375px) {
   .metric-card {
-  
+    &__info--download {
+      margin-bottom: 57px;
+    }
     &--upload,
     &--latency {
       width: 260px;
@@ -321,6 +323,7 @@
 
     &--download {
       max-width: 290px;
+      padding-bottom: 18px;
 
       .metric-card__progress-box svg {
         width: 100%;
