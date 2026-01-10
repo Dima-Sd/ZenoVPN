@@ -1,7 +1,6 @@
 .ready {
   position: relative;
   overflow: hidden;
-
   &__inner {
     display: flex;
     padding: 0 0 0 34px;
@@ -11,7 +10,7 @@
       content: "";
       position: absolute;
       background-position: 0 bottom;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
       inset: 0;
@@ -63,7 +62,7 @@
     display: block;
     margin-bottom: 12px;
     text-align: inherit;
-    @include GoogleSans-500;
+    font-weight: 500;
   }
 
   &__title-accent {
