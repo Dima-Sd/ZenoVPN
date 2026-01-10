@@ -279,4 +279,7 @@
       display: none;
     }
   }
+  .swiper-slide-next {
+    transform: translate3d(0px, 0, -150px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+  }
 }
