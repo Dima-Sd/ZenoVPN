@@ -10,7 +10,10 @@ html[dir="rtl"] {
 
       &::before {
         transform: scale3d(-1, 1, 1);
-      }
+        left: auto;
+        right: -298px;
+        bottom: -109px;
+     }
     }
 
     &__img {
@@ -33,11 +36,11 @@ html[dir="rtl"] {
 
   @media(max-width: 928px) {
     .ready {
-      &__inner {
+/*       &__inner {
         &::before {
           background-position: right bottom;
         }
-      }
+      } */
 
       &__img-box {
         left: auto;
@@ -51,10 +54,11 @@ html[dir="rtl"] {
     .ready {
       &__inner {
         &::before {
-          background-size: cover;
+          right: -430px;
+  /*         background-size: cover;
           left: 0;
           right: -20%;
-          width: auto;
+          width: auto; */
         }
       }
 
@@ -68,10 +72,15 @@ html[dir="rtl"] {
     .ready {
       &__inner {
         &::before {
-          background-size: contain;
-          right: auto;
+        //  background-size: contain;
+        //  right: auto;
+        //  left: auto;
           width: 100%;
+          background: #FFD700;
+          filter: blur(222px);
           left: auto;
+          right: -37px;
+          bottom: -19px;
         }
       }
     }
@@ -79,6 +88,19 @@ html[dir="rtl"] {
 
   @media(max-width: 568px) {
     .ready {
+      &__inner {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 158px;
+          background: #FFD700;
+          filter: blur(122px);
+          right: 0;
+          bottom: -19px;
+          z-index: -1;
+        }
+      }
       &__item-accent {
         text-wrap: wrap;
       }
