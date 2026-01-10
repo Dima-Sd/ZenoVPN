@@ -48,11 +48,12 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" data-header>
     <div class="container">
         <nav class="menu">
             <a class="logo header__logo" href="#">
-                <img src="../images/logo.svg" alt="ZenoVPN Logo" width="176" height="47">
+                <img class="logo__img" src="../images/logo.svg" alt="ZenoVPN Logo" width="176" height="47">
+                <img class="logo__img logo__img--small" src="../images/logo-mob.svg" alt="ZenoVPN Logo" width="58" height="56">
             </a>
             <button class="mobile-button blur-plate" type="button" data-menu-button>
                 <span class="visually-hidden">
@@ -80,38 +81,46 @@
             </ul>
             <div class="user-menu">
                 <div class="switcher-lang">
-                    <button class="switcher-lang__btn blur-plate" data-lang-switcher>
+                    <button class="switcher-lang__btn blur-plate" data-lang-switcher type="button">
                         <svg width="24" height="24">
-                            <use href="../../images/sprite.svg#flagAr"></use>
+                            <use href="../images/sprite.svg#flagAr"></use>
                         </svg>
-                        عر
+                        <span class="switcher-lang__text">
+                            عر          
+                        </span> 
                         <svg class="switcher-lang__arrow" width="18" height="18">
-                            <use href="../../images/sprite.svg#arrow-bottom"></use>
+                            <use href="../images/sprite.svg#arrow-bottom"></use>
                         </svg>
                     </button>
                     <ul class="switcher-lang__list blur-plate" data-langs-list>
                         <li class="switcher-lang__item">
                             <a class="switcher-lang__link @@current" href="../">
                                 <svg class="switcher-lang__icon" width="24" height="24">
-                                    <use href="../../images/sprite.svg#flagEn"></use>
+                                    <use href="../images/sprite.svg#flagEn"></use>
                                 </svg>
-                                En
+                                <span class="switcher-lang__text">
+                                    En
+                                </span> 
                             </a>
                         </li>
                         <li class="switcher-lang__item">
                             <a class="switcher-lang__link current-ar" href="@@langHrefAr">
                                 <svg class="switcher-lang__icon" width="24" height="24">
-                                    <use href="../../images/sprite.svg#flagAr"></use>
+                                    <use href="../images/sprite.svg#flagAr"></use>
                                 </svg>
-                                عر
+                                <span class="switcher-lang__text">
+                                    عر                  
+                                </span> 
                             </a>
                         </li>
                         <li class="switcher-lang__item">
                             <a class="switcher-lang__link @@currentRu" href="../ru/">
                                 <svg class="switcher-lang__icon" width="24" height="24">
-                                    <use href="../../images/sprite.svg#flagRu"></use>
+                                    <use href="../images/sprite.svg#flagRu"></use>
                                 </svg>
-                                Ру
+                                <span class="switcher-lang__text">
+                                    Ру
+                                </span> 
                             </a>
                         </li>
                     </ul>
@@ -122,7 +131,7 @@
     </span>
     <span class="cta__icon telegramSmallClass">
         <svg class="icon" width="21" height="18">
-            <use href="./images/sprite.svg#telegramSmall"></use>
+            <use href="../images/sprite.svg#telegramSmall"></use>
         </svg>
     </span>
 </a>

@@ -132,6 +132,10 @@ body {
     &:active {
         transform: scale(0.98);
     }
+
+    &__img--small {
+        display: none;
+    }
 }
 
 @media (max-width:768px) {
@@ -142,3 +146,14 @@ body {
     }
 }
 
+@media(max-width:576px) {
+    .logo {
+        &__img {
+            display: none;
+        }
+
+        &__img--small {
+            display: block;
+        }
+    }
+}

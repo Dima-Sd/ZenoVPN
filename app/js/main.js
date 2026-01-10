@@ -23,4 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtnRef.setAttribute("aria-expanded", !expanded);
         mobileMenuRef.classList.toggle("is-open");
     });
+
+    const header = document.querySelector('[data-header]');
+    const scrollThreshold = 300;
+    window.addEventListener('scroll', () => {
+        if (!header) return;
+        if (window.scrollY >= scrollThreshold) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
+    });
 });

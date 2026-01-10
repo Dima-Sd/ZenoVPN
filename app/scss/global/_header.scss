@@ -1,5 +1,22 @@
 .header {
     padding: 24px 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 1188px;
+    margin: 0 auto;
+    border-radius: 40px;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease;
+
+    &.active {
+        padding: 15px 5px;
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
 
     &__logo {
         margin-right: 48px;
@@ -27,6 +44,7 @@
 
         &.blur-plate {
             background-color: transparent;
+            background: linear-gradient(transparent);
 
             &::after {
                 background: linear-gradient(transparent);
@@ -159,6 +177,7 @@
         &.current,
         &.current-ru,
         &.current-ar {
+            pointer-events: none;
             color: $accent;
         }
 
@@ -197,6 +216,12 @@
 }
 
 @media(max-width:992px) {
+    .header {
+        &__logo {
+            margin-right: 0;
+        }
+    }
+
     .mobile-button {
         display: flex;
         justify-content: center;
@@ -335,14 +360,77 @@
         }
     }
 
+    .switcher-lang__btn:hover {
+        color: $light;
+    }
+
     .user-menu {
         margin-right: 16px;
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width:768px) {
     .user-menu {
         gap: 8px;
         margin-right: 8px;
+    }
+}
+
+@media(max-width:576px) {
+    .header {
+        padding: 16px 0;
+    }
+
+    .switcher-lang {
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+
+        &__list.active {
+            padding: 66px 0 22px;
+        }
+
+        &__btn {
+            gap: 4px;
+        }
+
+        &__link {
+            padding: 0;
+            border-radius: 50%;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 66px;
+                height: 44px;
+            }
+
+            &.current,
+            &.current-ru,
+            &.current-ar,
+            &:focus {
+                color: transparent;
+                outline: 2px solid $accent;
+            }
+
+            // &:active {
+
+            //     &::after {
+            //         background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
+            //     }
+            // }
+        }
+
+        &__text {
+            display: none;
+        }
     }
 }
