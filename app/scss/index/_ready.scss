@@ -12,11 +12,12 @@
     &::before {
       content: '';
       position: absolute;
-      width: 759px;
-      height: 294px;
-      background: #FFD700;
-      filter: blur(222px);
-      left: -298px;
+      width: 595px;
+      height: 265px;
+      background: $accent;
+      -webkit-filter: blur(222px);
+      filter: blur(180px);
+      left: -171px;
       bottom: -109px;
       z-index: -1;
     }
@@ -173,7 +174,8 @@
   .ready {
     &__inner {
       &::before {
-        left: -430px;
+        bottom: -36px;
+        left: -369px;
         /* background-size: cover;
         left: -20%;
         width: auto; */
