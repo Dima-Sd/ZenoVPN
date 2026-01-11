@@ -433,4 +433,13 @@
       font-size: 18px;
     }
   }
+  .review-card {
+    &__inner {
+      &.blur-plate {
+        background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.06) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    }
+  }
 }
