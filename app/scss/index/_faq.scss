@@ -1,0 +1,110 @@
+.faq {
+    padding-bottom: 80px;
+
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    &__list {
+        max-width: 986px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 32px;
+        outline-offset: 6px;
+        gap: 35px;
+        position: relative;
+        transition: outline 0.3s;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        &.blur-plate {
+            padding: 16px 24px;
+            transition: padding 0.3s;
+        }
+
+        &::after {
+            padding: 1px;
+            border-radius: 32px;
+            background: linear-gradient(5.35deg, rgba(255, 255, 255, 0) 72.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(185.43deg, rgba(255, 255, 255, 0) 64.44%, rgba(255, 255, 255, 0.6) 100%);
+        }
+
+        &:hover {
+            .faq__subtitle {
+                color: $accent;
+            }
+        }
+
+        &:focus {
+            outline: 1px solid $accent;
+        }
+
+        &.is-open {
+            &::after {
+                background: linear-gradient(5.35deg, $accent-opacity-00 72.32%, $accent 94.79%), linear-gradient(185.43deg, $accent-opacity-00 64.44%, $accent 100%);
+            }
+
+            .faq__subtitle {
+                margin-bottom: 12px;
+            }
+
+            .faq__icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__inner {
+        overflow: hidden;
+        transition: max-height 0.3s, padding 0.3s;
+    }
+
+    &__button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        transition: margin-bottom 0.3s, color 0.3s;
+    }
+
+    &__answer {
+        max-height: 0;
+        transition: max-height 0.3s;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+}
+
+@media(max-width: 576px) {
+    .faq {
+
+        &__title {
+            margin-bottom: 32px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
+
+        &__answer {
+            font-size: 14px;
+        }
+    }
+}
