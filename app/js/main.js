@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () =>{
    
       }); */
 
-let swiper;
+/* let swiper;
 let currentDirection;
 
 function getDirection() {
@@ -83,7 +83,146 @@ window.addEventListener('resize', () => {
     initSwiper();
   }
 });
+ */
 
+
+/* let swiper;
+let currentDirection;
+
+const getDirection = () =>
+  window.innerWidth >= 768 ? 'vertical' : 'horizontal';
+
+const initSwiper = () => {
+  currentDirection = getDirection();
+
+  swiper = new Swiper('.reviews-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    direction: currentDirection,
+
+    navigation: {
+      nextEl: '.reviews__nav--next',
+      prevEl: '.reviews__nav--prev',
+    },
+
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 280,
+      depth: 260,
+      modifier: 1,
+      slideShadows: false,
+    },
+
+    breakpoints: {
+      0: {
+        direction: 'vertical',
+        coverflowEffect: {
+          stretch: 256,
+          depth: 179,
+        },
+      },
+      768: {
+        direction: 'horizontal',
+        coverflowEffect: {
+          stretch: 256,
+          depth: 190,
+        },
+      },
+      1025: {
+        direction: 'vertical',
+        coverflowEffect: {
+          stretch: 280,
+          depth: 260,
+        },
+      },
+    },
+  });
+};
+
+initSwiper();
+
+window.addEventListener('resize', () => {
+  const newDirection = getDirection();
+
+  if (newDirection !== currentDirection) {
+    swiper.destroy(true, true);
+    initSwiper();
+  }
+});
+ */
+
+let swiper;
+let currentRange;
+
+const getRange = () => {
+  const w = window.innerWidth;
+
+  if (w >= 1025) return 'desktop';
+  if (w >= 768) return 'tablet';
+  return 'mobile';
+};
+
+const initSwiper = () => {
+  currentRange = getRange();
+
+  swiper = new Swiper('.reviews-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    direction: 'vertical', // фактически управляется breakpoints
+
+    navigation: {
+      nextEl: '.reviews__nav--next',
+      prevEl: '.reviews__nav--prev',
+    },
+
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 280,
+      depth: 260,
+      modifier: 1,
+      slideShadows: false,
+    },
+
+    breakpoints: {
+      0: {
+        direction: 'vertical',
+        coverflowEffect: {
+          stretch: 246,
+          depth: 105,
+        },
+      },
+      768: {
+        direction: 'horizontal',
+        coverflowEffect: {
+          stretch: 256,
+          depth: 190,
+        },
+      },
+      1025: {
+        direction: 'vertical',
+        coverflowEffect: {
+          stretch: 280,
+          depth: 260,
+        },
+      },
+    },
+  });
+};
+
+initSwiper();
+
+window.addEventListener('resize', () => {
+  const newRange = getRange();
+
+  if (newRange !== currentRange) {
+    swiper.destroy(true, true);
+    initSwiper();
+  }
+});
 
 
 
