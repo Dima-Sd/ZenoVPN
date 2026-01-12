@@ -14,6 +14,7 @@
         display: flex;
         gap: 24px;
         flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
     }
 
@@ -26,6 +27,40 @@
         &.blur-plate::after {
             border-radius: 32px;
             background: linear-gradient(31.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(209.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .apps {
+        &__item {
+            max-width: 46%;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .apps {
+        &__title {
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        &__list {
+            gap: 16px;
+        }
+
+        &__item {
+            padding: 20px 16px 16px 16px;
+            max-width: 171px;
+
+            &.blur-plate:after {
+                background: linear-gradient(52.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(229.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+            }
         }
     }
 }
