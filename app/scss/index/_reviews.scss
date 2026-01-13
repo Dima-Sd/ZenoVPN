@@ -2,12 +2,15 @@
   position: relative;
   padding-bottom: 64px;
   overflow: hidden;
+  max-width: 1440px;
+  width: 100%; 
+  margin: 0 auto;
   &::before {
     content: '';
     position: absolute;
     width: 759px;
     height: 294px;
-    background: #FFD700;
+    background: $accent;
     filter: blur(222px);
     right: -174px;
     bottom: -18px;
@@ -24,7 +27,6 @@
     z-index: -1;
   }
   &__title {
-    display: block;
     margin-bottom: 48px;
   }
   &__title-accent {
@@ -87,8 +89,8 @@
     &:active {
       color: $accent;
       &::after {
-        background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, #FFD700 100%),
-            linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, #FFD700 100.69%);;
+        background: linear-gradient(227.43deg, rgba(255, 215, 0, 0) 65.44%, $accent 100%),
+            linear-gradient(47.67deg, rgba(255, 215, 0, 0) 67.58%, $accent 100.69%);;
       }
     }
     &:focus {
@@ -305,7 +307,7 @@
   }
   .swiper-slide-active {
     .review-card__inner.blur-plate {
-      backdrop-filter: blur(7px);
+      backdrop-filter: blur(10px);
     }
   }
   .review-card {
@@ -414,12 +416,6 @@
 }
 @media (max-width: 576px) {
   .reviews {
-    &__title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
     &__stats {
       gap: 16px;
     }
