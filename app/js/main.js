@@ -178,7 +178,6 @@ const initSwiper = () => {
     mousewheel: false,
     keyboard: false,
     allowTouchMove: false,
-    speed: 750,
     on: {
       init(swiper) {
         swiper.update();
@@ -202,8 +201,8 @@ const initSwiper = () => {
       0: {
         direction: 'vertical',
         coverflowEffect: {
-          stretch: 246,
-          depth: 105,
+          stretch: 248,
+          depth: 204,
         },
       },
       768: {
