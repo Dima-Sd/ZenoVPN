@@ -1,0 +1,76 @@
+.plan-card {
+    width: 100%;
+    height: 100%;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+        margin-bottom: 16px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 134px;
+        height: 134px;
+        margin: 0 auto 16px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        background-image: url('../images/plan/plan-trial.png');
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &__info-price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &__price {
+        font-size: 24px;
+        color: $accent;
+        font-weight: 700;
+    }
+
+    &__badge-popular {
+        position: absolute;
+        top: 107px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__cta {
+        gap: 6px;
+    }
+
+    &__cta-text {
+        padding: 16px 35px;
+    }
+
+    &__icon {
+        width: 55px;
+    }
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     z-index: 5;
+    //     width: 134px;
+    //     height: 134px;
+    //     background:
+    //         linear-gradient(204.7deg, rgba(217, 217, 217, 0.22) 37.46%, rgba(115, 115, 115, 0) 79.88%),
+    //         linear-gradient(216.15deg, rgba(217, 217, 217, 0.16) 14.42%, rgba(115, 115, 115, 0) 78.24%);
+    // }
+}

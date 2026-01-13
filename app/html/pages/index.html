@@ -268,17 +268,41 @@
           </ul>
         </div>
         <ul class="plan__list">
-          <li class="plan__item">
-            @@include('../components/plan-card.html')
+          <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "title": "Trial Period",
+              "period": "1 month",
+              "price": "Free",
+              "showDiscount": false,
+              "showPopular": "false"
+            })
           </li>
-            <li class="plan__item">
-            @@include('../components/plan-card.html')
+            <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "title": "Monthly",
+              "period": "1 month",
+              "price": "$10",
+              "showDiscount": false,
+              "showPopular": "false"
+            })
           </li>
-            <li class="plan__item">
-            @@include('../components/plan-card.html')
+            <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "title": "Semi-annual",
+              "period": "6 months",
+              "price": "$20",
+              "showDiscount": true,
+              "showPopular": "true"
+            })
           </li>
-            <li class="plan__item">
-            @@include('../components/plan-card.html')
+            <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "title": "Annual",
+              "period": "12 months",
+              "price": "$30",
+              "showDiscount": true,
+              "showPopular": "true"
+            })
           </li>
         </ul>
       </div>

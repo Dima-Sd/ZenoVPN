@@ -58,8 +58,16 @@
     }
 
     &__item {
+        text-align: center;
         max-width: 279px;
         width: 100%;
+        position: relative;
+        border-radius: 32px;
+        padding: 0 23px 24px 24px;
+
+        &::after {
+            border-radius: 32px;
+        }
     }
 }
 

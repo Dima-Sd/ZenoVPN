@@ -41,7 +41,6 @@ body {
 
 .cta {
     display: inline-flex;
-    align-items: center;
     color: $dark;
     font-size: 18px;
     gap: 4px;
@@ -60,7 +59,6 @@ body {
 
     &__icon {
         width: 44px;
-        height: 44px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
