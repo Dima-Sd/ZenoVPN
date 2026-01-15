@@ -17,6 +17,20 @@
         z-index: 1;
     }
 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 65px;
+        left: 36%;
+        transform: translateX(-50%) rotate(29deg);
+        z-index: 5;
+        width: 146px;
+        height: 32px;
+        -webkit-filter: blur(2px);
+        filter: blur(4px);
+        box-shadow: 4px 4px 170px #12181d inset;
+    }
+
     &--trial::before {
         background-image: url('../images/plan/plan-trial.png');
 
@@ -97,20 +111,6 @@
         }
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 65px;
-        left: 36%;
-        transform: translateX(-50%) rotate(29deg);
-        z-index: 5;
-        width: 146px;
-        height: 32px;
-        -webkit-filter: blur(2px);
-        filter: blur(4px);
-        box-shadow: 4px 4px 170px #141a1f inset;
-    }
-
     &__info {
         display: flex;
         flex-direction: column;
@@ -147,6 +147,7 @@
         gap: 6px;
         margin-top: auto;
         width: 100%;
+        z-index: 20;
     }
 
     &__cta-text {
@@ -156,5 +157,151 @@
 
     &__icon {
         width: 55px;
+    }
+}
+
+@media(max-width:768px) {
+    .plan-card {
+        &__cta-text {
+            padding: 16px;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .plan-card {
+        gap: 16px 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &::before {
+            margin: 0;
+            width: 100px;
+            height: 100px;
+        }
+
+        &::after {
+            top: 94px;
+            left: 12%;
+            transform: translateX(-50%) rotate(28deg);
+            width: 120px;
+            height: 37px;
+            box-shadow: 4px 4px 170px #0f161a inset;
+        }
+
+        &--trial::before {
+            background-image: url('../images/plan/plan-trial-mob.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-trial-mob-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/plan/plan-trial-mob.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/plan/plan-trial-mob-2x.webp');
+                }
+            }
+        }
+
+        &--monthly::before {
+            background-image: url('../images/plan/plan-monthly-mob.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-monthly-mob-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/plan/plan-monthly-mob.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/plan/plan-monthly-mob-2x.webp');
+                }
+            }
+        }
+
+        &--semi-annual::before {
+            background-image: url('../images/plan/plan-semi-annual-mob.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-semi-annual-mob-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/plan/plan-semi-annual-mob.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/plan/plan-semi-annual-mob-2x.webp');
+                }
+            }
+        }
+
+        &--annual::before {
+            background-image: url('../images/plan/plan-annual-mob.png');
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/plan/plan-annual-mob-2x.png');
+            }
+
+            @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
+                background-image: url('../images/plan/plan-annual-mob.webp');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/plan/plan-annual-mob-2x.webp');
+                }
+            }
+        }
+
+        &__info {
+            text-align: left;
+            gap: 2px;
+            margin-bottom: 0;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__period {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        &__info-price {
+            justify-content: flex-start;
+        }
+
+        &__badge-popular {
+            top: -15px;
+        }
+
+        &__cta {
+            gap: 4px;
+        }
+
+        &__cta-text {
+            padding: 11px 16px;
+        }
+
+        &__icon {
+            width: 44px;
+        }
     }
 }
