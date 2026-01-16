@@ -1,0 +1,286 @@
+.network {
+  padding-bottom: 77px;
+
+  &__wrapper {
+    padding: 50px 0 51px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/network/world-map.svg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  &__inner {
+    padding: 0 54px;
+
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    padding: 0 47px;
+  }
+
+  &__title {
+    max-width: 478px;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__location {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__location-box {
+    font-weight: 700;
+
+    .countries__item.blur-plate {
+      padding: 10px 16px 10px 10px;
+      backdrop-filter: blur(20px);
+
+      &::after {
+        background: linear-gradient(207.43deg, rgba(255, 215, 0, 0) 65.44%, rgba(255, 215, 0, 0.539216) 100%),
+          linear-gradient(27.67deg, rgba(255, 215, 0, 0) 67.58%, rgba(255, 215, 0, 0.6) 100.69%);
+      }
+    }
+
+    .countries__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .countries__name {
+      font-size: 22px;
+      letter-spacing: normal;
+    }
+  }
+
+  &__location-label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+.countries {
+  max-width: 1080px;
+  width: 100%;
+  position: relative;
+
+  &__btn {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px 8px 8px;
+
+    &.blur-plate {
+      border-radius: 12px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    //  letter-spacing: normal;
+  }
+}
+
+@media (max-width: 992px) {
+  .network {
+    padding-bottom: 112px;
+    position: relative;
+
+    &__wrapper {
+      padding-bottom: 0;
+
+      &::before {
+        background-image: url('../images/network/world-map-tab.svg');
+        background-size: cover;
+      }
+    }
+
+    &__inner {
+      padding: 0 16px;
+    }
+
+    &__head {
+      justify-content: center;
+      margin-bottom: 58px;
+      padding: 0;
+    }
+
+    &__title {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+
+    &__location {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    &__location-label {
+      margin-bottom: 0;
+    }
+  }
+
+  .countries {
+    &__inner {
+      padding: 0 17px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .network {
+    &__wrapper {
+      &::before {
+        background-size: contain;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 576px) {
+  .network {
+    padding-bottom: 80px;
+
+    &__wrapper {
+      &::before {
+        background-image: url('../images/network/world-map-mob.svg');
+      }
+
+      padding-top: 30px;
+    }
+
+    &__inner {
+      padding: 0;
+    }
+
+    &__head {
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    &__location-label {
+      font-size: 16px;
+    }
+
+    &__location-box {
+      .countries__icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .countries__name {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .countries {
+    &__inner {
+      max-height: 300px;
+      margin-bottom: 5px;
+      padding: 0 19px;
+      position: relative;
+
+      &.is-open {
+        max-height: 2000px;
+
+        &::after {
+          height: 0;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 120px;
+        width: 100%;
+        background: linear-gradient(to bottom,
+            rgba(11, 18, 23, 0) 0%,
+            rgba(11, 18, 23, 0.25) 35%,
+            rgba(11, 18, 23, 0.6) 65%,
+            #0B1217 100%);
+        z-index: 2;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 8px;
+      margin: 0 auto;
+      color: $accent;
+      outline-offset: 2px;
+      padding: 12px 8px;
+      transition: transform 0.3s, color 0.3s, opacity 0.3s, outline 0.3s;
+
+      &.is-open {
+        .countries__btn-icon {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover {
+        filter: drop-shadow(0 0 12px $accent-opacity-60);
+      }
+
+      &:active {
+        opacity: .7;
+      }
+
+      &:focus {
+        outline: 1px solid $accent;
+        border-radius: 32px;
+      }
+    }
+  }
+}

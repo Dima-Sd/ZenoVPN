@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ================= METRICS: NUMBER ANIMATION ================= */
   const animateNumbers = (elements, duration = 2000) => {
     elements.forEach((item) => {
-      const value = item.dataset.countNum; // data-count-num
+      const value = item.dataset.countNum;
       if (!value) return;
 
       const target = parseFloat(value);
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!btn || !answer) return;
 
-      // стартово закрито / відкрито
       if (!item.classList.contains('is-open')) {
         answer.style.maxHeight = null;
         if (icon) icon.classList.remove('faq__icon--open');
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // якщо відкритий пункт і змінюється ширина — підлаштувати висоту
     window.addEventListener('resize', () => {
       accordions.forEach((acc) => {
         if (!acc.classList.contains('is-open')) return;
@@ -101,8 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
 
-          // Анімація чисел (лише data-count-num)
-          animateNumbers(entry.target.querySelectorAll('[data-count-num]'));
+          animateNumbers(
+            entry.target.querySelectorAll('[data-count-num]')
+          );
 
           observer.unobserve(entry.target);
         });
@@ -152,17 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getRange = () => {
     const w = window.innerWidth;
-
     if (w >= 1025) return 'desktop';
     if (w >= 768) return 'tablet';
     return 'mobile';
   };
 
   const initSwiper = () => {
-    // якщо Swiper не підключений — просто виходимо
     if (typeof Swiper === 'undefined') return;
 
-    // якщо слайдера на сторінці немає — виходимо
     const sliderEl = document.querySelector('.reviews-slider');
     if (!sliderEl) return;
 
@@ -171,20 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
     swiper = new Swiper('.reviews-slider', {
       effect: 'coverflow',
       initialSlide: 1,
-      grabCursor: false,
       centeredSlides: true,
       slidesPerView: 'auto',
-      direction: 'vertical', // фактично керується breakpoints
-      modifier: 1,
-      mousewheel: false,
-      keyboard: false,
       allowTouchMove: false,
-
-      on: {
-        init(s) {
-          s.update();
-        },
-      },
 
       navigation: {
         nextEl: '.reviews__nav--next',
@@ -225,6 +210,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  /* ================= GEO + LANGUAGE ================= */
+  const LANG_KEY = 'siteLang';
+
+  (function initGeo() {
+    if (typeof fetch !== 'function') return;
+
+    fetch('https://ipwho.is/')
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (!data || data.success !== true || !data.country_code) return;
+
+        const countryCode = data.country_code;
+
+        const countryItem = document.querySelector(
+          `.countries__item[data-country="${countryCode}"]`
+        );
+
+        const location = document.querySelector('.network__location');
+        const locationBox = document.querySelector('.network__location-box');
+
+        if (countryItem && location && locationBox) {
+          location.classList.remove('hidden');
+          locationBox.innerHTML = '';
+          locationBox.appendChild(countryItem.cloneNode(true));
+        }
+
+        const savedLang = localStorage.getItem(LANG_KEY);
+        if (savedLang) return;
+
+        let targetLang = 'en';
+
+        if (['RU', 'BY', 'KZ', 'UA'].includes(countryCode)) {
+          targetLang = 'ru';
+        }
+
+        if (['SA', 'AE', 'EG', 'QA', 'KW', 'TR', 'IR', 'PK', 'OM'].includes(countryCode)) {
+          targetLang = 'ar';
+        }
+
+        localStorage.setItem(LANG_KEY, targetLang);
+
+        const path = window.location.pathname;
+
+        if (targetLang === 'ru' && !path.startsWith('/ru/')) {
+          window.location.replace('/ru/index.html');
+        }
+
+        if (targetLang === 'ar' && !path.startsWith('/ar/')) {
+          window.location.replace('/ar/index.html');
+        }
+      })
+      .catch(() => {});
+  })();
+
+  /* ================= NETWORK: SHOW ALL COUNTRIES ================= */
+  const countries = document.querySelector('.countries__inner');
+  const toggleBtn = document.querySelector('.countries__btn');
+
+  if (countries && toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      countries.classList.toggle('is-open');
+      toggleBtn.classList.toggle('is-open');
+    });
+  }
+
   /* ================= INIT ================= */
   initAccordion();
   initMetricsObserver();
@@ -232,9 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSwiper();
 
   window.addEventListener('resize', () => {
-    // оновлення висоти акордеона вже є в initAccordion()
-
-    // Swiper переініт тільки коли змінився "діапазон" (mobile/tablet/desktop)
     if (!swiper) return;
 
     const newRange = getRange();
