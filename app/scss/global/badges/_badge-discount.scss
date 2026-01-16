@@ -1,0 +1,17 @@
+.badge-discount {
+    display: inline-block;
+    color: $accent;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 10px;
+    letter-spacing: normal;
+    background: linear-gradient(75.18deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+
+    &::after {
+        backdrop-filter: blur(8px);
+        background: linear-gradient(21.35deg, rgba(255, 255, 255, 0) 66.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(199.43deg, rgba(255, 255, 255, 0) 64.44%, rgba(255, 255, 255, 0.6) 100%);
+        border-radius: 10px;
+        padding: 1px;
+    }
+}

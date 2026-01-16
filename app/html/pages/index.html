@@ -142,7 +142,6 @@
             <!-- Latency -->
              <div class="metrics__card metrics__card--latency">
               <div class="metrics__card-inner metrics__card-inner--latency">
-
                 <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
                   <div class="metrics__card-icon-sub-wrap blur-plate">
                     <div class="metrics__card-icon-box">
@@ -152,7 +151,6 @@
                     </div>
                   </div>
                 </div>
- 
                 <div class="metric-card metric-card--latency blur-plate">
                   <div class="metric-card__info">
                     <p class="metric-card__label">Latency</p>
@@ -192,10 +190,129 @@
                   </div>
                 </div>
               </div>
-             </div>
-     
+            </div>
           </div>
         </div>
+    </section>
+    <section class="plan section">
+      <div class="container">
+        <h2 class="visually-hidden">
+            ZenoVPN Pricing and Subscriptions
+        </h2>
+        <div class="plan__advantages">
+          <span class="plan__title title">
+            Choose <span class="accent">Your Plan</span>
+          </span>
+          <div class="plan__advantages-inner">
+          <ul class="plan__advantages-list">
+            <li class="plan__advantages-item">
+              <div class="plan__advantages-icon blur-plate">
+                <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="./images/sprite.svg#shield-check"></use>
+                </svg>
+              </div>
+              <span class="plan__advantages-text">
+                <span class="accent">Unlimited</span> bandwidth
+              </span>
+            </li>
+            <li class="plan__advantages-item">
+              <div class="plan__advantages-icon blur-plate">
+                <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="./images/sprite.svg#shield-check"></use>
+                </svg>
+              </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Access</span> to all server
+                </span>
+            </li>
+            <li class="plan__advantages-item">
+              <div class="plan__advantages-icon blur-plate">
+                <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="./images/sprite.svg#shield-check"></use>
+                </svg>
+              </div>
+              <span class="plan__advantages-text">
+                <span class="accent">Military-grade</span> encryption
+              </span>
+            </li>
+              </ul>
+              <ul class="plan__advantages-list">
+            <li class="plan__advantages-item">
+              <div class="plan__advantages-icon blur-plate">
+                <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="./images/sprite.svg#shield-check"></use>
+                </svg>
+              </div>
+              <span class="plan__advantages-text">
+                <span class="accent">24/7</span> customer support
+              </span>
+            </li>
+            <li class="plan__advantages-item">
+              <div class="plan__advantages-icon blur-plate">
+                <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="./images/sprite.svg#shield-check"></use>
+                </svg>
+              </div>
+              <span class="plan__advantages-text">
+                <span class="accent">No logs</span> policy
+              </span> 
+            </li>
+            <li class="plan__advantages-item">
+              <div class="plan__advantages-icon blur-plate">
+                <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="./images/sprite.svg#shield-check"></use>
+                </svg>
+              </div>
+              <span class="plan__advantages-text">
+                <span class="accent">Multi-device</span> support
+              </span>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="plan__list">
+          <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "planCardClass": "plan-card--trial",
+              "title": "Trial Period",
+              "period": "1 month",
+              "price": "Free",
+              "showDiscount": false,
+              "showPopular": false
+            })
+          </li>
+            <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "planCardClass": "plan-card--monthly",
+              "title": "Monthly",
+              "period": "1 month",
+              "price": "$10",
+              "showDiscount": false,
+              "showPopular": false
+            })
+          </li>
+            <li class="plan__item blur-plate plan__item--popular">
+            @@include('../components/plan-card.html', {
+              "planCardClass": "plan-card--semi-annual",
+              "title": "Semi-annual",
+              "period": "6 months",
+              "price": "$20",
+              "showDiscount": true,
+              "showPopular": true
+            })
+          </li>
+            <li class="plan__item blur-plate">
+            @@include('../components/plan-card.html', {
+              "planCardClass": "plan-card--annual",
+              "title": "Annual",
+              "period": "12 months",
+              "price": "$30",
+              "showDiscount": true,
+              "showPopular": false
+            })
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="reviews section">
       <div class="container">
