@@ -1,0 +1,28 @@
+.footer {
+  padding: 32px 0 32px; 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  &__menu-link {
+    font-weight: 700;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__conacts {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+  }
+}
