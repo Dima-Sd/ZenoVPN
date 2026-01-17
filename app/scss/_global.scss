@@ -143,3 +143,35 @@ body {
     fill: currentColor;
     flex-shrink: 0;
 }
+
+.main {
+    &__futuristic-valley {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: calc(50% - 108px);
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 629px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('../images/futuristic-valley.jpg');
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 108px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 629px;
+            background-color: $dark;
+            opacity: 0.6;
+        }
+    }
+}
