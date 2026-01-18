@@ -32,6 +32,16 @@
                 background-image: url('../images/advantages/astronaut-2x.webp');
             }
         }
+
+        @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+            background-image: url("../images/advantages/astronaut.avif");
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url("../images/advantages/astronaut-2x.avif");
+            }
+        }
     }
 
     &::after {
@@ -243,6 +253,16 @@
                     background-image: url('../images/advantages/astronaut-tab-2x.webp');
                 }
             }
+
+            @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+                background-image: url("../images/advantages/astronaut-tab.avif");
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url("../images/advantages/astronaut-tab-2x.avif");
+                }
+            }
         }
 
         &::after {
@@ -304,6 +324,16 @@
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
                     background-image: url('../images/advantages/astronaut-mob-2x.webp');
+                }
+            }
+
+            @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+                background-image: url("../images/advantages/astronaut-mob.avif");
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url("../images/advantages/astronaut-mob-2x.avif");
                 }
             }
         }
