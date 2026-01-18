@@ -28,7 +28,10 @@
         height: 32px;
         -webkit-filter: blur(2px);
         filter: blur(4px);
-        box-shadow: 4px 4px 170px #12181d inset;
+    }
+
+    &--trial::after {
+        box-shadow: 4px 4px 170px #0f161a inset;
     }
 
     &--trial::before {
@@ -51,6 +54,10 @@
         }
     }
 
+    &--monthly::after {
+        box-shadow: 4px 4px 170px #12181d inset;
+    }
+
     &--monthly::before {
         background-image: url('../images/plan/plan-monthly.png');
 
@@ -71,6 +78,10 @@
         }
     }
 
+    &--semi-annual::after {
+        box-shadow: 4px 4px 170px #192027 inset;
+    }
+
     &--semi-annual::before {
         background-image: url('../images/plan/plan-semi-annual.png');
 
@@ -89,6 +100,10 @@
                 background-image: url('../images/plan/plan-semi-annual-2x.webp');
             }
         }
+    }
+
+    &--annual::after {
+        box-shadow: 4px 4px 170px #161e24 inset;
     }
 
     &--annual::before {
@@ -162,6 +177,22 @@
 
 @media(max-width:768px) {
     .plan-card {
+        &--trial::after {
+            box-shadow: 4px 4px 170px #12191e inset;
+        }
+
+        &--monthly::after {
+            box-shadow: 4px 4px 170px #1d272e inset;
+        }
+
+        &--semi-annual::after {
+            box-shadow: 4px 4px 170px #11181c inset;
+        }
+
+        &--annual::after {
+            box-shadow: 4px 4px 170px #11181c inset;
+        }
+
         &__cta-text {
             padding: 16px;
         }
@@ -204,6 +235,7 @@
                 @media (min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
+
                     background-image: url('../images/plan/plan-trial-mob-2x.webp');
                 }
             }
