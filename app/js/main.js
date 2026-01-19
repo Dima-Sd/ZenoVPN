@@ -1,4 +1,80 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+   /* ================= SCROLL NAV ================= */
+
+  const navLinks = document.querySelectorAll('a[href^="#"], [data-scroll]');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      if (link.classList.contains('go-top')) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      const targetId =
+        link.dataset.scroll ||
+        link.getAttribute('href')?.substring(1);
+
+      if (!targetId) return;
+
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      const header = document.getElementById('header');
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      const top =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        (headerHeight + 80);
+
+      window.scrollTo({ top, behavior: 'smooth' });
+      closeMenu();
+    });
+  });
+
+  /* ================= HEADER + GO TOP ================= */
+
+  const header = document.getElementById('header');
+  const goTop = document.querySelector('.go-top');
+  const SCROLL_FIXED_THRESHOLD = 50;
+
+  if (header || goTop) {
+    const headerScroll = () => {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      if (header) {
+        if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
+          header.classList.add('is-fixed');
+        } else {
+          header.classList.remove('is-fixed');
+        }
+      }
+
+      // вернуть когда появится шапка, если будет нобходимо
+     // if (goTop && header) {
+     //   if (scrollPosition > header.offsetHeight || scrollPosition >= SCROLL_FIXED_THRESHOLD) {
+     //     goTop.classList.add('go-top--active');
+     //   } else {
+     //     goTop.classList.remove('go-top--active');
+     //   }
+     // }
+      if (goTop) {
+        if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
+          goTop.classList.add('go-top--active');
+        } else {
+          goTop.classList.remove('go-top--active');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', headerScroll);
+    headerScroll();
+  }
+
+
   /* ================= HELPERS ================= */
   const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
