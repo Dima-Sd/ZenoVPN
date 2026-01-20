@@ -1196,12 +1196,22 @@
       </div>
     </section>
   </main>
-
-    @@include('../components/go-top.html', {
+  @@include('../components/go-top.html', {
     "extraDots": ".",
     "target": "#header",
     "accessibility": "Scroll to top"
-    })
+  })
+
+  @@include('../components/cookie.html', {
+    "extraDots": ".",
+    "cookieNotice": "Coockie Notice.",
+    "cookieTextLeft": "Our website uses",
+    "cookieLink": "Cookie Policy",
+    "cookieTextRight": "to ensure you have the best possible experience.",
+    "privacyHref": "./privacy/",
+    "accept": "Accept",
+    "accessibility": "Close cookie notification"
+  })
 
     <script src="js/main.min.js"></script>
 </body>

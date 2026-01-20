@@ -1,0 +1,31 @@
+<div class="cookie blur-plate" id="cookie">
+  <div class="cookie__inner">
+    <span class="cookie__cookie-img blur-plate">
+      <svg class="cookie__icon" width="24" height="24">
+        <use href="@@extraDots/images/sprite.svg#coockie"></use>
+      </svg>
+    </span>
+    <div class="cookie__content">
+      <span class="cookie__text cookie__text--bold">
+        @@cookieNotice
+      </span> 
+      <p class="cookie__text">
+        @@cookieTextLeft <a class="accent-link" href="@@privacyHref">@@cookieLink</a>
+        @@cookieTextRight
+      </p>
+    </div>
+    <div class="cookie__actions">
+      <button class="cookie__accept" type="button">
+        @@accept
+      </button>
+      <button class="cookie__close blur-plate" type="button">
+        <svg class="cookie__close-icon icon" width="11" height="11">
+          <use href="@@extraDots/images/sprite.svg#close-cookie"></use>
+        </svg>
+        <span class="visually-hidden">
+          @@accessibility
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
