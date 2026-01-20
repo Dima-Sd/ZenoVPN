@@ -29,66 +29,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  /* ================= FAQ ACCORDION (NEW STRUCTURE) ================= */
-  const initAccordion = () => {
+  /* ================= FAQ ACCORDION ================= */
   const accordions = document.querySelectorAll('[data-accordion]');
   if (!accordions.length) return;
 
-  const close = (acc) => {
-    acc.classList.remove('is-open');
-
-    const answer = acc.querySelector('.faq__answer');
-    if (answer) answer.style.maxHeight = null;
-
-    const icon = acc.querySelector('.faq__icon');
-    if (icon) icon.classList.remove('faq__icon--open');
-  };
-
-  const open = (acc) => {
-    acc.classList.add('is-open');
-
-    const answer = acc.querySelector('.faq__answer');
-    if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`;
-
-    const icon = acc.querySelector('.faq__icon');
-    if (icon) icon.classList.add('faq__icon--open');
-  };
-
-  accordions.forEach((item) => {
-    const btn = item.querySelector('.faq__button');
+  accordions.forEach(item => {
+    const button = item.querySelector('.faq__button');
     const answer = item.querySelector('.faq__answer');
     const icon = item.querySelector('.faq__icon');
 
-    if (!btn || !answer) return;
+    if (!button || !answer || !icon) return;
 
-    // стартово закрито
-    if (!item.classList.contains('is-open')) {
-      answer.style.maxHeight = null;
-      if (icon) icon.classList.remove('faq__icon--open');
-    } else {
-      answer.style.maxHeight = `${answer.scrollHeight}px`;
-      if (icon) icon.classList.add('faq__icon--open');
-    }
+    button.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
 
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
+      accordions.forEach(acc => {
+        acc.classList.remove('is-open');
 
-      const isOpening = !item.classList.contains('is-open');
+        const accAnswer = acc.querySelector('.faq__answer');
+        const accIcon = acc.querySelector('.faq__icon');
 
-      accordions.forEach(close);
-      if (isOpening) open(item);
+        if (accAnswer) accAnswer.style.maxHeight = null;
+        if (accIcon) accIcon.classList.remove('faq__icon--open');
+      });
+
+      if (!isOpen) {
+        item.classList.add('is-open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.classList.add('faq__icon--open');
+      }
     });
   });
-
-  // якщо відкритий пункт і змінюється ширина (переноси тексту) — підлаштувати висоту
-  window.addEventListener('resize', () => {
-    accordions.forEach((acc) => {
-      if (!acc.classList.contains('is-open')) return;
-      const answer = acc.querySelector('.faq__answer');
-      if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`;
-    });
-  });
-  };
 
   /* ================= METRICS: OBSERVER ================= */
   const initMetricsObserver = () => {
