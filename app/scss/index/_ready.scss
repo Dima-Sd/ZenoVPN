@@ -6,7 +6,7 @@
 
   &__inner {
     display: flex;
-    padding: 0 0 0 34px;
+    justify-content: center;
     gap: 96px;
 
     &::before {
@@ -21,14 +21,6 @@
       bottom: -109px;
       z-index: -1;
     }
-  }
-
-  &__img-box {
-    margin-top: auto;
-  }
-
-  &__img {
-    position: relative;
   }
 
   &__content {
