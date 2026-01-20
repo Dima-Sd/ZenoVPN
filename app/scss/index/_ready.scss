@@ -21,39 +21,6 @@
       bottom: -109px;
       z-index: -1;
     }
-
-    /*     &::before {
-      content: "";
-      position: absolute;
-      background-position: 0 bottom;
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      inset: 0;
-      z-index: -1;
-
-      // WebP 1x — ОСНОВНОЕ 
-      background-image: url('../images/ready/ready-gradient.webp');
-
-      // WebP 2x 
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-        background-image: url('../images/ready/ready-gradient-x2.webp');
-      }
-
-      // PNG fallback, если WebP не поддерживается 
-      @supports not (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
-        background-image: url('../images/ready/ready-gradient.png');
-
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-          background-image: url('../images/ready/ready-gradient-x2.png');
-        }
-      }
-    } */
-
   }
 
   &__img-box {
@@ -61,14 +28,11 @@
   }
 
   &__img {
-    max-width: 529px;
-    width: 100%;
-    height: auto;
     position: relative;
   }
 
   &__content {
-    max-width: 365px;
+    max-width: 357px;
     width: 100%;
     padding: 64px 0 100px;
     display: flex;
@@ -78,7 +42,7 @@
   &__title {
     display: block;
     margin-bottom: 12px;
-    text-align: inherit;
+    text-align: left;
     font-weight: 500;
   }
 
@@ -95,17 +59,8 @@
   &__item {
     display: flex;
     flex-direction: column;
-
-    &--support {
-      flex: 0 0 183px;
-      max-width: 183px;
-      width: 100%;
-    }
-
-    &--guarantee {
-      flex: 1 1 auto;
-      width: 100%;
-    }
+    max-width: 166px;
+    width: 100%;
   }
 
   &__icon {
@@ -125,7 +80,6 @@
 
   &__cta {
     gap: 6px;
-    width: max-content;
   }
 
   &__cta-text {
@@ -136,10 +90,8 @@
     width: 55px;
     height: 55px;
   }
-
 }
 
-// ready
 @media(max-width: 1048px) {
   .ready {
     &__inner {
@@ -156,10 +108,6 @@
       padding: 0;
       justify-content: flex-end;
       gap: 0;
-
-      /*   &::before {
-        background-position: left bottom;
-      } */
     }
 
     &__img-box {
@@ -176,10 +124,11 @@
       &::before {
         bottom: -36px;
         left: -369px;
-        /* background-size: cover;
-        left: -20%;
-        width: auto; */
       }
+    }
+
+    &__content {
+      max-width: 330px;
     }
 
     &__img-box {
@@ -188,96 +137,7 @@
   }
 }
 
-@media(max-width: 767px) {
-  .ready {
-    &__inner {
-      flex-direction: column-reverse;
-      align-items: center;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        background: #FFD700;
-        filter: blur(222px);
-        left: -37px;
-        bottom: -19px;
-        z-index: -1;
-      }
-
-      /*     &::before {
-        background-size: contain;
-        left: auto;
-        width: 100%;
-        //  WebP 1x — ОСНОВНОЕ 
-        background-image: url('../images/ready/ready-gradient-mob.webp');
-
-        // WebP 2x 
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-          background-image: url('../images/ready/ready-gradient-mob-x2.webp');
-        }
-
-        //  PNG fallback, если WebP не поддерживается 
-        @supports not (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEALmk0mk0iIiIiIgBoSygA")) {
-          background-image: url('../images/ready/ready-gradient-mob.png');
-
-          @media (min-device-pixel-ratio: 2),
-          (min-resolution: 192dpi),
-          (min-resolution: 2dppx) {
-            background-image: url('../images/ready/ready-gradient-mob-x2.png');
-          }
-        }
-      } */
-    }
-
-    &__title {
-      text-align: center;
-    }
-
-    &__img-box {
-      position: static;
-      margin-top: 0;
-    }
-
-    &__content {
-      padding: 0;
-      margin-bottom: 32px;
-    }
-
-    &__info {
-      gap: 16px;
-      justify-content: space-between;
-    }
-
-    &__item {
-      align-items: center;
-
-      &--support {
-        flex: 1 1 50%;
-        max-width: 171px;
-        width: 100%;
-      }
-
-      &--guarantee {
-        flex: 1 1 50%;
-        max-width: 171px;
-        width: 100%;
-      }
-    }
-
-    &__item-descr {
-      text-align: center;
-    }
-
-    &__cta {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media(max-width: 568px) {
+@media(max-width: 576px) {
   .ready {
     &__inner {
       &::before {
@@ -293,13 +153,14 @@
       }
     }
 
+    &__img {
+      width: 309px;
+      height: 329px;
+    }
+
     &__title {
       text-wrap: balance;
       margin-bottom: 25px;
-    }
-
-    &__img {
-      max-width: 309px;
     }
 
     &__info {
@@ -309,18 +170,6 @@
 
     &__item {
       align-items: center;
-
-      &--support {
-        flex: 1 1 50%;
-        max-width: 171px;
-        width: 100%;
-      }
-
-      &--guarantee {
-        flex: 1 1 50%;
-        max-width: 171px;
-        width: 100%;
-      }
     }
 
     &__icon {
@@ -334,35 +183,8 @@
     }
 
     &__cta {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media(max-width: 390px) {
-  .ready {
-    &__cta-text {
-      font-size: 16px;
-      padding: 16px 20px;
-    }
-
-    &__cta-icon {
-      width: 52px;
-      height: 52px;
-    }
-  }
-}
-
-@media(max-width: 340px) {
-  .ready {
-    &__cta-text {
-      font-size: 14px;
-      padding: 16px 18px;
-    }
-
-    &__cta-icon {
-      width: 50px;
-      height: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
