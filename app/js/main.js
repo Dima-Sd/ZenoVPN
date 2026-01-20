@@ -107,36 +107,39 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ================= FAQ ACCORDION ================= */
-  const accordions = document.querySelectorAll('[data-accordion]');
-  if (!accordions.length) return;
+  const initAccordion = () => {
+    const accordions = document.querySelectorAll('[data-accordion]');
+    if (!accordions.length) return;
 
-  accordions.forEach(item => {
-    const button = item.querySelector('.faq__button');
-    const answer = item.querySelector('.faq__answer');
-    const icon = item.querySelector('.faq__icon');
+    accordions.forEach(item => {
+      const button = item.querySelector('.faq__button');
+      const answer = item.querySelector('.faq__answer');
+      const icon = item.querySelector('.faq__icon');
 
-    if (!button || !answer || !icon) return;
+      if (!button || !answer || !icon) return;
+      answer.style.maxHeight = null;
 
-    button.addEventListener('click', () => {
-      const isOpen = item.classList.contains('is-open');
+      button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('is-open');
 
-      accordions.forEach(acc => {
-        acc.classList.remove('is-open');
+        accordions.forEach(acc => {
+          acc.classList.remove('is-open');
 
-        const accAnswer = acc.querySelector('.faq__answer');
-        const accIcon = acc.querySelector('.faq__icon');
+          const accAnswer = acc.querySelector('.faq__answer');
+          const accIcon = acc.querySelector('.faq__icon');
 
-        if (accAnswer) accAnswer.style.maxHeight = null;
-        if (accIcon) accIcon.classList.remove('faq__icon--open');
+          if (accAnswer) accAnswer.style.maxHeight = null;
+          if (accIcon) accIcon.classList.remove('faq__icon--open');
+        });
+
+        if (!isOpen) {
+          item.classList.add('is-open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.classList.add('faq__icon--open');
+        }
       });
-
-      if (!isOpen) {
-        item.classList.add('is-open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        icon.classList.add('faq__icon--open');
-      }
     });
-  });
+  };
 
   /* ================= METRICS: OBSERVER ================= */
   const initMetricsObserver = () => {
