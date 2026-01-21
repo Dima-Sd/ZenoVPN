@@ -424,17 +424,16 @@
                 color: transparent;
                 outline: 2px solid $accent;
             }
-
-            // &:active {
-
-            //     &::after {
-            //         background: linear-gradient(27.35deg, $accent-opacity-00 70.32%, $accent 94.79%), linear-gradient(200.43deg, $accent-opacity-00 65.44%, $accent 100%);
-            //     }
-            // }
         }
 
         &__text {
             display: none;
         }
+    }
+}
+
+@media(max-width:1000px) and (orientation:landscape) {
+    .header {
+        padding: 16px 0;
     }
 }
