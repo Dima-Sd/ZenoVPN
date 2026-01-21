@@ -1,11 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ================= SCROLL NAV ================= */
+  /* ================= LANGUAGE SWITCHER (HEADER) ================= */
+  const langSwitcher = document.querySelector('[data-lang-switcher]');
+  const langList = langSwitcher?.nextElementSibling;
 
+  if (langSwitcher && langList) {
+    langSwitcher.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      const isActive = langList.classList.toggle('active');
+      this.classList.toggle('active', isActive);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.switcher-lang')) {
+        langList.classList.remove('active');
+        langSwitcher.classList.remove('active');
+      }
+    });
+  }
+
+  /* ================= MOBILE MENU ================= */
+  const menuBtnRef = document.querySelector('[data-menu-button]');
+  const mobileMenuRef = document.querySelector('[data-menu]');
+
+  const closeMenu = () => {
+    if (!menuBtnRef || !mobileMenuRef) return;
+
+    mobileMenuRef.classList.remove('is-open');
+    menuBtnRef.classList.remove('is-open');
+    menuBtnRef.setAttribute('aria-expanded', 'false');
+  };
+
+  if (menuBtnRef && mobileMenuRef) {
+    menuBtnRef.addEventListener('click', () => {
+      const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true';
+      menuBtnRef.classList.toggle('is-open');
+      menuBtnRef.setAttribute('aria-expanded', String(!expanded));
+      mobileMenuRef.classList.toggle('is-open');
+    });
+  }
+
+  /* ================= SCROLL NAV ================= */
   const navLinks = document.querySelectorAll('a[href^="#"], [data-scroll]');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
 
       if (link.classList.contains('go-top')) {
@@ -22,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.getElementById(targetId);
       if (!target) return;
 
-      const header = document.getElementById('header');
-      const headerHeight = header ? header.offsetHeight : 0;
+      const headerEl = document.getElementById('header');
+      const headerHeight = headerEl ? headerEl.offsetHeight : 0;
 
       const top =
         target.getBoundingClientRect().top +
@@ -35,45 +75,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ================= HEADER + GO TOP ================= */
+  /* ================= HEADER STATE (FIXED + ACTIVE) ================= */
+  const headerById = document.getElementById('header');
+  const headerByData = document.querySelector('[data-header]');
+  const headerEl = headerByData || headerById;
 
-  const header = document.getElementById('header');
   const goTop = document.querySelector('.go-top');
-  const SCROLL_FIXED_THRESHOLD = 50;
 
-  if (header || goTop) {
-    const headerScroll = () => {
-      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  const SCROLL_FIXED_THRESHOLD = 50;  // is-fixed
+  const SCROLL_ACTIVE_THRESHOLD = 50; // active
 
-      if (header) {
-        if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
-          header.classList.add('is-fixed');
-        } else {
-          header.classList.remove('is-fixed');
-        }
-      }
+  const onHeaderScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
 
-      // вернуть когда появится шапка, если будет нобходимо
-      // if (goTop && header) {
-      //   if (scrollPosition > header.offsetHeight || scrollPosition >= SCROLL_FIXED_THRESHOLD) {
-      //     goTop.classList.add('go-top--active');
-      //   } else {
-      //     goTop.classList.remove('go-top--active');
-      //   }
-      // }
-      if (goTop) {
-        if (scrollPosition >= SCROLL_FIXED_THRESHOLD) {
-          goTop.classList.add('go-top--active');
-        } else {
-          goTop.classList.remove('go-top--active');
-        }
-      }
-    };
+    if (headerEl) {
+      // fixed
+      if (y >= SCROLL_FIXED_THRESHOLD) headerEl.classList.add('is-fixed');
+      else headerEl.classList.remove('is-fixed');
 
-    window.addEventListener('scroll', headerScroll);
-    headerScroll();
-  }
+      // active (your first code)
+      if (y >= SCROLL_ACTIVE_THRESHOLD) headerEl.classList.add('active');
+      else headerEl.classList.remove('active');
+    }
 
+    if (goTop) {
+      if (y >= SCROLL_FIXED_THRESHOLD) goTop.classList.add('go-top--active');
+      else goTop.classList.remove('go-top--active');
+    }
+  };
+
+  window.addEventListener('scroll', onHeaderScroll);
+  onHeaderScroll();
 
   /* ================= HELPERS ================= */
   const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
@@ -111,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const accordions = document.querySelectorAll('[data-accordion]');
     if (!accordions.length) return;
 
-    accordions.forEach(item => {
+    accordions.forEach((item) => {
       const button = item.querySelector('.faq__button');
       const answer = item.querySelector('.faq__answer');
       const icon = item.querySelector('.faq__icon');
@@ -122,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', () => {
         const isOpen = item.classList.contains('is-open');
 
-        accordions.forEach(acc => {
+        accordions.forEach((acc) => {
           acc.classList.remove('is-open');
 
           const accAnswer = acc.querySelector('.faq__answer');
@@ -151,10 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
 
-          animateNumbers(
-            entry.target.querySelectorAll('[data-count-num]')
-          );
-
+          animateNumbers(entry.target.querySelectorAll('[data-count-num]'));
           observer.unobserve(entry.target);
         });
       },
@@ -269,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof fetch !== 'function') return;
 
     fetch('https://ipwho.is/')
-      .then((res) => res.ok ? res.json() : null)
+      .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (!data || data.success !== true || !data.country_code) return;
 
@@ -293,13 +322,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let targetLang = 'en';
 
-        if (['RU', 'BY', 'KZ', 'UA'].includes(countryCode)) {
-          targetLang = 'ru';
-        }
-
-        if (['SA', 'AE', 'EG', 'QA', 'KW', 'TR', 'IR', 'PK', 'OM'].includes(countryCode)) {
-          targetLang = 'ar';
-        }
+        if (['RU', 'BY', 'KZ', 'UA'].includes(countryCode)) targetLang = 'ru';
+        if (['SA', 'AE', 'EG', 'QA', 'KW', 'TR', 'IR', 'PK', 'OM'].includes(countryCode)) targetLang = 'ar';
 
         localStorage.setItem(LANG_KEY, targetLang);
 
@@ -344,8 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ================= COOKIE ================= */
-
   const cookie = document.getElementById('cookie');
+
   if (cookie) {
     const acceptBtn = cookie.querySelector('.cookie__accept');
     const closeBtn = cookie.querySelector('.cookie__close');
@@ -365,6 +389,5 @@ document.addEventListener('DOMContentLoaded', () => {
       cookie.classList.remove('is-visible');
     });
   }
-
 
 });

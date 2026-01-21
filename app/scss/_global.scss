@@ -39,6 +39,28 @@ body {
     overflow: hidden;
 }
 
+.logo {
+    outline-offset: 10px;
+    border-radius: 3px;
+    transition: transform 0.3s, outline 0.3s;
+
+    &:hover {
+        transform: scale(1.10);
+    }
+
+    &:focus {
+        outline: 1px solid $accent;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &__img--small {
+        display: none;
+    }
+}
+
 .cta {
     display: flex;
     color: $dark;
@@ -121,30 +143,11 @@ body {
 
 .icon {
     fill: currentColor;
-}
-
-@media(max-width: 768px) {
-    .section {
-        padding-bottom: 112px;
-    }
-}
-
-@media(max-width: 576px) {
-    .section {
-        padding-bottom: 80px;
-    }
-
-    .title {
-        font-size: 40px;
-    }
-}
-
-.icon {
-    fill: currentColor;
     flex-shrink: 0;
 }
 
 .main {
+    padding-top: 106px;
     position: relative;
 
     &::before {
@@ -213,10 +216,42 @@ body {
     .main::before {
         background-image: url('../images/linear-grid-tab.svg');
     }
+
+    .section {
+        padding-bottom: 112px;
+    }
 }
 
 @media(max-width:576px) {
-    .main::before {
-        background-image: url('../images/linear-grid-mob.svg');
+    .main {
+        padding-top: 81px;
+
+        &::before {
+            background-image: url('../images/linear-grid-mob.svg');
+        }
+    }
+
+    .section {
+        padding-bottom: 80px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .logo {
+        &__img {
+            display: none;
+        }
+
+        &__img--small {
+            display: block;
+        }
+    }
+}
+
+@media(max-width:1000px) and (orientation: landscape) {
+    .main {
+        padding-top: 90px;
     }
 }

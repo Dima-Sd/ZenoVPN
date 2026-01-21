@@ -48,36 +48,128 @@
 </head>
 
 <body>
+  <header class="header" data-header>
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="#">
+                <img class="logo__img" src="./images/logo.svg" alt="ZenoVPN Logo" width="146" height="58">
+                <img class="logo__img logo__img--small" src="./images/logo-mob.svg" alt="ZenoVPN Logo" width="49" height="58">
+            </a>
+            <button class="mobile-button blur-plate" type="button" data-menu-button>
+                <span class="visually-hidden">
+                    @@mobileButtonAccessibility
+                </span>
+                <span class="mobile-button__line">
+                </span>
+            </button>
+            <ul class="menu__list blur-plate" data-menu>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        How it Work’s
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Pricing
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Support
+                    </a>
+                </li>
+            </ul>
+            <div class="user-menu">
+                <div class="switcher-lang">
+                    <button class="switcher-lang__btn blur-plate" data-lang-switcher type="button">
+                        <svg width="24" height="24">
+                            <use href="./images/sprite.svg#flagEn"></use>
+                        </svg>
+                        <span class="switcher-lang__text">
+                            En          
+                        </span> 
+                        <svg class="switcher-lang__arrow" width="18" height="18">
+                            <use href="./images/sprite.svg#angle-down"></use>
+                        </svg>
+                    </button>
+                    <ul class="switcher-lang__list blur-plate" data-langs-list>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link current" href="@@langHrefEn">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#flagEn"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    En
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link currentAr" href="./ar/">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#flagAr"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    عر                  
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link currentRu" href="./ru/">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#flagRu"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    Ру
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="cta header__cta" href="https://t.me/ZenoVPNBot" target="_blank">
+    <span class="cta__text header__cta-text">
+        Open VPN
+    </span>
+    <span class="cta__icon header__cta-icon">
+        <svg class="icon" width="21" height="18">
+            <use href="./images/sprite.svg#telegramSmall"></use>
+        </svg>
+    </span>
+</a>
+            </div>
+        </nav>
+    </div>
+</header>
   <main class="main">
-  <h1 class="visually-hidden">
-    ZenoVPN — Secure & Private VPN for Unlimited Internet Access
-  </h1>
+    <h1 class="visually-hidden">
+      ZenoVPN — Secure & Private VPN for Unlimited Internet Access
+    </h1>
     <section class="hero">
       <div class="container">
-          <h2 class="visually-hidden">
-            Secure and fast VPN benefits for unrestricted internet access
-          </h2>
-          <div class="hero__inner">
-            <div class="hero__wrap">
-              <div class="hero__statement">
-                <span class="hero__statement-title">
-                  Freedom of Thought
+        <h2 class="visually-hidden">
+          Secure and fast VPN benefits for unrestricted internet access
+        </h2>
+        <div class="hero__inner">
+          <div class="hero__wrap">
+            <div class="hero__statement">
+              <span class="hero__statement-title">
+                Freedom of Thought
+              </span>
+              <p class="hero__statement-text">
+                We believe in the power of free thinking. In a world of digital censorship and surveillance, Zeno VPN
+                empowers you to think, explore, and connect without boundaries.
+              </p>
+            </div>
+            <div class="hero__headline">
+              <span class="hero__title">
+                Think
+                <span class="accent">
+                  Free
                 </span>
-                <p class="hero__statement-text">
-                  We believe in the power of free thinking. In a world of digital censorship and surveillance, Zeno VPN empowers you to think, explore, and connect without boundaries.
-                </p>
-              </div>
-              <div class="hero__headline">
-                <span class="hero__title">
-                  Think 
-                  <span class="accent">
-                    Free
-                  </span> 
-                </span>
-                <p class="hero__text">
-                  Your digital philosophy for unrestricted internet access on all your devices.
-                </p>
-                <a class="cta hero__cta" href="https://t.me/ZenoVPNBot" target="_blank">
+              </span>
+              <p class="hero__text">
+                Your digital philosophy for unrestricted internet access on all your devices.
+              </p>
+              <a class="cta hero__cta" href="https://t.me/ZenoVPNBot" target="_blank">
     <span class="cta__text hero__cta-text">
         Get Started
     </span>
@@ -87,43 +179,43 @@
         </svg>
     </span>
 </a>
-              </div>
             </div>
-            <ul class="hero__advantages">
-              <li class="hero__item hero__item--speed blur-plate">
-                <h3 class="hero__subtitle">
-                    High Speed
-                </h3>
-                <p class="hero__description">
-                  Lightning-fast connection optimized for streaming, gaming, and downloads.
-                </p>
-              </li>
-              <li class="hero__item hero__item--privacy blur-plate">
-                <h3 class="hero__subtitle">
-                    Privacy First
-                </h3>
-                <p class="hero__description">
-                  Military-grade encryption and strict no-logs policy to protect your data.
-                </p>
-              </li>
-              <li class="hero__item hero__item--global blur-plate">
-                <h3 class="hero__subtitle">
-                    Global Access
-                </h3>
-                <p class="hero__description">
-                  Access any content worldwide, bypassing censorship and geo-restrictions.
-                </p>
-              </li>
-              <li class="hero__item hero__item--unlimited blur-plate">
-                <h3 class="hero__subtitle">
-                    Unlimited Devices
-                </h3>
-                <p class="hero__description">
-                  Protect all your devices with one subscription: phone, laptop, tablet, PC.
-                </p>
-              </li>
-            </ul>
           </div>
+          <ul class="hero__advantages">
+            <li class="hero__item hero__item--speed blur-plate">
+              <h3 class="hero__subtitle">
+                High Speed
+              </h3>
+              <p class="hero__description">
+                Lightning-fast connection optimized for streaming, gaming, and downloads.
+              </p>
+            </li>
+            <li class="hero__item hero__item--privacy blur-plate">
+              <h3 class="hero__subtitle">
+                Privacy First
+              </h3>
+              <p class="hero__description">
+                Military-grade encryption and strict no-logs policy to protect your data.
+              </p>
+            </li>
+            <li class="hero__item hero__item--global blur-plate">
+              <h3 class="hero__subtitle">
+                Global Access
+              </h3>
+              <p class="hero__description">
+                Access any content worldwide, bypassing censorship and geo-restrictions.
+              </p>
+            </li>
+            <li class="hero__item hero__item--unlimited blur-plate">
+              <h3 class="hero__subtitle">
+                Unlimited Devices
+              </h3>
+              <p class="hero__description">
+                Protect all your devices with one subscription: phone, laptop, tablet, PC.
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="steps section">
@@ -144,7 +236,7 @@
             <span class="steps__number blur-plate">
               <span class="steps__number-box blur-plate">
                 1
-              </span>  
+              </span>
             </span>
           </li>
           <li class="steps__item blur-plate">
@@ -159,7 +251,7 @@
             <span class="steps__number blur-plate">
               <span class="steps__number-box blur-plate">
                 2
-              </span>  
+              </span>
             </span>
           </li>
           <li class="steps__item blur-plate">
@@ -174,260 +266,267 @@
             <span class="steps__number blur-plate">
               <span class="steps__number-box blur-plate">
                 3
-              </span>  
+              </span>
             </span>
           </li>
         </ul>
       </div>
     </section>
     <section class="metrics section">
-        <div class="container">
-          <h2 class="visually-hidden">
-            ZenoVPN Real-Time Performance and Connection Reliability
-          </h2>
-          <div class="metrics__header">
-            <h2 class="metrics__title title">Real-Time <span class="accent">Performance</span></h2>
-            <ul class="metrics__list">
-              <li class="metrics__item">
-                <span class="metrics__item-title">Unlimited</span>
-                <span class="metrics__item-subtitle">Bandwidth</span>
-              </li>
-              <li class="metrics__item">
-                <span class="metrics__item-title">No</span>
-                <span class="metrics__item-subtitle">Throttling</span>
-              </li>
-              <li class="metrics__item">
-                <span class="metrics__item-title metrics__item-num"><span data-activeNum data-count-num="99.9">99.9</span>%</span>
-                <span class="metrics__item-subtitle ">Uptime</span>
-              </li>
-              <li class="metrics__item">
-                <span class="metrics__item-title">
-                  <span data-activeNum data-count-num="10">10</span>Gbps
-                </span>
-                <span class="metrics__item-subtitle">Max Speed</span>
-              </li>
-            </ul>
+      <div class="container">
+        <h2 class="visually-hidden">
+          ZenoVPN Real-Time Performance and Connection Reliability
+        </h2>
+        <div class="metrics__header">
+          <h2 class="metrics__title title">Real-Time <span class="accent">Performance</span></h2>
+          <ul class="metrics__list">
+            <li class="metrics__item">
+              <span class="metrics__item-title">Unlimited</span>
+              <span class="metrics__item-subtitle">Bandwidth</span>
+            </li>
+            <li class="metrics__item">
+              <span class="metrics__item-title">No</span>
+              <span class="metrics__item-subtitle">Throttling</span>
+            </li>
+            <li class="metrics__item">
+              <span class="metrics__item-title metrics__item-num"><span data-activeNum
+                  data-count-num="99.9">99.9</span>%</span>
+              <span class="metrics__item-subtitle ">Uptime</span>
+            </li>
+            <li class="metrics__item">
+              <span class="metrics__item-title">
+                <span data-activeNum data-count-num="10">10</span>Gbps
+              </span>
+              <span class="metrics__item-subtitle">Max Speed</span>
+            </li>
+          </ul>
+        </div>
+        <div class="metrics__cards">
+          <div class="metrics__card metrics__card--upload">
+            <div class="metrics__card-inner metrics__card-inner--upload">
+              <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
+                <div class="metrics__card-icon-sub-wrap blur-plate">
+                  <div class="metrics__card-icon-box">
+                    <svg class="icon" width="20" height="20">
+                      <use href="./images/sprite.svg#upload"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="metric-card metric-card--upload blur-plate">
+                <div class="metric-card__info">
+                  <h3 class="metric-card__label">Upload</h3>
+                  <span class="metric-card__note">Peak: <span data-activeNum data-count-num="500">500</span> Mbps</span>
+                </div>
+                <div class="metric-card__progress-box metric-card__progress-box--upload">
+                  <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M224.751 166.693C220.983 179.136 214.801 190.715 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.316 48.8463 196.173 42.7122 184.71C36.5781 173.248 32.7619 160.689 31.4814 147.751C30.2009 134.814 31.4811 121.75 35.2491 109.308C39.0171 96.8647 45.199 85.2858 53.4418 75.2321C61.6847 65.1783 71.827 56.8465 83.2898 50.7125C94.7526 44.5784 107.311 40.7621 120.249 39.4816C133.187 38.2011 146.25 39.4814 158.693 43.2494C171.136 47.0173 182.714 53.1992 192.768 61.4421C202.822 69.6849 211.154 79.8273 217.288 91.2901C223.422 102.753 227.238 115.312 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
+                      stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
+                    <g filter="url(#filter0_d_0_2)">
+                      <path class="metric-card__progress-bar"
+                        d="M31 138C31 114.361 39.4587 91.5021 54.8464 73.5569C70.2342 55.6118 91.5352 43.765 114.898 40.1589C138.26 36.5528 162.142 41.4254 182.225 53.8956C202.307 66.3657 217.265 85.6103 224.392 108.149"
+                        stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_0_2" x="-8" y="0" width="271.395" height="177" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="16" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="metric-card__value">
+                  <span class="metric-card__value-num" data-activeNum data-count-num="420">420</span>
+                  <p class="metric-card__value-name">Mbps</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="metrics__cards">
-            <div class="metrics__card metrics__card--upload">
-              <div class="metrics__card-inner metrics__card-inner--upload">
-                <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
-                  <div class="metrics__card-icon-sub-wrap blur-plate">
-                    <div class="metrics__card-icon-box">
-                      <svg class="icon" width="20" height="20">
-                        <use href="./images/sprite.svg#upload"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="metric-card metric-card--upload blur-plate">
-                  <div class="metric-card__info">
-                    <h3 class="metric-card__label">Upload</h3>
-                    <span class="metric-card__note">Peak: <span data-activeNum data-count-num="500">500</span> Mbps</span>
-                  </div>
-                  <div class="metric-card__progress-box metric-card__progress-box--upload">
-                    <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M224.751 166.693C220.983 179.136 214.801 190.715 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.316 48.8463 196.173 42.7122 184.71C36.5781 173.248 32.7619 160.689 31.4814 147.751C30.2009 134.814 31.4811 121.75 35.2491 109.308C39.0171 96.8647 45.199 85.2858 53.4418 75.2321C61.6847 65.1783 71.827 56.8465 83.2898 50.7125C94.7526 44.5784 107.311 40.7621 120.249 39.4816C133.187 38.2011 146.25 39.4814 158.693 43.2494C171.136 47.0173 182.714 53.1992 192.768 61.4421C202.822 69.6849 211.154 79.8273 217.288 91.2901C223.422 102.753 227.238 115.312 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
-                        stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
-                      <g filter="url(#filter0_d_0_2)">
-                        <path class="metric-card__progress-bar"
-                          d="M31 138C31 114.361 39.4587 91.5021 54.8464 73.5569C70.2342 55.6118 91.5352 43.765 114.898 40.1589C138.26 36.5528 162.142 41.4254 182.225 53.8956C202.307 66.3657 217.265 85.6103 224.392 108.149"
-                          stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
-                      </g>
-                      <defs>
-                        <filter id="filter0_d_0_2" x="-8" y="0" width="271.395" height="177" filterUnits="userSpaceOnUse"
-                          color-interpolation-filters="sRGB">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="16" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
-                        </filter>
-                      </defs>
+          <div class="metrics__card metrics__card--download">
+            <div class="metrics__card-inner metrics__card-inner--download">
+              <div class="metrics__card-icon metrics__card-icon--download blur-plate">
+                <div class="metrics__card-icon-sub-wrap metrics__card-icon-sub-wrap--download blur-plate">
+                  <div class="metrics__card-icon-box metrics__card-icon-box--download">
+                    <svg class="icon" width="20" height="20">
+                      <use href="./images/sprite.svg#download"></use>
                     </svg>
-                  </div>
-                  <div class="metric-card__value">
-                    <span class="metric-card__value-num" data-activeNum data-count-num="420">420</span>
-                    <p class="metric-card__value-name">Mbps</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="metrics__card metrics__card--download">
-              <div class="metrics__card-inner metrics__card-inner--download">
-                <div class="metrics__card-icon metrics__card-icon--download blur-plate">
-                  <div class="metrics__card-icon-sub-wrap metrics__card-icon-sub-wrap--download blur-plate">
-                    <div class="metrics__card-icon-box metrics__card-icon-box--download">
-                      <svg class="icon" width="20" height="20">
-                        <use href="./images/sprite.svg#download"></use>
-                      </svg>
-                    </div>
-                  </div>
+              <div class="metric-card metric-card--download blur-plate">
+                <div class="metric-card__info metric-card__info--download">
+                  <h3 class="metric-card__label metric-card__label--download">Download</h3>
+                  <span class="metric-card__note">Peak: <span data-activeNum data-count-num="1000">1000</span>
+                    Mbps</span>
                 </div>
-                <div class="metric-card metric-card--download blur-plate">
-                   <div class="metric-card__info metric-card__info--download">
-                     <h3 class="metric-card__label metric-card__label--download">Download</h3>
-                     <span class="metric-card__note">Peak: <span data-activeNum data-count-num="1000">1000</span> Mbps</span>
-                   </div>
-                   <div class="metric-card__progress-box metric-card__progress-box--download">
-                   <svg class="metric-card__progress-line" xmlns="http://www.w3.org/2000/svg" width="371" height="188" viewBox="0 0 371 188" fill="none">
-                     <path stroke="#fff" stroke-linecap="round" stroke-opacity=".06" stroke-width="20"
-                       d="M327.734 230.315a146.01 146.01 0 0 1-70.848 86.413 146.003 146.003 0 0 1-208.62-171.042 146 146 0 1 1 279.468 84.629h0Z" />
-                     <g filter="url(#a)">
-                       <path class="metric-card__progress-bar" stroke="#FFD700" stroke-linecap="round" stroke-width="20" d="M42 188a146 146 0 0 1 286.403-40.039" />
-                     </g>
-                     <defs>
-                       <filter id="a" width="370.405" height="230" x="0" y="0" color-interpolation-filters="sRGB"
-                         filterUnits="userSpaceOnUse">
-                         <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                         <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                         <feOffset />
-                         <feGaussianBlur stdDeviation="16" />
-                         <feComposite in2="hardAlpha" operator="out" />
-                         <feColorMatrix values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
-                         <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
-                         <feBlend in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
-                       </filter>
-                     </defs>
-                   </svg>
-                   </div>
-                   <div class="metric-card__value">
-                     <span class="metric-card__value-num" data-activeNum data-count-num="850">850</span>
-                     <p class="metric-card__value-name">Mbps</p>
-                   </div>
-                 </div>
+                <div class="metric-card__progress-box metric-card__progress-box--download">
+                  <svg class="metric-card__progress-line" xmlns="http://www.w3.org/2000/svg" width="371" height="188"
+                    viewBox="0 0 371 188" fill="none">
+                    <path stroke="#fff" stroke-linecap="round" stroke-opacity=".06" stroke-width="20"
+                      d="M327.734 230.315a146.01 146.01 0 0 1-70.848 86.413 146.003 146.003 0 0 1-208.62-171.042 146 146 0 1 1 279.468 84.629h0Z" />
+                    <g filter="url(#a)">
+                      <path class="metric-card__progress-bar" stroke="#FFD700" stroke-linecap="round" stroke-width="20"
+                        d="M42 188a146 146 0 0 1 286.403-40.039" />
+                    </g>
+                    <defs>
+                      <filter id="a" width="370.405" height="230" x="0" y="0" color-interpolation-filters="sRGB"
+                        filterUnits="userSpaceOnUse">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="16" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                        <feBlend in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="metric-card__value">
+                  <span class="metric-card__value-num" data-activeNum data-count-num="850">850</span>
+                  <p class="metric-card__value-name">Mbps</p>
+                </div>
               </div>
             </div>
-            <div class="metrics__card metrics__card--latency">
-              <div class="metrics__card-inner metrics__card-inner--latency">
-                <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
-                  <div class="metrics__card-icon-sub-wrap blur-plate">
-                    <div class="metrics__card-icon-box">
-                      <svg class="icon" width="20" height="20">
-                        <use href="./images/sprite.svg#latency"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="metric-card metric-card--latency blur-plate">
-                  <div class="metric-card__info">
-                    <h3 class="metric-card__label">Latency</h3>
-                    <span class="metric-card__note">Excellent Connection</span>
-                  </div>
-                  <div class="metric-card__progress-box metric-card__progress-box--latency">
-                    <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M224.751 166.693C220.983 179.136 214.801 190.714 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.315 48.8463 196.173 42.7122 184.71C36.5781 173.247 32.7619 160.689 31.4814 147.751C30.2009 134.813 31.4811 121.75 35.2491 109.307C39.0171 96.8644 45.199 85.2856 53.4418 75.2318C61.6847 65.1781 71.827 56.8463 83.2898 50.7122C94.7526 44.5781 107.311 40.7619 120.249 39.4814C133.187 38.2009 146.25 39.4811 158.693 43.2491C171.136 47.0171 182.714 53.199 192.768 61.4418C202.822 69.6847 211.154 79.827 217.288 91.2898C223.422 102.753 227.238 115.311 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
-                        stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
-                      <g filter="url(#filter0_d_0_1)">
-                        <path class="metric-card__progress-bar"
-                          d="M31 138C31 111.744 41.4303 86.5625 59.9964 67.9964C78.5625 49.4303 103.744 39 130 39C156.256 39 181.437 49.4303 200.004 67.9964C218.57 86.5625 229 111.744 229 138"
-                          stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
-                      </g>
-                      <defs>
-                        <filter id="filter0_d_0_1" x="-8" y="0" width="276" height="177" filterUnits="userSpaceOnUse"
-                          color-interpolation-filters="sRGB">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="16" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
-                        </filter>
-                      </defs>
+          </div>
+          <div class="metrics__card metrics__card--latency">
+            <div class="metrics__card-inner metrics__card-inner--latency">
+              <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
+                <div class="metrics__card-icon-sub-wrap blur-plate">
+                  <div class="metrics__card-icon-box">
+                    <svg class="icon" width="20" height="20">
+                      <use href="./images/sprite.svg#latency"></use>
                     </svg>
                   </div>
-                  <div class="metric-card__value">
-                    <span class="metric-card__value-num" data-activeNum data-count-num="8">8</span> 
-                    <p class="metric-card__value-name">ms</p>
-                  </div>
+                </div>
+              </div>
+              <div class="metric-card metric-card--latency blur-plate">
+                <div class="metric-card__info">
+                  <h3 class="metric-card__label">Latency</h3>
+                  <span class="metric-card__note">Excellent Connection</span>
+                </div>
+                <div class="metric-card__progress-box metric-card__progress-box--latency">
+                  <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M224.751 166.693C220.983 179.136 214.801 190.714 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.315 48.8463 196.173 42.7122 184.71C36.5781 173.247 32.7619 160.689 31.4814 147.751C30.2009 134.813 31.4811 121.75 35.2491 109.307C39.0171 96.8644 45.199 85.2856 53.4418 75.2318C61.6847 65.1781 71.827 56.8463 83.2898 50.7122C94.7526 44.5781 107.311 40.7619 120.249 39.4814C133.187 38.2009 146.25 39.4811 158.693 43.2491C171.136 47.0171 182.714 53.199 192.768 61.4418C202.822 69.6847 211.154 79.827 217.288 91.2898C223.422 102.753 227.238 115.311 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
+                      stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
+                    <g filter="url(#filter0_d_0_1)">
+                      <path class="metric-card__progress-bar"
+                        d="M31 138C31 111.744 41.4303 86.5625 59.9964 67.9964C78.5625 49.4303 103.744 39 130 39C156.256 39 181.437 49.4303 200.004 67.9964C218.57 86.5625 229 111.744 229 138"
+                        stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_0_1" x="-8" y="0" width="276" height="177" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="16" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="metric-card__value">
+                  <span class="metric-card__value-num" data-activeNum data-count-num="8">8</span>
+                  <p class="metric-card__value-name">ms</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
     <section class="plan section">
       <div class="container">
         <h2 class="visually-hidden">
-            ZenoVPN Pricing and Subscriptions
+          ZenoVPN Pricing and Subscriptions
         </h2>
         <div class="plan__advantages">
           <span class="plan__title title">
             Choose <span class="accent">Your Plan</span>
           </span>
           <div class="plan__advantages-inner">
-          <ul class="plan__advantages-list">
-            <li class="plan__advantages-item">
-              <div class="plan__advantages-icon blur-plate">
-                <svg class="plan__advantages-check icon" width="16" height="12">
+            <ul class="plan__advantages-list">
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
                     <use href="./images/sprite.svg#shield-check"></use>
-                </svg>
-              </div>
-              <span class="plan__advantages-text">
-                <span class="accent">Unlimited</span> bandwidth
-              </span>
-            </li>
-            <li class="plan__advantages-item">
-              <div class="plan__advantages-icon blur-plate">
-                <svg class="plan__advantages-check icon" width="16" height="12">
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Unlimited</span> bandwidth
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
                     <use href="./images/sprite.svg#shield-check"></use>
-                </svg>
-              </div>
+                  </svg>
+                </div>
                 <span class="plan__advantages-text">
                   <span class="accent">Access</span> to all server
                 </span>
-            </li>
-            <li class="plan__advantages-item">
-              <div class="plan__advantages-icon blur-plate">
-                <svg class="plan__advantages-check icon" width="16" height="12">
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
                     <use href="./images/sprite.svg#shield-check"></use>
-                </svg>
-              </div>
-              <span class="plan__advantages-text">
-                <span class="accent">Military-grade</span> encryption
-              </span>
-            </li>
-              </ul>
-              <ul class="plan__advantages-list">
-            <li class="plan__advantages-item">
-              <div class="plan__advantages-icon blur-plate">
-                <svg class="plan__advantages-check icon" width="16" height="12">
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Military-grade</span> encryption
+                </span>
+              </li>
+            </ul>
+            <ul class="plan__advantages-list">
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
                     <use href="./images/sprite.svg#shield-check"></use>
-                </svg>
-              </div>
-              <span class="plan__advantages-text">
-                <span class="accent">24/7</span> customer support
-              </span>
-            </li>
-            <li class="plan__advantages-item">
-              <div class="plan__advantages-icon blur-plate">
-                <svg class="plan__advantages-check icon" width="16" height="12">
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">24/7</span> customer support
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
                     <use href="./images/sprite.svg#shield-check"></use>
-                </svg>
-              </div>
-              <span class="plan__advantages-text">
-                <span class="accent">No logs</span> policy
-              </span> 
-            </li>
-            <li class="plan__advantages-item">
-              <div class="plan__advantages-icon blur-plate">
-                <svg class="plan__advantages-check icon" width="16" height="12">
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">No logs</span> policy
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
                     <use href="./images/sprite.svg#shield-check"></use>
-                </svg>
-              </div>
-              <span class="plan__advantages-text">
-                <span class="accent">Multi-device</span> support
-              </span>
-            </li>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Multi-device</span> support
+                </span>
+              </li>
             </ul>
           </div>
         </div>
@@ -463,7 +562,7 @@
 
 
           </li>
-            <li class="plan__item blur-plate">
+          <li class="plan__item blur-plate">
             <article class="plan-card plan-card--monthly">
     <div class="plan-card__info">
         <h3 class="plan-card__title">
@@ -494,7 +593,7 @@
 
 
           </li>
-            <li class="plan__item blur-plate plan__item--popular">
+          <li class="plan__item blur-plate plan__item--popular">
             <article class="plan-card plan-card--semi-annual">
     <div class="plan-card__info">
         <h3 class="plan-card__title">
@@ -533,7 +632,7 @@
 
 
           </li>
-            <li class="plan__item blur-plate">
+          <li class="plan__item blur-plate">
             <article class="plan-card plan-card--annual">
     <div class="plan-card__info">
         <h3 class="plan-card__title">
@@ -585,10 +684,12 @@
                     <div class="review-card__inner blur-plate">
                       <div class="review-card__header">
                         <picture>
-                          <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
-                          <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
-                            loading="lazy" />
+                          <source type="image/webp"
+                            srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png"
+                            srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users"
+                            width="56" height="56" loading="lazy" />
                         </picture>
                         <div class="review-card__user">
                           <p class="review-card__user-name">Robert F.</p>
@@ -631,10 +732,12 @@
                     <div class="review-card__inner blur-plate">
                       <div class="review-card__header">
                         <picture>
-                          <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
-                          <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
-                            loading="lazy" />
+                          <source type="image/webp"
+                            srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png"
+                            srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users"
+                            width="56" height="56" loading="lazy" />
                         </picture>
                         <div class="review-card__user">
                           <p class="review-card__user-name">Robert F.</p>
@@ -677,10 +780,12 @@
                     <div class="review-card__inner blur-plate">
                       <div class="review-card__header">
                         <picture>
-                          <source type="image/webp" srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
-                          <source type="image/png" srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
-                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users" width="56" height="56"
-                            loading="lazy" />
+                          <source type="image/webp"
+                            srcset="./images/reviews/robert.webp 1x, ./images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png"
+                            srcset="./images/reviews/robert.png 1x, ./images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="./images/reviews/robert.png" alt="Active Users"
+                            width="56" height="56" loading="lazy" />
                         </picture>
                         <div class="review-card__user">
                           <p class="review-card__user-name">Robert F.</p>
@@ -722,19 +827,19 @@
                 </div>
               </div>
               <div class="reviews__nav-panel">
-                 <button class="reviews__nav reviews__nav--next blur-plate" type="button">
+                <button class="reviews__nav reviews__nav--next blur-plate" type="button">
                   <span class="visually-hidden">next slide</span>
-                   <svg class="reviews__nav-icon icon" width="24" height="24">
-                     <use href="./images/sprite.svg#chevron"></use>
-                   </svg>
-                 </button>
-           
-                 <button class="reviews__nav reviews__nav--prev blur-plate" type="button">
+                  <svg class="reviews__nav-icon icon" width="24" height="24">
+                    <use href="./images/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+
+                <button class="reviews__nav reviews__nav--prev blur-plate" type="button">
                   <span class="visually-hidden">previous slide</span>
-                   <svg class="reviews__nav-icon icon" width="24" height="24">
-                     <use href="./images/sprite.svg#chevron"></use>
-                   </svg>
-                 </button>
+                  <svg class="reviews__nav-icon icon" width="24" height="24">
+                    <use href="./images/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <picture>
@@ -746,17 +851,21 @@
                   ./images/reviews/astronaut-reviews.png 1x,
                   ./images/reviews/astronaut-reviews-x2.png 2x
                 ">
-              <img class="reviews__img" src="./images/reviews/astronaut-reviews.png" alt="Customer Support" loading="lazy">
+              <img class="reviews__img" src="./images/reviews/astronaut-reviews.png" alt="Customer Support"
+                loading="lazy">
             </picture>
           </div>
           <div class="reviews__stats">
             <div class="reviews__stat blur-plate">
               <picture>
-                <source media="(max-width: 992px)" type="image/webp" srcset="./images/reviews/users-tab.webp 1x,./images/reviews/users-tab-x2.webp 2x" />
-                <source media="(max-width: 992px)" type="image/png" srcset="./images/reviews/users-tab.png 1x, ./images/reviews/users-tab-x2.png 2x" />
+                <source media="(max-width: 992px)" type="image/webp"
+                  srcset="./images/reviews/users-tab.webp 1x,./images/reviews/users-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png"
+                  srcset="./images/reviews/users-tab.png 1x, ./images/reviews/users-tab-x2.png 2x" />
                 <source type="image/webp" srcset="./images/reviews/users.webp 1x,./images/reviews/users-x2.webp 2x" />
                 <source type="image/png" srcset="./images/reviews/users.png 1x, ./images/reviews/users-x2.png 2x" />
-                <img class="reviews__stat-img" src="./images/reviews/users.png" alt="Active Users" width="64" height="64" loading="lazy" />
+                <img class="reviews__stat-img" src="./images/reviews/users.png" alt="Active Users" width="64"
+                  height="64" loading="lazy" />
               </picture>
               <div class="reviews__stat-content">
                 <span class="reviews__stat-num">15K+</span>
@@ -771,9 +880,10 @@
                   srcset="./images/reviews/rev-guarantee-tab.png 1x, ./images/reviews/rev-guarantee-tab-x2.png 2x" />
                 <source type="image/webp"
                   srcset="./images/reviews/rev-guarantee.webp 1x, ./images/reviews/rev-guarantee-x2.webp 2x" />
-                <source type="image/png" srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
-                <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.png" alt="Active Users" width="64" height="64"
-                  loading="lazy" />
+                <source type="image/png"
+                  srcset="./images/reviews/rev-guarantee.png 1x, ./images/reviews/rev-guarantee-x2.png 2x" />
+                <img class="reviews__stat-img" src="./images/reviews/rev-guarantee.png" alt="Active Users" width="64"
+                  height="64" loading="lazy" />
               </picture>
               <div class="reviews__stat-content">
                 <span class="reviews__stat-num">99.9%</span>
@@ -786,9 +896,11 @@
                   srcset="./images/reviews/support-tab.webp 1x, ./images/reviews/support-tab-x2.webp 2x" />
                 <source media="(max-width: 992px)" type="image/png"
                   srcset="./images/reviews/support-tab.png 1x, ./images/reviews/support-tab-x2.png 2x" />
-                <source type="image/webp" srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
+                <source type="image/webp"
+                  srcset="./images/reviews/support.webp 1x, ./images/reviews/support-x2.webp 2x" />
                 <source type="image/png" srcset="./images/reviews/support.png 1x, ./images/reviews/support-x2.png 2x" />
-                <img class="reviews__stat-img" src="./images/reviews/support.png" alt="Active Users" width="64" height="64" loading="lazy" />
+                <img class="reviews__stat-img" src="./images/reviews/support.png" alt="Active Users" width="64"
+                  height="64" loading="lazy" />
               </picture>
               <div class="reviews__stat-content">
                 <span class="reviews__stat-num">24/7</span>
@@ -964,7 +1076,8 @@
                 </div>
                 <!-- ca -->
                 <div class="countries__item blur-plate" data-country="CA">
-                  <img class="countries__icon" src="./images/network/canada.svg" alt="canada icon" width="24" height="24">
+                  <img class="countries__icon" src="./images/network/canada.svg" alt="canada icon" width="24"
+                    height="24">
                   <p class="countries__name">Canada</p>
                 </div>
                 <!-- th -->
@@ -1110,7 +1223,7 @@
               </div>
               <button class="countries__btn" type="button">
                 Show all
-    
+
                 <svg class="countries__btn-icon icon" width="18" height="18">
                   <use href="./images/sprite.svg#show-all"></use>
                 </svg>
@@ -1217,108 +1330,108 @@
       </div>
     </section>
     <section class="faq section">
-        <div class="container">
-            <h2 class="faq__title title">
-                Questions<span class="accent">?</span> We Have <span class="accent">Answers</span>
-            </h2>
-            <ul class="faq__list">
-                <li class="faq__item blur-plate" data-accordion>
-                    <button class="faq__button" type="button" data-button>
-                        <span class="visually-hidden">
-                            open/close the accordion
-                        </span>
-                    </button>
-                    <div class="faq__inner" data-accordion-content>
-                      <h3 class="faq__subtitle">
-                          How many devices can I connect?
-                      </h3>
-                        <p class="faq__answer">
-                            Unlimited quantity
-                        </p>
-                    </div>
-                    <svg class="faq__icon" width="18" height="18">
-                        <use href="./images/sprite.svg#arrow-bottom"></use>
-                    </svg>
-                </li>
-                <li class="faq__item blur-plate" data-accordion>
-                    <button class="faq__button" type="button" data-button>
-                        <span class="visually-hidden">
-                            open/close the accordion
-                        </span>
-                    </button>
-                    <div class="faq__inner" data-accordion-content>
-                        <h3 class="faq__subtitle">
-                            What speed do you guarantee?
-                        </h3>
-                        <p class="faq__answer">
-                            Unlimited quantity
-                        </p>
-                    </div>
-                    <svg class="faq__icon" width="18" height="18">
-                        <use href="./images/sprite.svg#arrow-bottom"></use>
-                    </svg>
-                </li>
-                <li class="faq__item blur-plate" data-accordion>
-                    <button class="faq__button" type="button" data-button>
-                        <span class="visually-hidden">
-                            open/close the accordion
-                        </span>
-                    </button>
-                    <div class="faq__inner" data-accordion-content>
-                      <h3 class="faq__subtitle">
-                            Do you block ads?
-                      </h3>
-                      <p class="faq__answer">
-                          Unlimited quantity
-                      </p>
-                    </div>
-                    <svg class="faq__icon" width="18" height="18">
-                        <use href="./images/sprite.svg#arrow-bottom"></use>
-                    </svg>
-                </li>
-                <li class="faq__item blur-plate" data-accordion>
-                    <button class="faq__button" type="button" data-button>
-                        <span class="visually-hidden">
-                            open/close the accordion
-                        </span>
-                    </button>
-                    <div class="faq__inner" data-accordion-content>
-                        <h3 class="faq__subtitle">
-                            Do you keep logs?
-                        </h3>
-                        <p class="faq__answer">
-                            Unlimited quantity
-                        </p>
-                    </div>
-                    <svg class="faq__icon" width="18" height="18">
-                        <use href="./images/sprite.svg#arrow-bottom"></use>
-                    </svg>
-                </li>
-                <li class="faq__item blur-plate" data-accordion>
-                    <button class="faq__button" type="button" data-button>
-                        <span class="visually-hidden">
-                            open/close the accordion
-                        </span>
-                    </button>
-                    <div class="faq__inner" data-accordion-content>
-                        <h3 class="faq__subtitle">
-                            What payment methods do you accept?
-                        </h3>
-                        <p class="faq__answer">
-                            Unlimited quantity
-                        </p>
-                    </div>
-                    <svg class="faq__icon" width="18" height="18">
-                        <use href="./images/sprite.svg#arrow-bottom"></use>
-                    </svg>
-                </li>
-            </ul>
-        </div>
+      <div class="container">
+        <h2 class="faq__title title">
+          Questions<span class="accent">?</span> We Have <span class="accent">Answers</span>
+        </h2>
+        <ul class="faq__list">
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                How many devices can I connect?
+              </h3>
+              <p class="faq__answer">
+                Unlimited quantity
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="./images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                What speed do you guarantee?
+              </h3>
+              <p class="faq__answer">
+                Unlimited quantity
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="./images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Do you block ads?
+              </h3>
+              <p class="faq__answer">
+                Unlimited quantity
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="./images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Do you keep logs?
+              </h3>
+              <p class="faq__answer">
+                Unlimited quantity
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="./images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                What payment methods do you accept?
+              </h3>
+              <p class="faq__answer">
+                Unlimited quantity
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="./images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="ready">
       <div class="container">
         <h2 class="visually-hidden">
-            Secure VPN access with 24/7 customer support and money-back guarantee
+          Secure VPN access with 24/7 customer support and money-back guarantee
         </h2>
         <div class="ready__inner">
           <div class="ready__img-box">
@@ -1352,9 +1465,12 @@
             <div class="ready__info">
               <div class="ready__item">
                 <picture>
-                  <source type="image/webp" srcset="./images/ready/earphones.webp 1x, ./images/ready/earphones-x2.webp 2x" />
-                  <source type="image/png" srcset="./images/ready/earphones.png 1x, ./images/ready/earphones-x2.png 2x" />
-                  <img class="ready__icon" src="./images/ready/earphones.png" width="64" height="64" alt="ZenoVPN customer support 24/7 via Telegram" loading="lazy" />
+                  <source type="image/webp"
+                    srcset="./images/ready/earphones.webp 1x, ./images/ready/earphones-x2.webp 2x" />
+                  <source type="image/png"
+                    srcset="./images/ready/earphones.png 1x, ./images/ready/earphones-x2.png 2x" />
+                  <img class="ready__icon" src="./images/ready/earphones.png" width="64" height="64"
+                    alt="ZenoVPN customer support 24/7 via Telegram" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
                   24/7
@@ -1364,10 +1480,12 @@
               </div>
               <div class="ready__item">
                 <picture>
-                  <source type="image/webp" srcset="./images/ready/guarantee.webp 1x, ./images/ready/guarantee-x2.webp 2x" />
-                  <source type="image/png" srcset="./images/ready/guarantee.png 1x, ./images/ready/guarantee-x2.png 2x" />
-                  <img class="ready__icon" src="./images/ready/guarantee.png" width="64" height="64" alt="ZenoVPN 30-day money-back guarantee"
-                    loading="lazy" />
+                  <source type="image/webp"
+                    srcset="./images/ready/guarantee.webp 1x, ./images/ready/guarantee-x2.webp 2x" />
+                  <source type="image/png"
+                    srcset="./images/ready/guarantee.png 1x, ./images/ready/guarantee-x2.png 2x" />
+                  <img class="ready__icon" src="./images/ready/guarantee.png" width="64" height="64"
+                    alt="ZenoVPN 30-day money-back guarantee" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
                   30-day
@@ -1377,14 +1495,14 @@
               </div>
             </div>
             <a class="cta ready__cta" href="https://t.me/ZenoVPNBot" target="_blank">
-                <span class="cta__text ready__cta-text">
-        Get Started in Telegram
-                </span>
-                <span class="cta__icon ready__cta-icon">
-        <svg class="icon" width="24" height="24">
-            <use href="./images/sprite.svg#telegram"></use>
-        </svg>
-                </span>
+              <span class="cta__text ready__cta-text">
+                Get Started in Telegram
+              </span>
+              <span class="cta__icon ready__cta-icon">
+                <svg class="icon" width="24" height="24">
+                  <use href="./images/sprite.svg#telegram"></use>
+                </svg>
+              </span>
             </a>
           </div>
         </div>
@@ -1429,7 +1547,7 @@
   </div>
 </div>
 
-    <script src="js/main.min.js"></script>
+  <script src="./js/main.min.js"></script>
 </body>
 
 </html>

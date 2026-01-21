@@ -3,9 +3,11 @@
 @import "vars";
 @import "global";
 
+
 @import "./global/go-top";
 @import "./global/cookie";
 
+@import "global/header";
 @import "./index/hero";
 @import "./index/steps";
 @import "./index/metrics";
@@ -20,6 +22,5 @@
 @import "./index/faq";
 @import "./index/ready";
 @import "./index/indexRtl";
-
 
 

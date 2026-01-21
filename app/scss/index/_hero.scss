@@ -43,7 +43,7 @@
         width: 759px;
         height: 223px;
         background-color: $accent;
-        filter: blur(200px);
+        filter: blur(141px);
         z-index: -3;
     }
 
@@ -351,6 +351,15 @@
 
 @media(max-width: 1000px) and (orientation: landscape) {
     .hero {
+
+        &::after {
+            width: 259px;
+            height: 110px;
+            bottom: 215px;
+            filter: blur(115px);
+            left: calc(50% - -100px);
+        }
+
         &::before {
             top: -31px;
             right: 16px;
@@ -376,7 +385,7 @@
         }
 
         &__title {
-            font-size: 60px;
+            font-size: 50px;
         }
 
         &__text {
