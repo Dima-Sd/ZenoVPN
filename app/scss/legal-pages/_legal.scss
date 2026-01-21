@@ -95,6 +95,9 @@
     border-bottom: 1px solid transparent;
     outline-offset: 5px;
     transition: color 0.3s, border-color 0.3s, outline 0.3s;
+    position: relative;
+    padding-bottom: 1px;
+
 
     &:hover {
       color: $accent;
