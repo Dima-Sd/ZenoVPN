@@ -1,0 +1,44 @@
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+
+  .breadcrumbs {
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      padding-right: 0;
+      padding-left: 32px;
+      position: relative;
+
+      &::after {
+        right: auto;
+        left: 8px;
+        transform: scale(-1, 1) translateY(-50%);
+      }
+
+      &:last-child {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  @media(max-width: 576px) {
+    .breadcrumbs {
+      &__item {
+        padding-right: 0;
+        padding-left: 22px;
+
+        &::after {
+          width: 14px;
+          height: 14px;
+          right: auto;
+          left: 4px;
+        }
+      }
+    }
+  }
+}
