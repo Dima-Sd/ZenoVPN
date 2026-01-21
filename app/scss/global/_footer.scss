@@ -185,8 +185,12 @@
 @media (max-width: 576px) {
   .footer {
     &__menu {
-      margin-bottom: 26px;
+      margin-bottom: 25px;
       gap: 25px;
+    }
+
+    &__menu-list {
+      gap: 18px;
     }
 
     &__contact {
