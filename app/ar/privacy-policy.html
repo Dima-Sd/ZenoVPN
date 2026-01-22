@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Fast & Secure ZenoVPN for Online Privacy
+    </title>
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ZenoVPN" />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+
+    <!-- SEO -->
+    <meta name="description" content="ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions,and enjoy true online freedom worldwide.">
+    <link rel="canonical" href="https://zenovpn.com/">
+
+    <!-- cryptomus -->
+    <meta name="cryptomus" content="8e67b6b7">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fast & Secure ZenoVPN for Online Privacy">
+    <meta property="og:description" content="ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions,and enjoy true online freedom worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenovpn.com/">
+    <meta property="og:site_name" content="ZenoVPN">
+    <meta property="og:image" content="https://zenovpn.com/images/preview.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fast & Secure Online Privacy with ZenoVPN">
+    <meta name="twitter:description" content="Protect your privacy, browse securely, and access global content with ZenoVPN. High speed, strong encryption and no limits.">
+    <meta name="twitter:image" content="https://zenovpn.com/images/preview.jpg">
+
+    <!-- Language -->
+    <link rel="alternate" hreflang="en" href="https://zenovpn.com/">
+    <link rel="alternate" hreflang="ru" href="https://zenovpn.com/ru/">
+    <link rel="alternate" hreflang="ar" href="https://zenovpn.com/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://zenovpn.com/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+<body class="body">
+    <header class="header" data-header>
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="#">
+                <img class="logo__img" src="@@extraDots/images/logo.svg" alt="@@altLogo" width="146" height="58">
+                <img class="logo__img logo__img--small" src="@@extraDots/images/logo-mob.svg" alt="@@altLogo" width="49" height="58">
+            </a>
+            <button class="mobile-button blur-plate" type="button" data-menu-button>
+                <span class="visually-hidden">
+                    @@mobileButtonAccessibility
+                </span>
+                <span class="mobile-button__line">
+                </span>
+            </button>
+            <ul class="menu__list blur-plate" data-menu>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        How it Work’s
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Pricing
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        Support
+                    </a>
+                </li>
+            </ul>
+            <div class="user-menu">
+                <div class="switcher-lang">
+                    <button class="switcher-lang__btn blur-plate" data-lang-switcher type="button">
+                        <svg width="24" height="24">
+                            <use href="@@extraDots/images/sprite.svg#flag@@srcLang"></use>
+                        </svg>
+                        <span class="switcher-lang__text">
+                            @@langText          
+                        </span> 
+                        <svg class="switcher-lang__arrow" width="18" height="18">
+                            <use href="@@extraDots/images/sprite.svg#angle-down"></use>
+                        </svg>
+                    </button>
+                    <ul class="switcher-lang__list blur-plate" data-langs-list>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link @@current" href="@@langHrefEn">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="@@extraDots/images/sprite.svg#flagEn"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    En
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link @@currentAr" href="@@langHrefAr">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="@@extraDots/images/sprite.svg#flagAr"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    عر                  
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link @@currentRu" href="@@langHrefRu">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="@@extraDots/images/sprite.svg#flagRu"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    Ру
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="cta header__cta" href="https://t.me/ZenoVPNBot" target="_blank">
+    <span class="cta__text header__cta-text">
+        Open VPN
+    </span>
+    <span class="cta__icon header__cta-icon">
+        <svg class="icon" width="21" height="18">
+            <use href="@@extraDots/images/sprite.svg#telegramSmall"></use>
+        </svg>
+    </span>
+</a>
+            </div>
+        </nav>
+    </div>
+</header>
+  <main class="main">
+    <section class="legal">
+      <div class="container">
+        <div class="top">
+          <div class="breadcrumbs">
+  <ul class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="./">
+        بيت
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="./privacy-policy.html">
+        سياسة الخصوصية
+      </a>
+    </li>
+  </ul>
+</div>
+        </div>
+
+        <div class="legal__inner">
+          <div class="legal__tab-nav blur-plate">
+            <h1 class="legal__tab-nav-title">الشروط والسياسة</h1>
+            <div class="tab-nav">
+              <a class="tab-nav__btn" href="../terms-and-conditions.html">
+                <span>الشروط والأحكام</span>
+              </a>
+              <a class="tab-nav__btn tab-nav__btn--active" href="../privacy-policy.html" rel="noopener noreferrer">
+                <span>سياسة الخصوصية</span>
+              </a>
+              <a class="tab-nav__btn" href="../refund-policy.html" rel="noopener noreferrer">
+                <span>سياسة استرداد الأموال</span>
+              </a>
+              <a class="tab-nav__btn" href="../about-us.html" rel="noopener noreferrer">
+                <span>معلومات عنا</span>
+              </a>
+            </div>
+          </div>
+          <div class="legal__tabs-content tab">
+            <!-- Privacy Policy -->
+            <div class="tab__item" id="btn_2">
+              <div class="tab__inner">
+                <div class="terms">
+                  <h2 class="terms__main-title">
+                    سياسة الخصوصية
+                  </h2>
+
+                  <!-- 1. Introduction -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      1. مقدمة
+                    </h3>
+
+                    <p class="privacy__descr">
+                      تلتزم ZenoVPN بحماية خصوصيتك. توضح سياسة الخصوصية هذه المعلومات التي نجمعها وكيف نستخدمها وحقوقك فيما يتعلق بها. مبدأنا
+                      التوجيهي هو جمع الحد الأدنى من البيانات المطلوبة لتشغيل خدمة VPN عالمية المستوى. نحن مزود VPN صارم لا يحتفظ بالسجلات.
+                    </p>
+                  </section>
+
+                  <!-- 2. Information We Do Not Collect -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      2. المعلومات التي لا نقوم بجمعها
+                    </h3>
+
+                    <p class="privacy__descr privacy__descr--mb">
+                      نحن لا نقوم بجمع أو تسجيل أو تخزين أي مما يلي:
+                    </p>
+
+                    <ul class="privacy__list">
+                      <li class="privacy__item">عنوان IP الأصلي الخاص بك.</li>
+                      <li class="privacy__item">عنوان IP الصادر عن VPN.</li>
+                      <li class="privacy__item">سجل تصفحك.</li>
+                      <li class="privacy__item">وجهة حركة المرور الخاصة بك.</li>
+                      <li class="privacy__item">محتوى بياناتك.</li>
+                      <li class="privacy__item">طلبات DNS الخاصة بك.</li>
+                    </ul>
+                  </section>
+
+                  <!-- 3. Information We Collect -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      3. المعلومات التي نقوم بجمعها
+                    </h3>
+
+                    <p class="privacy__descr privacy__descr--mb">
+                      لتقديم خدماتنا، نقوم بجمع الحد الأدنى من المعلومات التالية:
+                    </p>
+
+                    <!-- 3.1 Account Information -->
+                    <h4 class="privacy__subtitle">
+                      3.1. معلومات الحساب
+                    </h4>
+
+                    <ul class="privacy__list">
+                      <li class="privacy__item">
+                        <span class="privacy__text privacy__text--bold">عنوان البريد الإلكتروني:</span>
+                        <span class="privacy__text">
+                          نقوم بجمع عنوان بريدك الإلكتروني لإنشاء حسابك وإدارته، ومعالجة المدفوعات، والتواصل معك.
+                        </span>
+                      </li>
+                      <li class="privacy__item">
+                        <span class="privacy__text privacy__text--bold">معلومات الدفع:</span>
+                        <span class="privacy__text">نحن نستخدم أنظمة دفع خارجية (مثل Cryptomus) لمعالجة المدفوعات. نحن لا نحتفظ بمعلومات كاملة عن بطاقتك الائتمانية.
+                        </span>
+                      </li>
+                    </ul>
+
+                    <!-- 3.2 Aggregated Usage Statistics -->
+                    <h4 class="privacy__subtitle privacy__subtitle--pt">
+                      3.2. إحصاءات الاستخدام المجمّعة
+                    </h4>
+
+                    <ul class="privacy__list">
+                      <li class="privacy__item">
+                        <span class="privacy__text privacy__text--bold">الاتصال الناجح:</span>
+                        <span class="privacy__text">
+                          نقوم بجمع معلومات حول ما إذا تم إنشاء اتصال VPN بنجاح في يوم معين (دون تحديد وقت معين).
+                        </span>
+                      </li>
+                      <li class="privacy__item">
+                        <span class="privacy__text privacy__text--bold">البيانات المنقولة:</span>
+                        <span class="privacy__text">
+                          نقوم بجمع الحجم الإجمالي للبيانات التي نقلها المستخدم، وذلك لضمان الاستخدام العادل والحفاظ على جودة الخدمة.
+                        </span>
+                      </li>
+                    </ul>
+
+                    <p class="privacy__text privacy__text--down">
+                      يتم تجميع هذه البيانات ولا يمكن استخدامها لتحديد هوية أي مستخدم فردي أو أنشطته المحددة.
+                    </p>
+
+                    <!-- 3.3 Telegram Bot -->
+                    <h4 class="privacy__subtitle privacy__subtitle--pt">
+                      3.3. بوت Telegram
+                    </h4>
+
+                    <ul class="privacy__list">
+                      <li class="privacy__item">
+                        <span class="privacy__text">
+                          قد يقوم بوتنا على Telegram بجمع معرف المستخدم الخاص بك على Telegram لربطه
+                          بحسابك على ZenoVPN. وهذا ضروري لتقديم
+                        </span>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <!-- 4. How We Use Your Information -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      4. كيف نستخدم معلوماتك
+                    </h3>
+                    <p class="privacy__descr privacy__descr--mb">
+                      نستخدم المعلومات التي نجمعها من أجل:
+                    </p>
+                    <ul class="privacy__list">
+                      <li class="privacy__item">تقديم خدماتنا وتشغيلها وصيانتها.</li>
+                      <li class="privacy__item">معالجة مدفوعاتك وإدارة اشتراكك.</li>
+                      <li class="privacy__item">التواصل معك، بما في ذلك إرسال التحديثات المتعلقة بالخدمة والرد على استفساراتك لدى دعم العملاء.</li>
+                      <li class="privacy__item">منع الاحتيال وإساءة استخدام خدماتنا.</li>
+                    </ul>
+                  </section>
+
+                  <!-- 5. How We Protect Your Information -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      5. كيفية حمايتنا لمعلوماتك
+                    </h3>
+
+                    <p class="privacy__descr">
+                      نطبق مجموعة متنوعة من التدابير الأمنية لضمان حماية معلوماتك الشخصية. تتم معالجة جميع معاملات الدفع عبر بوابات مزودي
+                      خدمات الدفع ولا يتم تخزينها أو معالجتها على خوادمنا.
+                    </p>
+                  </section>
+
+                  <!-- 6. Data Retention -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      6. الاحتفاظ بالبيانات
+                    </h3>
+
+                    <p class="privacy__descr">
+                      نحتفظ بمعلومات حسابك طالما أن حسابك نشط. يمكنك في أي وقت طلب حذف حسابك والبيانات المرتبطة به.
+                    </p>
+                  </section>
+
+                  <!-- 7. Third-Party Services -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      7. خدمات خارجية
+                    </h3>
+
+                    <p class="privacy__descr privacy__descr--mb">
+                      نحن نستخدم الخدمات الخارجية التالية:
+                    </p>
+
+                    <ul class="privacy__list">
+                      <li class="privacy__item">
+                        <span class="privacy__text privacy__text--bold">أنظمة الدفع:</span>
+                        <span class="privacy__text">Cryptomus وآخرون.</span>
+                      </li>
+                      <li class="privacy__item">
+                        <span class="privacy__text privacy__text--bold">Telegram:</span>
+                        <span class="privacy__text">يعمل روبوتنا على منصة Telegram.</span>
+                      </li>
+                    </ul>
+
+                    <p class="privacy__text privacy__text--down">
+                      نحن لا نتحمل أي مسؤولية عن سياسة الخصوصية لهذه الخدمات الخارجية. نوصيك بالاطلاع على سياسة الخصوصية الخاصة بها.
+                    </p>
+                  </section>
+
+                  <!-- 8. Your Rights -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      8. حقوقك
+                    </h3>
+                    <p class="privacy__descr privacy__descr--mb">
+                      لديك الحق في
+                    </p>
+
+                    <ul class="privacy__list">
+                      <li class="privacy__item">الوصول إلى البيانات الشخصية التي نحتفظ بها عنك.</li>
+                      <li class="privacy__item">طلب تصحيح البيانات غير الدقيقة.</li>
+                      <li class="privacy__item">طلب حذف بياناتك الشخصية.</li>
+                      <li class="privacy__item">الاعتراض على معالجة بياناتك.</li>
+                    </ul>
+
+                    <p class="privacy__text privacy__text--down">
+                      للاستفادة من هذه الحقوق، يرجى الاتصال بنا على العنوان التالي: <a href="mailto:info@zenovpn.com"
+                        class="accent-link">
+                        info@zenovpn.com.
+                      </a>
+                    </p>
+                  </section>
+
+                  <!-- 9. Children's Privacy -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      9. خصوصية الأطفال
+                    </h3>
+
+                    <p class="privacy__descr">
+                      خدماتنا غير مخصصة للاستخدام من قبل الأشخاص الذين تقل أعمارهم عن 18 عامًا. نحن لا نجمع معلومات شخصية من الأطفال عن قصد.
+                    </p>
+                  </section>
+
+                  <!-- 10. Changes To This Policy -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      10. التغييرات في هذه السياسة
+                    </h3>
+
+                    <p class="privacy__descr">
+                      قد نقوم من وقت لآخر بتحديث سياسة الخصوصية هذه. سنقوم بإخطارك بأي تغييرات من خلال نشر السياسة الجديدة على موقعنا
+                      الإلكتروني.
+                    </p>
+                  </section>
+
+                  <!-- 11. Contact Us -->
+                  <section class="privacy__section">
+                    <h3 class="privacy__title">
+                      11. اتصل بنا
+                    </h3>
+
+                    <p class="privacy__descr">
+                      إذا كان لديك أي أسئلة بخصوص سياسة الخصوصية هذه، يرجى الاتصال بنا على العنوان التالي: <a href="mailto:info@zenovpn.com" class="accent-link">
+                        info@zenovpn.com.
+                      </a>
+                    </p>
+                  </section>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+    <footer class="footer">
+  <div class="container">
+    <nav class="footer__menu">
+      <a class="logo" href="#hero">
+          <img class="logo__img" src="@@extraDots/images/logo.svg" alt="@@altLogo" width="146" height="58">
+      </a>
+      <ul class="footer__menu-list">
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="@@extraDots/terms">
+              @@termsText
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="@@extraDots/privacy">
+              @@privacyText
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="@@extraDots/refund">
+              @@refundText
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="@@extraDots/about">
+              @@aboutText
+            </a>
+          </li>
+      </ul>
+      </nav>
+    <address class="footer__info">
+      <div class="footer__contacts">
+        <a class="footer__contact" href="mailto:@@email">
+          <span class="footer__contact-icon">
+            <svg class="icon" width="20" height="15">
+              <use href="@@extraDots/images/sprite.svg#email"></use>
+            </svg>
+          </span>
+          @@email
+        </a>
+        <a class="footer__contact" href="@@telegramHref">
+          <div class="footer__contact-icon">
+            <svg class="icon" width="22" height="22">
+              <use href="@@extraDots/images/sprite.svg#telegram"></use>
+            </svg>
+          </div>
+          @@telegramText
+        </a>
+      </div>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="@@telegramHref" target="_blank">
+            <svg class="icon" width="22" height="22">
+              <use href="@@extraDots/images/sprite.svg#telegram"></use>
+            </svg>
+            <span class="visually-hidden">
+              @@telegramHidden
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="@@instagramHref" target="_blank">
+            <svg class="icon" width="22" height="22">
+              <use href="@@extraDots/images/sprite.svg#instagram"></use>
+            </svg>
+            <span class="visually-hidden">
+              @@instagramHidden
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link footer__social-link--transparent" href="@@xHref" target="_blank">
+            <svg class="icon" width="40" height="40">
+              <use href="@@extraDots/images/sprite.svg#twitter"></use>
+            </svg>
+            <span class="visually-hidden">
+              @@xHidden
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="@@facebookHref" target="_blank">
+            <svg class="icon" width="12" height="22">
+              <use href="@@extraDots/images/sprite.svg#facebook"></use>
+            </svg>
+            <span class="visually-hidden">
+              @@facebookHidden
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+            <a class="footer__social-link" href="@@tiktokHref" target="_blank">
+              <svg class="icon" width="18" height="20">
+                <use href="@@extraDots/images/sprite.svg#tiktok"></use>
+              </svg>
+              <span class="visually-hidden">
+                @@tiktokHidden
+              </span>
+            </a>
+        </li>
+      </ul>
+    </address>
+      <p class="footer__copyright">
+        @@copyright
+      </p>
+  </div>
+</footer>
+  <script src="../js/main.min.js"></script>
+
+</body>
+
+</html>

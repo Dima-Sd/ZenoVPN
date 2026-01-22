@@ -1,0 +1,315 @@
+.top {
+  padding: 24px 0 32px;
+}
+
+.legal {
+  padding-bottom: 112px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -78px;
+    transform: translateX(-50%);
+    max-width: 1440px;
+    height: 629px;
+    width: 100%;
+    z-index: -999;
+  }
+
+  &::before {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg/futuristic-valley.jpg");
+
+    @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+      background-image: url("../images/bg/futuristic-valley.avif");
+    }
+  }
+
+  &::after {
+    max-width: 1442px;
+    background: linear-gradient(180deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(0deg, rgba(11, 18, 23, 0) 0%, #0B1217 100%), linear-gradient(90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%), linear-gradient(-90deg, rgba(11, 18, 23, 0) 79%, #0B1217 100%);
+  }
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  &__tab-nav {
+    max-width: 263px;
+    width: 100%;
+    flex: 0 0 263px;
+    position: relative;
+    padding: 24px;
+    border: 1px solid transparent;
+
+    &::after {
+      background: linear-gradient(52.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(231.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+    }
+  }
+
+  &__tab-nav-title {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    margin-bottom: 16px;
+    letter-spacing: normal;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $light-opacity-06;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__tabs-content {
+    max-width: 785px;
+    width: 100%;
+  }
+}
+
+
+.tab-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  &__btn {
+    background-color: transparent;
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid transparent;
+    outline-offset: 5px;
+    transition: color 0.3s, border-color 0.3s, outline 0.3s;
+    position: relative;
+    padding-bottom: 1px;
+
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $accent;
+      border-color: $accent;
+    }
+
+    &:focus {
+      border-radius: 3px;
+      outline: 1px solid $accent;
+    }
+
+    &--active {
+      color: $accent;
+      font-weight: 700;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        height: 24px;
+        width: 4px;
+        background-color: $accent;
+        top: 50%;
+        transform: translateY(-50%)
+      }
+
+      &::before {
+        left: -24px;
+        border-radius: 0 2px 2px 0;
+      }
+
+      &::after {
+        right: -24px;
+        border-radius: 2px 0 0 2px;
+      }
+    }
+  }
+}
+
+.terms,
+.privacy,
+.refund,
+.aboutUs {
+  &__section:not(:last-child) {
+    padding-bottom: 32px;
+  }
+
+  &__main-title {
+    font-size: 56px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 16px;
+    letter-spacing: normal;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 500;
+
+    &--pt {
+      padding-top: 32px;
+    }
+  }
+
+  &__descr {
+    font-size: 18px;
+
+    &--mb {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 16px;
+
+    &--down {
+      margin-top: 16px;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--mb0 {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    padding-left: 38px;
+    position: relative;
+    margin-bottom: 12px;
+
+    &:first-child {
+      padding-top: 6px;
+
+      &::before {
+        top: 11px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      left: 15px;
+      top: 5px;
+      background-color: $accent;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .legal {
+    &::before {
+      background-image: url("../images/bg/futuristic-valley-tab.jpg");
+
+      @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+        background-image: url("../images/bg/futuristic-valley-tab.avif");
+      }
+    }
+
+    &__inner {
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    &__tab-nav-title {
+      font-size: 24px;
+    }
+
+    &__tab-nav {
+      max-width: 100%;
+      flex: 1 1 auto;
+
+      &::after {
+        background: linear-gradient(22.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(205.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+      }
+    }
+
+    &__tabs-content {
+      max-width: 100%;
+    }
+  }
+
+  .terms,
+  .privacy,
+  .refund,
+  .aboutUs {
+
+    &__subtitle {
+      font-size: 24px;
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .top {
+    padding: 12px 0 24px;
+  }
+
+  .legal {
+    padding-bottom: 80px;
+
+    &::before {
+      background-image: url("../images/bg/futuristic-valley-mob.jpg");
+
+      @supports (background-image: url("data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZt")) {
+        background-image: url("../images/bg/futuristic-valley-mob.avif");
+      }
+    }
+
+    &__tab-nav {
+      &::after {
+        background: linear-gradient(44.35deg, rgba(255, 255, 255, 0) 70.32%, rgba(255, 255, 255, 0.6) 94.79%), linear-gradient(218.43deg, rgba(255, 255, 255, 0) 65.44%, rgba(255, 255, 255, 0.6) 100%);
+      }
+    }
+  }
+
+  .terms,
+  .privacy,
+  .refund,
+  .aboutUs {
+    &__main-title {
+      font-size: 40px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

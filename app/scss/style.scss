@@ -3,9 +3,10 @@
 @import "vars";
 @import "global";
 
-
 @import "./global/go-top";
 @import "./global/cookie";
+@import "./global/breadcrumbs";
+@import "./global/breadcrumbs-rtl";
 
 @import "global/header";
 @import "./index/hero";
@@ -23,5 +24,9 @@
 @import "./index/faq";
 @import "./index/ready";
 @import "./index/indexRtl";
+
+@import "./global/go-top";
+@import "./legal-pages/legal";
+@import "./legal-pages/legal-rtl";
 
 
