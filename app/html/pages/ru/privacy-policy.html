@@ -11,7 +11,15 @@
 })
 
 <body class="body">
-  @@include('../../components/header.html')
+  @@include('../../components/header.html', {
+  "extraDots": "..",
+  "altLogo": "Логотип ZenoVPN",
+  "currentRu": "current",
+  "langHrefAr": "../ar/privacy-policy.html",
+  "langHrefEn": "../privacy-policy.html",
+  "srcLang": "Ru",
+  "langText": "Ру",
+  })
   <main class="main">
     <section class="legal">
       <div class="container">
@@ -287,7 +295,34 @@
       </div>
     </section>
   </main>
-  @@include('../../components/footer.html')
+  @@include('../../components/footer.html', {
+"extraDots": "..",
+"footerAltlogo": "Логотип ZenoVPN",
+
+"termsText": "Условия и положения",
+"privacyText": "Политика конфиденциальности",
+"refundText": "Политика возврата",
+"aboutText": "О нас",
+
+"email": "info@zenovpn.com",
+"telegramHref": "https://t.me/ZenoVPNBot",
+"telegramText": "@ZenoVPNBot",
+
+"telegramHidden": "Перейти в Telegram-канал ZenoVPN",
+"instagramHref": "https://t.me/ZenoVPNBot",
+"instagramHidden": "Перейти на страницу ZenoVPN в Instagram",
+
+"xHref": "https://t.me/ZenoVPNBot",
+"xHidden": "Перейти в X-канал ZenoVPN",
+
+"facebookHref": "https://t.me/ZenoVPNBot",
+"facebookHidden": "Перейти на страницу ZenoVPN в Facebook",
+
+"tiktokHref": "https://t.me/ZenoVPNBot",
+"tiktokHidden": "Перейти на страницу ZenoVPN в TikTok",
+
+"copyright": "Авторские права: © 2025 Zeno VPN. Все права защищены."
+})
   <script src="../js/main.min.js"></script>
 </body>
 

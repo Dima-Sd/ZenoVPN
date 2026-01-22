@@ -11,7 +11,15 @@
 })
 
 <body class="body">
-    @@include('../../components/header.html')
+  @@include('../../components/header.html', {
+  "extraDots": "..",
+  "altLogo": "شعار ZenoVPN",
+  "currentAr": "current",
+  "langHrefRu": "../ru/privacy-policy.html",
+  "langHrefEn": "../privacy-policy.html",
+  "srcLang": "Ar",
+  "langText": "عر"
+  })
   <main class="main">
     <section class="legal">
       <div class="container">
