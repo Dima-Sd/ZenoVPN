@@ -9,6 +9,12 @@ body {
     font-style: normal;
 }
 
+.body {
+    .main::before {
+        display: none;
+    }
+}
+
 .container {
     max-width: 1252px;
     padding: 0 32px;
@@ -216,9 +222,10 @@ body {
 }
 
 @media(max-width:576px) {
-  .container {
-    padding: 0 15px;
-  }
+    .container {
+        padding: 0 15px;
+    }
+
     .main::before {
         background-image: url('../images/linear-grid-mob.svg');
     }
