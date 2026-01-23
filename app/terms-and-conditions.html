@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Fast & Secure ZenoVPN for Online Privacy
+    </title>
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ZenoVPN" />
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+
+    <!-- SEO -->
+    <meta name="description" content="ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions, and enjoy true online freedom worldwide.">
+    <link rel="canonical" href="https://zenovpn.com/">
+
+    <!-- cryptomus -->
+    <meta name="cryptomus" content="8e67b6b7">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fast & Secure ZenoVPN for Online Privacy">
+    <meta property="og:description" content="ZenoVPN provides fast, secure, and private internet access. Protect your data, bypass restrictions, and enjoy true online freedom worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenovpn.com/">
+    <meta property="og:site_name" content="ZenoVPN">
+    <meta property="og:image" content="https://zenovpn.com/images/preview.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fast & Secure Online Privacy with ZenoVPN">
+    <meta name="twitter:description" content="Protect your privacy, browse securely, and access global content with ZenoVPN. High speed, strong encryption and no limits.">
+    <meta name="twitter:image" content="https://zenovpn.com/images/preview.jpg">
+
+    <!-- Language -->
+    <link rel="alternate" hreflang="en" href="https://zenovpn.com/">
+    <link rel="alternate" hreflang="ru" href="https://zenovpn.com/ru/">
+    <link rel="alternate" hreflang="ar" href="https://zenovpn.com/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://zenovpn.com/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="body">
+  <header class="header" data-header>
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="@@logoHref">
+                <img class="logo__img header__logo-img" src="./images/logo.svg" alt="ZenoVPN Logo" width="146" height="58">
+                <img class="logo__img header__logo-img--small" src="./images/logo-mob.svg" alt="ZenoVPN Logo" width="47" height="58">
+            </a>
+            <button class="mobile-button blur-plate" type="button" data-menu-button>
+                <span class="visually-hidden">
+                    @@mobileButtonAccessibility
+                </span>
+                <span class="mobile-button__line">
+                </span>
+            </button>
+            <ul class="menu__list " data-menu>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        How it Work’s
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./#pricing">
+                        Pricing
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./#support">
+                        Support
+                    </a>
+                </li>
+            </ul>
+            <div class="user-menu">
+                <div class="switcher-lang">
+                    <button class="switcher-lang__btn blur-plate" data-lang-switcher type="button">
+                        <svg width="24" height="24">
+                            <use href="./images/sprite.svg#flagEn"></use>
+                        </svg>
+                        <span class="switcher-lang__text">
+                            En          
+                        </span> 
+                        <svg class="switcher-lang__arrow" width="18" height="18">
+                            <use href="./images/sprite.svg#angle-down"></use>
+                        </svg>
+                    </button>
+                    <ul class="switcher-lang__list blur-plate" data-langs-list>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link current" href="@@langHrefEn">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#flagEn"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    En
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link currentAr" href="./ar/terms-and-conditions.html">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#flagAr"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    عر                  
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link currentRu" href="./ru/terms-and-conditions.html">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#flagRu"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    Ру
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="cta header__cta" href="https://t.me/ZenoVPNBot" target="_blank">
+    <span class="cta__text header__cta-text">
+        Open VPN
+    </span>
+    <span class="cta__icon header__cta-icon">
+        <svg class="icon" width="21" height="18">
+            <use href="./images/sprite.svg#telegramSmall"></use>
+        </svg>
+    </span>
+</a>
+            </div>
+        </nav>
+    </div>
+</header>
+  <main class="main">
+    <section class="legal">
+      <div class="container">
+        <div class="top">
+          <div class="breadcrumbs">
+  <ul class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="./">
+        Home
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="./terms-and-conditions.html">
+        Terms And Conditions
+      </a>
+    </li>
+  </ul>
+</div>
+        </div>
+        <div class="legal__inner">
+          <div class="legal__tab-nav blur-plate">
+            <h1 class="legal__tab-nav-title">Terms and Policy</h1>
+            <div class="tab-nav">
+              <a class="tab-nav__btn tab-nav__btn--active" href="./terms-and-conditions.html">
+                <span>Terms and Conditions</span>
+              </a>
+              <a class="tab-nav__btn" href="./privacy-policy.html" rel="noopener noreferrer">
+                <span>Privacy Policy</span>
+              </a>
+              <a class="tab-nav__btn" href="./refund-policy.html" rel="noopener noreferrer">
+                <span>Refund Policy</span>
+              </a>
+              <a class="tab-nav__btn" href="./about-us.html" rel="noopener noreferrer">
+                <span>About Us</span>
+              </a>
+            </div>
+          </div>
+          <div class="legal__tabs-content tab">
+            <!-- Terms & Conditions  -->
+            <div class="tab__item">
+              <div class="tab__inner">
+                <div class="terms">
+                  <h2 class="terms__main-title">Terms & Conditions</h2>
+                  <!-- 1. Introduction -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      1. Introduction
+                    </h3>
+            
+                    <p class="terms__descr ">
+                      Welcome to ZenoVPN! These Terms & Conditions (“Terms”) govern your use of our website,
+                      Telegram bot, and VPN
+                      services (collectively, the “Services”), which are provided by ZenoVPN (“we”, “us”, or “our”).
+                      By registering for or
+                      using our Services, you agree to be bound by these Terms in their entirety.
+                      <br><br>
+                      Our Privacy Policy is an integral part of these Terms. Please read it carefully.
+                    </p>
+                  </section>
+            
+                  <!-- 2. User Account -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      2. User Account
+                    </h3>
+            
+                    <p class="terms__descr">
+                      To use our Services, you must create an account through our Telegram bot. You are responsible for
+                      maintaining the
+                      confidentiality of your account and for all activities that occur under your account. You agree to
+                      provide accurate and
+                      complete information when creating your account.
+                      <br><br>
+                      Your account is for your personal use only. Sharing your account with others is strictly
+                      prohibited and may result in the termination of your account.
+                    </p>
+                  </section>
+            
+                  <!-- 3. Services -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      3. Services
+                    </h3>
+            
+                    <p class="terms__descr">
+                      ZenoVPN provides a virtual private network (VPN) service using the VLESS protocol. We grant
+                      you a limited,
+                      non-exclusive, revocable license to use our Services in accordance with these Terms.
+                    </p>
+                  </section>
+            
+                  <!-- 4. Payments -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      4. Payments, Subscriptions, and Refunds
+                    </h3>
+            
+                    <h4 class="terms__subtitle">
+                      4.1. Subscriptions
+                    </h4>
+                    <p class="terms__descr terms__descr--mb">
+                      Our paid Services are available on a subscription basis. You can choose the subscription period
+                      and payment method
+                      through our Telegram bot. Subscriptions will automatically renew at the end of each service period
+                      unless you cancel the
+                      auto-renewal.
+                    </p>
+            
+                    <h4 class="terms__subtitle">
+                      4.2. Renewals
+                    </h4>
+                    <p class="terms__descr terms__descr--mb">
+                      We accept payments through various payment processors, including Cryptomus. By providing a payment
+                      method, you authorize
+                      us to charge you for the selected Services.
+                    </p>
+            
+                    <h4 class="terms__subtitle">
+                      4.3. Refund Policy
+                    </h4>
+                    <p class="terms__descr terms__descr--mb">
+                      We offer a 14-day money-back guarantee for your initial purchase. If you are not satisfied with
+                      our Services, you may
+                      request a refund within 14 days of your first payment. Refund requests are subject to approval by
+                      our support team and
+                      are reviewed on a case-by-case basis.
+                    </p>
+                    <p class="terms__descr">
+                      Refunds are not available for payments made with certain prepaid cards or gift cards. For
+                      cryptocurrency payments, the
+                      refund will be processed in the same cryptocurrency, equivalent to the USD value at the time of
+                      purchase. Any
+                      transaction fees associated with the refund are your responsibility.
+                    </p>
+                  </section>
+            
+                  <!-- 5. Acceptable Use -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      5. Acceptable Use Policy
+                    </h3>
+            
+                    <p class="terms__descr terms__descr--mb">
+                      You agree not to use our Services for any illegal or prohibited activities, including but not
+                      limited to:
+                    </p>
+            
+                    <ul class="terms__list">
+                      <li class="terms__item">Sending spam or unsolicited emails.
+                      </li>
+                      <li class="terms__item">Engaging in any form of hacking,
+                        cracking, or network
+                        attacks.</li>
+                      <li class="terms__item">Distributing malware, viruses, or
+                        other malicious
+                        software.</li>
+                      <li class="terms__item">Infringing on the intellectual
+                        property rights of
+                        others.</li>
+                      <li class="terms__item">Transmitting or distributing any
+                        content that is
+                        illegal, abusive, or harassing.</li>
+                      <li class="terms__item">Accessing or distributing child
+                        pornography or other
+                        illicit materials.</li>
+                    </ul>
+                  </section>
+            
+                  <!-- 6. No-Logs Policy -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      6. No-Logs Policy
+                    </h3>
+            
+                    <p class="terms__descr">
+                      We are committed to your privacy. We do not monitor, log, or store any of your online activity, including browsing
+                      history, traffic destination, data content, or DNS queries. For more details, please see our Privacy Policy.
+                    </p>
+                  </section>
+            
+                  <!-- 7. Disclaimer of Warranties -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      7. Disclaimer of Warranties
+                    </h3>
+            
+                    <p class="terms__descr">
+                      Our Services are provided on an “as is” and “as available” basis. We do not warrant that our
+                      Services will be
+                      uninterrupted, error-free, or completely secure. You use our Services at your own risk.
+                    </p>
+                  </section>
+            
+                  <!-- 8. Limitation of Liability -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      8. Limitation of Liability
+                    </h3>
+            
+                    <p class="terms__descr">
+                      To the fullest extent permitted by law, ZenoVPN shall not be liable for any direct, indirect,
+                      incidental, special,
+                      or consequential damages arising out of your use of our Services.
+                    </p>
+                  </section>
+            
+                  <!-- 9. General Terms -->
+                  <section class="terms__section">
+                    <h3 class="terms__title">
+                      9. General Terms
+                    </h3>
+            
+                    <!-- 9.1 Amendments -->
+                    <h4 class="terms__subtitle">
+                      9.1. Amendments
+                    </h4>
+                    <p class="terms__descr terms__descr--mb">
+                      We may amend these Terms at any time by posting the updated version on our website. Your continued
+                      use of the Services
+                      after any changes constitutes your acceptance of the new Terms.
+                    </p>
+            
+                    <!-- 9.2 Governing Law -->
+                    <h4 class="terms__subtitle">
+                      9.2. Governing Law
+                    </h4>
+                    <p class="terms__descr terms__descr--mb">
+                      These Terms shall be governed by and construed in accordance with the laws of
+                      [YourJurisdiction].
+                    </p>
+            
+                    <!-- 9.3 Contact Us -->
+                    <h4 class="terms__subtitle">
+                      9.3. Contact Us
+                    </h4>
+                    <p class="terms__descr">
+                      If you have any questions about these Terms, please contact us at <a href="mailto:info@zenovpn.com"
+                        class="accent-link">
+                        info@zenovpn.com
+                      </a>.
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+  <div class="container">
+    <nav class="footer__menu">
+      <a class="logo" href="#hero">
+          <img class="logo__img" src="./images/logo.svg" alt="@@altLogo" width="146" height="58">
+      </a>
+      <ul class="footer__menu-list">
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="./terms-and-conditions.html">
+              Terms and Conditions
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="./privacy-policy.html">
+              Privacy Policy
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="./refund-policy.html">
+              Refund Policy
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="./about-us.html">
+              About Us
+            </a>
+          </li>
+      </ul>
+      </nav>
+    <address class="footer__info">
+      <div class="footer__contacts">
+        <a class="footer__contact" href="mailto:info@zenovpn.com">
+          <span class="footer__contact-icon">
+            <svg class="icon" width="20" height="15">
+              <use href="./images/sprite.svg#email"></use>
+            </svg>
+          </span>
+          info@zenovpn.com
+        </a>
+        <a class="footer__contact" href="https://t.me/ZenoVPNBot">
+          <div class="footer__contact-icon">
+            <svg class="icon" width="22" height="22">
+              <use href="./images/sprite.svg#telegram"></use>
+            </svg>
+          </div>
+          @ZenoVPNBot
+        </a>
+      </div>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/ZenoVPNBot" target="_blank">
+            <svg class="icon" width="22" height="22">
+              <use href="./images/sprite.svg#telegram"></use>
+            </svg>
+            <span class="visually-hidden">
+              Go to ZenoVPN Telegram channel
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/ZenoVPNBot" target="_blank">
+            <svg class="icon" width="22" height="22">
+              <use href="./images/sprite.svg#instagram"></use>
+            </svg>
+            <span class="visually-hidden">
+              Go to ZenoVPN Instagram page
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link footer__social-link--transparent" href="https://t.me/ZenoVPNBot" target="_blank">
+            <svg class="icon" width="40" height="40">
+              <use href="./images/sprite.svg#twitter"></use>
+            </svg>
+            <span class="visually-hidden">
+              Go to ZenoVPN X channel
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/ZenoVPNBot" target="_blank">
+            <svg class="icon" width="12" height="22">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+            <span class="visually-hidden">
+              Go to ZenoVPN Facebook page
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+            <a class="footer__social-link" href="https://t.me/ZenoVPNBot" target="_blank">
+              <svg class="icon" width="18" height="20">
+                <use href="./images/sprite.svg#tiktok"></use>
+              </svg>
+              <span class="visually-hidden">
+                Go to ZenoVPN TikTok page
+              </span>
+            </a>
+        </li>
+      </ul>
+    </address>
+      <p class="footer__copyright">
+        Copyright: © 2025 Zeno VPN. All rights reserved.
+      </p>
+  </div>
+</footer>
+  <script src="./js/main.min.js"></script>
+</body>
+
+</html>
