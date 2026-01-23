@@ -20,6 +20,7 @@
   "langHrefRu": "./ru/",
   "srcLang": "En",
   "langText": "En",
+  "mobileButtonAccessibility": "Open navigation menu / Close navigation menu",
 
   "howItWorksHref": "#steps",
   "pricingHref": "#pricing",
@@ -447,6 +448,7 @@
             "title": "Semi-annual",
             "period": "6 months",
             "price": "$20",
+            "badgePopularText": "Most Popular",
             "showDiscount": true,
             "showPopular": true
             })
@@ -470,7 +472,6 @@
           <h2 class="reviews__title title">What Our <span class="accent">Customers Say</span></h2>
           <div class="reviews__inner">
             <div class="reviews__slider">
-              <span class="visually-hidden">carousel</span>
               <div class="swiper reviews-slider">
                 <div class="swiper-wrapper">
                   <!-- Slide -->
@@ -1038,22 +1039,26 @@
         <ul class="apps__list">
           <li class="apps__item blur-plate">
             @@include('../components/app-card.html', {
-            "title": "Streisand"
+            "title": "Streisand",
+            "extraDots": "."
             })
           </li>
           <li class="apps__item blur-plate">
             @@include('../components/app-card.html', {
-            "title": "Happ Plus"
+            "title": "Happ Plus",
+            "extraDots": "."
             })
           </li>
           <li class="apps__item blur-plate">
             @@include('../components/app-card.html', {
-            "title": "v2rayTUN"
+            "title": "v2rayTUN",
+            "extraDots": "."
             })
           </li>
           <li class="apps__item blur-plate">
             @@include('../components/app-card.html', {
-            "title": "AmneziaWG"
+            "title": "AmneziaWG",
+            "extraDots": "."
             })
           </li>
         </ul>

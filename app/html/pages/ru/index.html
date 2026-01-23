@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 @@include('../../components/head.html', {
 "title": "ZenoVPN — быстрый и безопасный VPN для приватности в интернете",
 "metaDescription": "ZenoVPN обеспечивает быстрый, безопасный и приватный доступ в интернет. Защитите данные, обходите ограничения и пользуйтесь свободным интернетом по всему миру.",
@@ -10,25 +11,1173 @@
 })
 
 <body>
-  <main>
-    <section class="ready">
+  @@include('../../components/header.html', {
+  "altLogo": "Логотип ZenoVPN",
+  "logoHref": "#",
+  "currentRu": "current",
+  "langHrefAr": "../ar/",
+  "langHrefEn": "../",
+  "srcLang": "Ru",
+  "langText": "Ру",
+  "mobileButtonAccessibility": "Открыть меню навигации / Закрыть меню навигации",
+  "howItWorksHref": "#steps",
+  "pricingHref": "#pricing",
+  "supportHref": "#support",
+  "howItWorks": "Как это работает",
+  "pricing": "Цены",
+  "support": "Поддержка"
+  })
+  <main class="main">
+    <h1 class="visually-hidden">
+      ZenoVPN — безопасный и приватный VPN для неограниченного доступа к интернету
+    </h1>
+    <section class="hero" id="hero">
+      <div class="container">
+        <h2 class="visually-hidden">
+          Безопасный и быстрый VPN для свободного доступа к интернету
+        </h2>
+        <div class="hero__inner">
+          <div class="hero__wrap">
+            <div class="hero__statement">
+              <span class="hero__statement-title">
+                  Свобода мысли
+              </span>
+              <p class="hero__statement-text">
+                Мы верим в силу свободного мышления. В мире цифровой цензуры и слежки Zeno VPN помогает вам думать, исследовать и оставаться на связи без границ.
+              </p>
+            </div>
+            <div class="hero__headline">
+              <span class="hero__title">
+                Думай
+                <span class="accent">
+                  Свободно
+                </span>
+              </span>
+              <p class="hero__text">
+                Ваша цифровая философия для неограниченного доступа к интернету на всех ваших устройствах.
+              </p>
+            @@include('../../components/cta.html', {
+              "extraDots": "..",
+              "ctaClass": "hero__cta",
+              "ctaText": "Начать",
+              "ctaTextClass": "hero__cta-text",
+              "ctaIconClass": "hero__cta-icon",
+              "ctaWidth": "17",
+              "ctaHeight": "15",
+              "ctaIcon": "arrow-right"
+            })
+            </div>
+          </div>
+          <ul class="hero__advantages">
+            <li class="hero__item hero__item--speed blur-plate">
+              <h3 class="hero__subtitle">
+                Высокая скорость
+              </h3>
+              <p class="hero__description">
+                Молниеносное соединение для стриминга, игр и загрузок.
+              </p>
+            </li>
+            <li class="hero__item hero__item--privacy blur-plate">
+              <h3 class="hero__subtitle">
+                Конфиденциальность прежде всего
+              </h3>
+              <p class="hero__description">
+                Шифрование военного уровня и строгая политика no-logs для защиты ваших данных.
+              </p>
+            </li>
+            <li class="hero__item hero__item--global blur-plate">
+              <h3 class="hero__subtitle">
+                Глобальный доступ
+              </h3>
+              <p class="hero__description">
+                Доступ к любому контенту по всему миру, обход цензуры и гео-ограничений.
+              </p>
+            </li>
+            <li class="hero__item hero__item--unlimited blur-plate">
+              <h3 class="hero__subtitle">
+                Неограниченные устройства
+              </h3>
+              <p class="hero__description">
+                Защищайте все устройства одной подпиской: телефон, ноутбук, планшет, ПК.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="steps section" id="steps">
+      <div class="container steps__container">
+        <h2 class="steps__title title">
+          Начните в <span class="accent">3 простых</span> шага
+        </h2>
+        <ul class="steps__list">
+          <li class="steps__item blur-plate">
+            <div class="steps__info">
+              <h3 class="steps__subtitle">
+                Откройте Telegram
+              </h3>
+              <p class="steps__description">
+                Начните чат с <a class="steps__link accent" href="https://t.me/ZenoVPNBot">@ZenoVPNBot</a>
+              </p>
+            </div>
+            <span class="steps__number blur-plate">
+              <span class="steps__number-box blur-plate">
+                1
+              </span>
+            </span>
+          </li>
+          <li class="steps__item blur-plate">
+            <div class="steps__info">
+              <h3 class="steps__subtitle">
+                Выберите план
+              </h3>
+              <p class="steps__description">
+                Подберите подписку под ваши задачи
+              </p>
+            </div>
+            <span class="steps__number blur-plate">
+              <span class="steps__number-box blur-plate">
+                2
+              </span>
+            </span>
+          </li>
+          <li class="steps__item blur-plate">
+            <div class="steps__info">
+              <h3 class="steps__subtitle">
+                Подключитесь и думайте свободно
+              </h3>
+              <p class="steps__description">
+                Получите VPN-ключ и подключитесь мгновенно
+              </p>
+            </div>
+            <span class="steps__number blur-plate">
+              <span class="steps__number-box blur-plate">
+                3
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="metrics section">
+      <div class="container">
+        <h2 class="visually-hidden">
+          Производительность ZenoVPN в реальном времени и надежность соединения
+        </h2>
+        <div class="metrics__header">
+          <h2 class="metrics__title title">
+            <span class="accent">Производительность</span> в реальном времени
+          </h2>
+          <ul class="metrics__list">
+            <li class="metrics__item">
+              <span class="metrics__item-title">Безлимит</span>
+              <span class="metrics__item-subtitle">Трафик</span>
+            </li>
+            <li class="metrics__item">
+              <span class="metrics__item-title">Без</span>
+              <span class="metrics__item-subtitle">Ограничений скорости</span>
+            </li>
+            <li class="metrics__item">
+              <span class="metrics__item-title metrics__item-num"><span data-activeNum
+                  data-count-num="99.9">99.9</span>%</span>
+              <span class="metrics__item-subtitle">Аптайм</span>
+            </li>
+            <li class="metrics__item">
+              <span class="metrics__item-title">
+                <span data-activeNum data-count-num="10">10</span>Gbps
+              </span>
+              <span class="metrics__item-subtitle">Макс. скорость</span>
+            </li>
+          </ul>
+        </div>
+        <div class="metrics__cards">
+          <div class="metrics__card metrics__card--upload">
+            <div class="metrics__card-inner metrics__card-inner--upload">
+              <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
+                <div class="metrics__card-icon-sub-wrap blur-plate">
+                  <div class="metrics__card-icon-box">
+                    <svg class="icon" width="20" height="20">
+                      <use href="../images/sprite.svg#upload"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="metric-card metric-card--upload blur-plate">
+                <div class="metric-card__info">
+                  <h3 class="metric-card__label">Отдача</h3>
+                  <span class="metric-card__note">Пик: <span data-activeNum data-count-num="500">500</span> Mbps</span>
+                </div>
+                <div class="metric-card__progress-box metric-card__progress-box--upload">
+                  <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M224.751 166.693C220.983 179.136 214.801 190.715 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.316 48.8463 196.173 42.7122 184.71C36.5781 173.248 32.7619 160.689 31.4814 147.751C30.2009 134.814 31.4811 121.75 35.2491 109.308C39.0171 96.8647 45.199 85.2858 53.4418 75.2321C61.6847 65.1783 71.827 56.8465 83.2898 50.7125C94.7526 44.5784 107.311 40.7621 120.249 39.4816C133.187 38.2011 146.25 39.4814 158.693 43.2494C171.136 47.0173 182.714 53.1992 192.768 61.4421C202.822 69.6849 211.154 79.8273 217.288 91.2901C223.422 102.753 227.238 115.312 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
+                      stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
+                    <g filter="url(#filter0_d_0_2)">
+                      <path class="metric-card__progress-bar"
+                        d="M31 138C31 114.361 39.4587 91.5021 54.8464 73.5569C70.2342 55.6118 91.5352 43.765 114.898 40.1589C138.26 36.5528 162.142 41.4254 182.225 53.8956C202.307 66.3657 217.265 85.6103 224.392 108.149"
+                        stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_0_2" x="-8" y="0" width="271.395" height="177" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="16" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="metric-card__value">
+                  <span class="metric-card__value-num" data-activeNum data-count-num="420">420</span>
+                  <p class="metric-card__value-name">Mbps</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="metrics__card metrics__card--download">
+            <div class="metrics__card-inner metrics__card-inner--download">
+              <div class="metrics__card-icon metrics__card-icon--download blur-plate">
+                <div class="metrics__card-icon-sub-wrap metrics__card-icon-sub-wrap--download blur-plate">
+                  <div class="metrics__card-icon-box metrics__card-icon-box--download">
+                    <svg class="icon" width="20" height="20">
+                      <use href="../images/sprite.svg#download"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="metric-card metric-card--download blur-plate">
+                <div class="metric-card__info metric-card__info--download">
+                  <h3 class="metric-card__label metric-card__label--download">Загрузка</h3>
+                  <span class="metric-card__note">Пик: <span data-activeNum data-count-num="1000">1000</span>
+                    Mbps</span>
+                </div>
+                <div class="metric-card__progress-box metric-card__progress-box--download">
+                  <svg class="metric-card__progress-line" xmlns="http://www.w3.org/2000/svg" width="371" height="188"
+                    viewBox="0 0 371 188" fill="none">
+                    <path stroke="#fff" stroke-linecap="round" stroke-opacity=".06" stroke-width="20"
+                      d="M327.734 230.315a146.01 146.01 0 0 1-70.848 86.413 146.003 146.003 0 0 1-208.62-171.042 146 146 0 1 1 279.468 84.629h0Z" />
+                    <g filter="url(#a)">
+                      <path class="metric-card__progress-bar" stroke="#FFD700" stroke-linecap="round" stroke-width="20"
+                        d="M42 188a146 146 0 0 1 286.403-40.039" />
+                    </g>
+                    <defs>
+                      <filter id="a" width="370.405" height="230" x="0" y="0" color-interpolation-filters="sRGB"
+                        filterUnits="userSpaceOnUse">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="16" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                        <feBlend in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="metric-card__value">
+                  <span class="metric-card__value-num" data-activeNum data-count-num="850">850</span>
+                  <p class="metric-card__value-name">Mbps</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="metrics__card metrics__card--latency">
+            <div class="metrics__card-inner metrics__card-inner--latency">
+              <div class="metrics__card-icon metrics__card-icon--upload blur-plate">
+                <div class="metrics__card-icon-sub-wrap blur-plate">
+                  <div class="metrics__card-icon-box">
+                    <svg class="icon" width="20" height="20">
+                      <use href="../images/sprite.svg#latency"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="metric-card metric-card--latency blur-plate">
+                <div class="metric-card__info">
+                  <h3 class="metric-card__label">Задержка</h3>
+                  <span class="metric-card__note">Отличное соединение</span>
+                </div>
+                <div class="metric-card__progress-box metric-card__progress-box--latency">
+                  <svg class="metric-card__progress-line" width="260" height="138" viewBox="0 0 260 138" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M224.751 166.693C220.983 179.136 214.801 190.714 206.558 200.768C198.315 210.822 188.173 219.154 176.71 225.288C165.247 231.422 152.689 235.238 139.751 236.519C126.813 237.799 113.75 236.519 101.307 232.751C88.8645 228.983 77.2856 222.801 67.2318 214.558C57.1781 206.315 48.8463 196.173 42.7122 184.71C36.5781 173.247 32.7619 160.689 31.4814 147.751C30.2009 134.813 31.4811 121.75 35.2491 109.307C39.0171 96.8644 45.199 85.2856 53.4418 75.2318C61.6847 65.1781 71.827 56.8463 83.2898 50.7122C94.7526 44.5781 107.311 40.7619 120.249 39.4814C133.187 38.2009 146.25 39.4811 158.693 43.2491C171.136 47.0171 182.714 53.199 192.768 61.4418C202.822 69.6847 211.154 79.827 217.288 91.2898C223.422 102.753 227.238 115.311 228.519 128.249C229.799 141.187 228.519 154.25 224.751 166.693L224.751 166.693Z"
+                      stroke="white" stroke-opacity="0.06" stroke-width="14" stroke-linecap="round" />
+                    <g filter="url(#filter0_d_0_1)">
+                      <path class="metric-card__progress-bar"
+                        d="M31 138C31 111.744 41.4303 86.5625 59.9964 67.9964C78.5625 49.4303 103.744 39 130 39C156.256 39 181.437 49.4303 200.004 67.9964C218.57 86.5625 229 111.744 229 138"
+                        stroke="#FFD700" stroke-width="14" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_0_1" x="-8" y="0" width="276" height="177" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="16" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.843137 0 0 0 0 0 0 0 0 0.6 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="metric-card__value">
+                  <span class="metric-card__value-num" data-activeNum data-count-num="8">8</span>
+                  <p class="metric-card__value-name">ms</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="plan section" id="pricing">
+      <div class="container">
+        <h2 class="visually-hidden">
+          Цены и подписки ZenoVPN
+        </h2>
+        <div class="plan__advantages">
+          <span class="plan__title title">
+            Выберите <span class="accent">свой план</span>
+          </span>
+          <div class="plan__advantages-inner">
+            <ul class="plan__advantages-list">
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="../images/sprite.svg#shield-check"></use>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Безлимитный</span> трафик
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="../images/sprite.svg#shield-check"></use>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Доступ</span> ко всем серверам
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="../images/sprite.svg#shield-check"></use>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  <span class="accent">Шифрование</span> военного уровня
+                </span>
+              </li>
+            </ul>
+            <ul class="plan__advantages-list">
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="../images/sprite.svg#shield-check"></use>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                    Поддержка <span class="accent">24/7</span>
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="../images/sprite.svg#shield-check"></use>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  Политика <span class="accent">No logs</span>
+                </span>
+              </li>
+              <li class="plan__advantages-item">
+                <div class="plan__advantages-icon blur-plate">
+                  <svg class="plan__advantages-check icon" width="16" height="12">
+                    <use href="../images/sprite.svg#shield-check"></use>
+                  </svg>
+                </div>
+                <span class="plan__advantages-text">
+                  Поддержка  <span class="accent">нескольких устройств</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="plan__list">
+          <li class="plan__item blur-plate">
+            @@include('../../components/plan-card.html', {
+            "planCardClass": "plan-card--trial",
+            "title": "Пробный",
+            "period": "1 месяц",
+            "price": "Бесплатно",
+            "showDiscount": false,
+            "showPopular": false
+            })
+          </li>
+          <li class="plan__item blur-plate">
+            @@include('../../components/plan-card.html', {
+            "planCardClass": "plan-card--monthly",
+            "title": "Ежемесячно",
+            "period": "1 месяц",
+            "price": "$10",
+            "showDiscount": false,
+            "showPopular": false
+            })
+          </li>
+          <li class="plan__item blur-plate plan__item--popular">
+            @@include('../../components/plan-card.html', {
+            "planCardClass": "plan-card--semi-annual",
+            "title": "На полгода",
+            "period": "6 месяцев",
+            "badgePopularText": "Самый популярный",
+            "price": "$20",
+            "showDiscount": true,
+            "showPopular": true
+            })
+          </li>
+          <li class="plan__item blur-plate">
+            @@include('../../components/plan-card.html', {
+            "planCardClass": "plan-card--annual",
+            "title": "Annual",
+            "period": "12 months",
+            "price": "$30",
+            "showDiscount": true,
+            "showPopular": false
+            })
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__wrapper">
+        <div class="container">
+          <h2 class="reviews__title title">Что говорят <span class="accent">наши клиенты</span></h2>
+          <div class="reviews__inner">
+            <div class="reviews__slider">
+              <div class="swiper reviews-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slide -->
+                  <div class="swiper-slide review-card">
+                    <div class="review-card__inner blur-plate">
+                      <div class="review-card__header">
+                        <picture>
+                          <source type="image/webp"
+                            srcset="../images/reviews/robert.webp 1x, ../images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png"
+                            srcset="../images/reviews/robert.png 1x, ../images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="../images/reviews/robert.png" alt="Active Users"
+                            width="56" height="56" loading="lazy" />
+                        </picture>
+                        <div class="review-card__user">
+                          <p class="review-card__user-name">Роберт Ф.</p>
+                          <p class="review-card__user-location">Мумбаи, Индия</p>
+                        </div>
+                      </div>
+                      <div class="review-card__rating">
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <p class="review-card__text">
+                        "Отличное соотношение цены и качества. Легко настроить и отлично работает на всех моих устройствах."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide review-card">
+                    <div class="review-card__inner blur-plate">
+                      <div class="review-card__header">
+                        <picture>
+                          <source type="image/webp"
+                            srcset="../images/reviews/robert.webp 1x, ../images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png"
+                            srcset="../images/reviews/robert.png 1x, ../images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="../images/reviews/robert.png" alt="Active Users"
+                            width="56" height="56" loading="lazy" />
+                        </picture>
+                        <div class="review-card__user">
+                          <p class="review-card__user-name">Роберт Ф.</p>
+                          <p class="review-card__user-location">Мумбаи, Индия</p>
+                        </div>
+                      </div>
+                      <div class="review-card__rating">
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <p class="review-card__text">
+                        "Отличное соотношение цены и качества. Легко настроить и отлично работает на всех моих устройствах."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide review-card">
+                    <div class="review-card__inner blur-plate">
+                      <div class="review-card__header">
+                        <picture>
+                          <source type="image/webp"
+                            srcset="../images/reviews/robert.webp 1x, ../images/reviews/robert-x2.webp 2x" />
+                          <source type="image/png"
+                            srcset="../images/reviews/robert.png 1x, ../images/reviews/robert-x2.png 2x" />
+                          <img class="review-card__avatar" src="../images/reviews/robert.png" alt="Active Users"
+                            width="56" height="56" loading="lazy" />
+                        </picture>
+                        <div class="review-card__user">
+                          <p class="review-card__user-name">Роберт Ф.</p>
+                          <p class="review-card__user-location">Мумбаи, Индия</p>
+                        </div>
+                      </div>
+                      <div class="review-card__rating">
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                        <span class="review-card__rating-star">
+                          <svg width="20" height="20">
+                            <use href="../images/sprite.svg#rating"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <p class="review-card__text">
+                        "Отличное соотношение цены и качества. Легко настроить и отлично работает на всех моих устройствах."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__nav-panel">
+                <button class="reviews__nav reviews__nav--next blur-plate" type="button">
+                  <span class="visually-hidden">следующий слайд</span>
+                  <svg class="reviews__nav-icon icon" width="24" height="24">
+                    <use href="../images/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+
+                <button class="reviews__nav reviews__nav--prev blur-plate" type="button">
+                  <span class="visually-hidden">предыдущий слайд</span>
+                  <svg class="reviews__nav-icon icon" width="24" height="24">
+                    <use href="../images/sprite.svg#chevron"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <picture>
+              <source type="image/webp" srcset="
+                  ../images/reviews/astronaut-reviews.webp 1x,
+                  ../images/reviews/astronaut-reviews-x2.webp 2x
+                ">
+              <source type="image/png" srcset="
+                  ../images/reviews/astronaut-reviews.png 1x,
+                  ../images/reviews/astronaut-reviews-x2.png 2x
+                ">
+              <img class="reviews__img" src="../images/reviews/astronaut-reviews.png" alt="Customer Support"
+                loading="lazy">
+            </picture>
+          </div>
+          <div class="reviews__stats">
+            <div class="reviews__stat blur-plate">
+              <picture>
+                <source media="(max-width: 992px)" type="image/webp"
+                  srcset="../images/reviews/users-tab.webp 1x,../images/reviews/users-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png"
+                  srcset="../images/reviews/users-tab.png 1x, ../images/reviews/users-tab-x2.png 2x" />
+                <source type="image/webp" srcset="../images/reviews/users.webp 1x,../images/reviews/users-x2.webp 2x" />
+                <source type="image/png" srcset="../images/reviews/users.png 1x, ../images/reviews/users-x2.png 2x" />
+                <img class="reviews__stat-img" src="../images/reviews/users.png" alt="Active Users" width="64"
+                  height="64" loading="lazy" />
+              </picture>
+              <div class="reviews__stat-content">
+                <span class="reviews__stat-num">15K+</span>
+                <span class="reviews__stat-name">Активных пользователей</span>
+              </div>
+            </div>
+            <div class="reviews__stat blur-plate">
+              <picture>
+                <source media="(max-width: 992px)" type="image/webp"
+                  srcset="../images/reviews/rev-guarantee-tab.webp 1x, ../images/reviews/rev-guarantee-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png"
+                  srcset="../images/reviews/rev-guarantee-tab.png 1x, ../images/reviews/rev-guarantee-tab-x2.png 2x" />
+                <source type="image/webp"
+                  srcset="../images/reviews/rev-guarantee.webp 1x, ../images/reviews/rev-guarantee-x2.webp 2x" />
+                <source type="image/png"
+                  srcset="../images/reviews/rev-guarantee.png 1x, ../images/reviews/rev-guarantee-x2.png 2x" />
+                <img class="reviews__stat-img" src="../images/reviews/rev-guarantee.png" alt="Active Users" width="64"
+                  height="64" loading="lazy" />
+              </picture>
+              <div class="reviews__stat-content">
+                <span class="reviews__stat-num">99.9%</span>
+                <span class="reviews__stat-name">Гарантия аптайма</span>
+              </div>
+            </div>
+            <div class="reviews__stat blur-plate">
+              <picture>
+                <source media="(max-width: 992px)" type="image/webp"
+                  srcset="../images/reviews/support-tab.webp 1x, ../images/reviews/support-tab-x2.webp 2x" />
+                <source media="(max-width: 992px)" type="image/png"
+                  srcset="../images/reviews/support-tab.png 1x, ../images/reviews/support-tab-x2.png 2x" />
+                <source type="image/webp"
+                  srcset="../images/reviews/support.webp 1x, ../images/reviews/support-x2.webp 2x" />
+                <source type="image/png" srcset="../images/reviews/support.png 1x, ../images/reviews/support-x2.png 2x" />
+                <img class="reviews__stat-img" src="../images/reviews/support.png" alt="Active Users" width="64"
+                  height="64" loading="lazy" />
+              </picture>
+              <div class="reviews__stat-content">
+                <span class="reviews__stat-num">24/7</span>
+                <span class="reviews__stat-name">Поддержка</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="network">
+      <div class="network__wrapper">
+        <div class="container">
+          <div class="network__inner">
+            <div class="network__head">
+              <h2 class="network__title title">
+                <span class="accent">Глобальная сеть</span> серверов
+              </h2>
+              <div class="network__location">
+                <p class="network__location-label">Ваше местоположение</p>
+                <div class="network__location-box">
+                </div>
+              </div>
+            </div>
+            <div class="countries">
+              <div class="countries__inner">
+                <!-- in -->
+                <div class="countries__item blur-plate" data-country="IN">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-in"></use>
+                  </svg>
+                  <p class="countries__name">Индия</p>
+                </div>
+                <!-- id -->
+                <div class="countries__item blur-plate" data-country="ID">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href=".../images/sprite.svg#country-id"></use>
+                  </svg>
+                  <p class="countries__name">Индонезия</p>
+                </div>
+                <!-- ae -->
+                <div class="countries__item blur-plate" data-country="AE">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href=".../images/sprite.svg#country-ae"></use>
+                  </svg>
+                  <p class="countries__name">Объединенные Арабские Эмираты</p>
+                </div>
+                <!-- br -->
+                <div class="countries__item blur-plate" data-country="BR">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-br"></use>
+                  </svg>
+                  <p class="countries__name">Бразилия</p>
+                </div>
+                <!-- ru -->
+                <div class="countries__item blur-plate" data-country="RU">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ru"></use>
+                  </svg>
+                  <p class="countries__name">Россия</p>
+                </div>
+                <!-- cn -->
+                <div class="countries__item blur-plate" data-country="CN">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-cn"></use>
+                  </svg>
+                  <p class="countries__name">Китай</p>
+                </div>
+                <!-- sa -->
+                <div class="countries__item blur-plate" data-country="SA">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-sa"></use>
+                  </svg>
+                  <p class="countries__name">Саудовская Аравия</p>
+                </div>
+                <!-- tr -->
+                <div class="countries__item blur-plate" data-country="TR">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-tr"></use>
+                  </svg>
+                  <p class="countries__name">Турция</p>
+                </div>
+                <!-- us -->
+                <div class="countries__item blur-plate" data-country="US">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-us"></use>
+                  </svg>
+                  <p class="countries__name">Соединенные Штаты</p>
+                </div>
+                <!-- qa -->
+                <div class="countries__item blur-plate" data-country="QA">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-qa"></use>
+                  </svg>
+                  <p class="countries__name">Катар</p>
+                </div>
+                <!-- vn -->
+                <div class="countries__item blur-plate" data-country="VN">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-vn"></use>
+                  </svg>
+                  <p class="countries__name">Вьетнам</p>
+                </div>
+                <!-- ph -->
+                <div class="countries__item blur-plate" data-country="PH">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ph"></use>
+                  </svg>
+                  <p class="countries__name">Филиппины</p>
+                </div>
+                <!-- mx -->
+                <div class="countries__item blur-plate" data-country="MX">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-mx"></use>
+                  </svg>
+                  <p class="countries__name">Мексика</p>
+                </div>
+                <!-- bg -->
+                <div class="countries__item blur-plate" data-country="GB">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-gb"></use>
+                  </svg>
+                  <p class="countries__name">Великобритания</p>
+                </div>
+                <!-- de -->
+                <div class="countries__item blur-plate" data-country="DE">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-de"></use>
+                  </svg>
+                  <p class="countries__name">Германия</p>
+                </div>
+                <!-- sg -->
+                <div class="countries__item blur-plate" data-country="SG">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-sg"></use>
+                  </svg>
+                  <p class="countries__name">Сингапур</p>
+                </div>
+                <!-- my -->
+                <div class="countries__item blur-plate" data-country="MY">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-my"></use>
+                  </svg>
+                  <p class="countries__name">Малайзия</p>
+                </div>
+                <!-- hk -->
+                <div class="countries__item blur-plate" data-country="HK">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-hk"></use>
+                  </svg>
+                  <p class="countries__name">Гонконг</p>
+                </div>
+                <!-- ch -->
+                <div class="countries__item blur-plate" data-country="CH">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ch"></use>
+                  </svg>
+                  <p class="countries__name">Швейцария</p>
+                </div>
+                <!-- nl -->
+                <div class="countries__item blur-plate" data-country="NL">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-nl"></use>
+                  </svg>
+                  <p class="countries__name">Нидерланды</p>
+                </div>
+                <!-- fr -->
+                <div class="countries__item blur-plate" data-country="FR">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-fr"></use>
+                  </svg>
+                  <p class="countries__name">Франция</p>
+                </div>
+                <!-- ca -->
+                <div class="countries__item blur-plate" data-country="CA">
+                  <img class="countries__icon" src="../images/network/canada.svg" alt="canada icon" width="24"
+                    height="24">
+                  <p class="countries__name">Канада</p>
+                </div>
+                <!-- th -->
+                <div class="countries__item blur-plate" data-country="TH">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-th"></use>
+                  </svg>
+                  <p class="countries__name">Таиланд</p>
+                </div>
+                <!-- ir -->
+                <div class="countries__item blur-plate" data-country="IR">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ir"></use>
+                  </svg>
+                  <p class="countries__name">Иран</p>
+                </div>
+                <!-- ua -->
+                <div class="countries__item blur-plate" data-country="UA">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ua"></use>
+                  </svg>
+                  <p class="countries__name">Украина</p>
+                </div>
+                <!-- pk -->
+                <div class="countries__item blur-plate" data-country="PK">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-pk"></use>
+                  </svg>
+                  <p class="countries__name">Пакистан</p>
+                </div>
+                <!-- eg -->
+                <div class="countries__item blur-plate" data-country="EG">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-eg"></use>
+                  </svg>
+                  <p class="countries__name">Египет</p>
+                </div>
+                <!-- ar -->
+                <div class="countries__item blur-plate" data-country="AR">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ar"></use>
+                  </svg>
+                  <p class="countries__name">Аргентина</p>
+                </div>
+                <!-- es -->
+                <div class="countries__item blur-plate" data-country="ES">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-es"></use>
+                  </svg>
+                  <p class="countries__name">Испания</p>
+                </div>
+                <!-- it -->
+                <div class="countries__item blur-plate" data-country="IT">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-it"></use>
+                  </svg>
+                  <p class="countries__name">Италия</p>
+                </div>
+                <!-- om -->
+                <div class="countries__item blur-plate" data-country="OM">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-om"></use>
+                  </svg>
+                  <p class="countries__name">Оман</p>
+                </div>
+                <!-- by -->
+                <div class="countries__item blur-plate" data-country="BY">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-by"></use>
+                  </svg>
+                  <p class="countries__name">Беларусь</p>
+                </div>
+                <!-- ve -->
+                <div class="countries__item blur-plate" data-country="VE">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ve"></use>
+                  </svg>
+                  <p class="countries__name">Венесуэла</p>
+                </div>
+                <!-- au -->
+                <div class="countries__item blur-plate" data-country="AU">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-au"></use>
+                  </svg>
+                  <p class="countries__name">Австралия</p>
+                </div>
+                <!-- nz -->
+                <div class="countries__item blur-plate" data-country="NZ">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-nz"></use>
+                  </svg>
+                  <p class="countries__name">Новая Зеландия</p>
+                </div>
+                <!-- pl -->
+                <div class="countries__item blur-plate" data-country="PL">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-pl"></use>
+                  </svg>
+                  <p class="countries__name">Польша</p>
+                </div>
+                <!-- jp -->
+                <div class="countries__item blur-plate" data-country="JP">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-jp"></use>
+                  </svg>
+                  <p class="countries__name">Япония</p>
+                </div>
+                <!-- kr -->
+                <div class="countries__item blur-plate" data-country="KR">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-kr"></use>
+                  </svg>
+                  <p class="countries__name">Южная Корея</p>
+                </div>
+                <!-- tw -->
+                <div class="countries__item blur-plate" data-country="TW">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-tw"></use>
+                  </svg>
+                  <p class="countries__name">Тайвань</p>
+                </div>
+                <!-- bd -->
+                <div class="countries__item blur-plate" data-country="BD">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-bd"></use>
+                  </svg>
+                  <p class="countries__name">Бангладеш</p>
+                </div>
+                <!-- se -->
+                <div class="countries__item blur-plate" data-country="SE">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-se"></use>
+                  </svg>
+                  <p class="countries__name">Швеция</p>
+                </div>
+                <!-- ee -->
+                <div class="countries__item blur-plate" data-country="EE">
+                  <svg class="countries__icon" width="24" height="24">
+                    <use href="../images/sprite.svg#country-ee"></use>
+                  </svg>
+                  <p class="countries__name">Эстония</p>
+                </div>
+              </div>
+              <button class="countries__btn" type="button">
+                Показать все
+                <svg class="countries__btn-icon icon" width="18" height="18">
+                  <use href="../images/sprite.svg#show-all"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="apps section">
+      <div class="container">
+        <h2 class="apps__title title">
+          Поддерживаемые <span class="accent">VPN-приложения</span>
+        </h2>
+        <p class="apps__description">
+          Выберите удобное приложение. Все приложения поддерживают наш протокол VLESS.
+        </p>
+        <ul class="apps__list">
+          <li class="apps__item blur-plate">
+            @@include('../../components/app-card.html', {
+            "title": "Streisand",
+            "extraDots": ".."
+            })
+          </li>
+          <li class="apps__item blur-plate">
+            @@include('../../components/app-card.html', {
+            "title": "Happ Plus",
+            "extraDots": ".."
+            })
+          </li>
+          <li class="apps__item blur-plate">
+            @@include('../../components/app-card.html', {
+            "title": "v2rayTUN",
+            "extraDots": ".."
+            })
+          </li>
+          <li class="apps__item blur-plate">
+            @@include('../../components/app-card.html', {
+            "title": "AmneziaWG",
+            "extraDots": ".."
+            })
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="faq section">
+      <div class="container">
+        <h2 class="faq__title title">
+          Вопросы<span class="accent">?</span> We Have <span class="accent">ответы</span>
+        </h2>
+        <ul class="faq__list">
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                открыть / закрыть аккордеон
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Сколько устройств можно подключить?
+              </h3>
+              <p class="faq__answer">
+                Неограниченное количество
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="../images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                открыть / закрыть аккордеон
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Какую скорость вы гарантируете?
+              </h3>
+              <p class="faq__answer">
+                Неограниченное количество
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="../images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                открыть / закрыть аккордеон
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Блокируете ли вы рекламу?
+              </h3>
+              <p class="faq__answer">
+                Неограниченное количество
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="../images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                открыть / закрыть аккордеон
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Вы храните логи?
+              </h3>
+              <p class="faq__answer">
+                Неограниченное количество
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="../images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+          <li class="faq__item blur-plate" data-accordion>
+            <button class="faq__button" type="button" data-button>
+              <span class="visually-hidden">
+                открыть / закрыть аккордеон
+              </span>
+            </button>
+            <div class="faq__inner" data-accordion-content>
+              <h3 class="faq__subtitle">
+                Какие способы оплаты вы принимаете?
+              </h3>
+              <p class="faq__answer">
+                Неограниченное количество
+              </p>
+            </div>
+            <svg class="faq__icon" width="18" height="18">
+              <use href="../images/sprite.svg#arrow-bottom"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="ready" id="support">
       <div class="container">
         <div class="ready__inner">
           <div class="ready__img-box">
             <picture>
               <!-- Mobile (<576px) -->
               <source media="(max-width: 575px)" type="image/webp"
-                srcset="../images/ready/astronaut-ready-mob.webp 1x,../images/ready/astronaut-ready-mob-x2.webp 2x" />
+                srcset=".../images/ready/astronaut-ready-mob.webp 1x,.../images/ready/astronaut-ready-mob-x2.webp 2x" />
               <source media="(max-width: 575px)" type="image/png"
-                srcset="../images/ready/astronaut-ready-mob.png 1x,../images/ready/astronaut-ready-mob-x2.png 2x" />
+                srcset=".../images/ready/astronaut-ready-mob.png 1x,.../images/ready/astronaut-ready-mob-x2.png 2x" />
 
               <!-- Desktop -->
               <source type="image/webp" srcset="
-                ../images/ready/astronaut-ready.webp 1x, ../images/ready/astronaut-ready-x2.webp 2x" />
+                .../images/ready/astronaut-ready.webp 1x, .../images/ready/astronaut-ready-x2.webp 2x" />
               <source type="image/png"
-                srcset="../images/ready/astronaut-ready.png 1x, ../images/ready/astronaut-ready-x2.png 2x" />
+                srcset=".../images/ready/astronaut-ready.png 1x, .../images/ready/astronaut-ready-x2.png 2x" />
 
-              <img class="ready__img" src="../images/ready/astronaut-ready.png" width="529" height="564"
+              <img class="ready__img" src=".../images/ready/astronaut-ready.png" width="529" height="564"
                 alt="ZenoVPN Ready to Think Free" loading="lazy" />
             </picture>
           </div>
@@ -40,10 +1189,10 @@
               <div class="ready__item ready__item--support">
                 <picture>
                   <source type="image/webp"
-                    srcset="../images/ready/earphones.webp 1x, ../images/ready/earphones-x2.webp 2x" />
+                    srcset=".../images/ready/earphones.webp 1x, .../images/ready/earphones-x2.webp 2x" />
                   <source type="image/png"
-                    srcset="../images/ready/earphones.png 1x, ../images/ready/earphones-x2.png 2x" />
-                  <img class="ready__icon" src="../images/ready/earphones.png" width="64" height="64"
+                    srcset=".../images/ready/earphones.png 1x, .../images/ready/earphones-x2.png 2x" />
+                  <img class="ready__icon" src=".../images/ready/earphones.png" width="64" height="64"
                     alt="ZenoVPN 24/7 поддержка через Telegram ?" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
@@ -55,10 +1204,10 @@
               <div class="ready__item ready__item--guarantee">
                 <picture>
                   <source type="image/webp"
-                    srcset="../images/ready/guarantee.webp 1x, ../images/ready/guarantee-x2.webp 2x" />
+                    srcset=".../images/ready/guarantee.webp 1x, .../images/ready/guarantee-x2.webp 2x" />
                   <source type="image/png"
-                    srcset="../images/ready/guarantee.png 1x, ../images/ready/guarantee-x2.png 2x" />
-                  <img class="ready__icon" src="../images/ready/guarantee.png" width="64" height="64"
+                    srcset=".../images/ready/guarantee.png 1x, .../images/ready/guarantee-x2.png 2x" />
+                  <img class="ready__icon" src=".../images/ready/guarantee.png" width="64" height="64"
                     alt="ZenoVPN 30 дней возврат денег гарантированно" loading="lazy" />
                 </picture>
                 <div class="ready__item-descr">
@@ -83,6 +1232,50 @@
       </div>
     </section>
   </main>
+@@include('../../components/footer.html', {
+  "extraDots": ".",
+  "footerHref": "#hero",
+  "footerAltlogo": "ZenoVPN Logo",
+  "termsHref": "./terms-and-conditions.html",
+  "privacyHref": "./privacy-policy.html",
+  "refundHref": "./refund-policy.html",
+  "aboutHref": "./about-us.html",
+  "termsText": "Условия использования",
+  "privacyText": "Политика конфиденциальности",
+  "refundText": "Политика возврата",
+  "aboutText": "О нас",
+  "email": "info@zenovpn.com",
+  "telegramHref": "https://t.me/ZenoVPNBot",
+  "telegramText": "@ZenoVPNBot",
+  "telegramHidden": "Перейти в Telegram-канал ZenoVPN",
+  "instagramHref": "https://t.me/ZenoVPNBot",
+  "instagramHidden": "Перейти на страницу ZenoVPN в Instagram",
+  "xHref": "https://t.me/ZenoVPNBot",
+  "xHidden": "Перейти в канал ZenoVPN в X",
+  "facebookHref": "https://t.me/ZenoVPNBot",
+  "facebookHidden": "Перейти на страницу ZenoVPN в Facebook",
+  "tiktokHref": "https://t.me/ZenoVPNBot",
+  "tiktokHidden": "Перейти на страницу ZenoVPN в TikTok",
+  "copyright": "Авторские права: © 2025 Zeno VPN. Все права защищены."
+})
+
+  @@include('../../components/go-top.html', {
+  "extraDots": ".",
+  "target": "#header",
+  "accessibility": "Прокрутить вверх"
+  })
+
+  @@include('../../components/cookie.html', {
+  "extraDots": ".",
+  "cookieNotice": "Cookie-уведомление",
+  "cookieTextLeft": "Наш сайт использует",
+  "cookieLink": "Файлы cookie",
+  "cookieTextRight": "чтобы обеспечить вам наилучший пользовательский опыт.",
+  "privacyHref": "./privacy-policy.html",
+  "accept": "Принять",
+  "accessibility": "Закрыть уведомление о файлах cookie"
+  })
+
   <script src="../js/main.min.js"></script>
 </body>
 

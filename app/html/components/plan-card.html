@@ -18,7 +18,8 @@
         </div>
         @@if (showPopular === true) {
             @@include('../components/badges/badge-popular.html', {
-            "badgePopularClass": "plan-card__badge-popular"
+            "badgePopularClass": "plan-card__badge-popular",
+            "badgePopularText": "@@badgePopularText"
         })
         }
     </div>

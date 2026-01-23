@@ -54,6 +54,97 @@
 
 <body>
   <main>
+      <header class="header" data-header>
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="#">
+                <img class="logo__img header__logo-img" src="../images/logo.svg" alt="Логотип ZenoVPN" width="111" height="44">
+                <img class="logo__img header__logo-img--small" src="../images/logo-mob.svg" alt="Логотип ZenoVPN" width="44" height="44">
+            </a>
+            <button class="mobile-button blur-plate" type="button" data-menu-button>
+                <span class="visually-hidden">
+                    فتح قائمة التنقل / إغلاق قائمة التنقل
+                </span>
+                <span class="mobile-button__line">
+                </span>
+            </button>
+            <ul class="menu__list" data-menu>
+                <li class="menu__item">
+                    <a class="menu__link" href="#steps">
+                        Как это работает
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#pricing">
+                        Цены
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#support">
+                        Поддержка
+                    </a>
+                </li>
+            </ul>
+            <div class="user-menu">
+                <div class="switcher-lang">
+                    <button class="switcher-lang__btn blur-plate" data-lang-switcher type="button">
+                        <svg width="24" height="24">
+                            <use href="../images/sprite.svg#flagRu"></use>
+                        </svg>
+                        <span class="switcher-lang__text">
+                            Ру          
+                        </span> 
+                        <svg class="switcher-lang__arrow" width="18" height="18">
+                            <use href="../images/sprite.svg#angle-down"></use>
+                        </svg>
+                    </button>
+                    <ul class="switcher-lang__list blur-plate" data-langs-list>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link @@current" href="@@langHrefEn">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="../images/sprite.svg#flagEn"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    En
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link @@currentAr" href="../ar/">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="../images/sprite.svg#flagAr"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    عر                  
+                                </span> 
+                            </a>
+                        </li>
+                        <li class="switcher-lang__item">
+                            <a class="switcher-lang__link current" href="../">
+                                <svg class="switcher-lang__icon" width="24" height="24">
+                                    <use href="../images/sprite.svg#flagRu"></use>
+                                </svg>
+                                <span class="switcher-lang__text">
+                                    Ру
+                                </span> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="cta header__cta" href="https://t.me/ZenoVPNBot" target="_blank">
+    <span class="cta__text header__cta-text">
+        Open VPN
+    </span>
+    <span class="cta__icon header__cta-icon">
+        <svg class="icon" width="21" height="18">
+            <use href="../images/sprite.svg#telegramSmall"></use>
+        </svg>
+    </span>
+</a>
+            </div>
+        </nav>
+    </div>
+</header>
     <section class="ready">
       <div class="container">
         <div class="ready__inner">
