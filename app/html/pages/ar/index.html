@@ -10,26 +10,158 @@
 })
 
 <body>
-  <main>
-      @@include('../../components/header.html', {
-  "extraDots": "..",
-  "altLogo": "Логотип ZenoVPN",
-  "logoHref": "#",
-  "currentRu": "current",
-  "langHrefAr": "../ar/",
-  "langHrefRu": "../",
-  "srcLang": "Ru",
-  "langText": "Ру",
-  "mobileButtonAccessibility": "فتح قائمة التنقل / إغلاق قائمة التنقل",
+  @@include('../../components/header.html', {
+"extraDots": "..",
+"altLogo": "Логотип ZenoVPN",
+"logoHref": "#",
+"currentAr": "current",
+"langHrefEn": "../",
+"langHrefRu": "../ru",
+"srcLang": "Ar",
+"langText": "عر",
+"mobileButtonAccessibility": "فتح قائمة التنقل / إغلاق قائمة التنقل",
 
-  "howItWorksHref": "#steps",
-  "pricingHref": "#pricing",
-  "supportHref": "#support",
+"howItWorksHref": "#steps",
+"pricingHref": "#pricing",
+"supportHref": "#support",
 
-  "howItWorks": "Как это работает",
-  "pricing": "Цены",
-  "support": "Поддержка"
-  })
+"howItWorks": "كيف يعمل",
+"pricing": "الأسعار",
+"support": "الدعم"
+})
+  <main class="main">
+    <h1 class="visually-hidden">
+      إغلاق إشعار ملفات تعريف الارتباط
+    </h1>
+    <section class="hero" id="hero">
+      <div class="container">
+        <h2 class="visually-hidden">
+          مزايا VPN آمنة وسريعة للوصول غير المقيد إلى الإنترنت
+        </h2>
+        <div class="hero__inner">
+          <div class="hero__wrap">
+            <div class="hero__statement">
+              <span class="hero__statement-title">
+                حرية الفكر
+              </span>
+              <p class="hero__statement-text">
+                نؤمن بقوة التفكير الحر. في عالمٍ من الرقابة الرقمية والمراقبة، يمنحك Zeno VPN القدرة على التفكير والاستكشاف والتواصل بلا
+                حدود.
+              </p>
+            </div>
+            <div class="hero__headline">
+              <span class="hero__title">
+                فكّر
+                <span class="accent">
+                  بحرّية
+                </span>
+              </span>
+              <p class="hero__text">
+                فلسفتك الرقمية للوصول غير المقيّد إلى الإنترنت على جميع أجهزتك.
+              </p>
+              @@include('../../components/cta.html', {
+              "ctaClass": "hero__cta",
+              "ctaText": "ابدأ",
+              "ctaTextClass": "hero__cta-text",
+              "ctaIconClass": "hero__cta-icon",
+              "ctaWidth": "17",
+              "ctaHeight": "15",
+              "extraDots": "..",
+              "ctaIcon": "arrow-right"
+              })
+            </div>
+          </div>
+          <ul class="hero__advantages">
+            <li class="hero__item hero__item--speed blur-plate">
+              <h3 class="hero__subtitle">
+                سرعة عالية
+              </h3>
+              <p class="hero__description">
+                اتصال فائق السرعة مُحسّن للبثّ والألعاب والتنزيلات.
+              </p>
+            </li>
+            <li class="hero__item hero__item--privacy blur-plate">
+              <h3 class="hero__subtitle">
+                الخصوصية أولاً
+              </h3>
+              <p class="hero__description">
+                تشفير بمستوى عسكري وسياسة صارمة لعدم الاحتفاظ بالسجلات لحماية بياناتك.
+              </p>
+            </li>
+            <li class="hero__item hero__item--global blur-plate">
+              <h3 class="hero__subtitle">
+                وصول عالمي
+              </h3>
+              <p class="hero__description">
+                وصول إلى أي محتوى حول العالم مع تجاوز الرقابة وقيود الموقع الجغرافي.
+              </p>
+            </li>
+            <li class="hero__item hero__item--unlimited blur-plate">
+              <h3 class="hero__subtitle">
+                أجهزة غير محدودة
+              </h3>
+              <p class="hero__description">
+              احمِ جميع أجهزتك باشتراك واحد: هاتف، لابتوب، جهاز لوحي، كمبيوتر.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="steps section" id="steps">
+      <div class="container steps__container">
+        <h2 class="steps__title title">
+          Get Started in <span class="accent">3 Simple</span> Steps
+        </h2>
+        <ul class="steps__list">
+          <li class="steps__item blur-plate">
+            <div class="steps__info">
+              <h3 class="steps__subtitle">
+                Open Telegram
+              </h3>
+              <p class="steps__description">
+                Start a conversation with <a class="steps__link accent" href="https://t.me/ZenoVPNBot">@ZenoVPNBot</a>
+              </p>
+            </div>
+            <span class="steps__number blur-plate">
+              <span class="steps__number-box blur-plate">
+                1
+              </span>
+            </span>
+          </li>
+          <li class="steps__item blur-plate">
+            <div class="steps__info">
+              <h3 class="steps__subtitle">
+                Choose Plan
+              </h3>
+              <p class="steps__description">
+                Select a subscription plan that fits your needs
+              </p>
+            </div>
+            <span class="steps__number blur-plate">
+              <span class="steps__number-box blur-plate">
+                2
+              </span>
+            </span>
+          </li>
+          <li class="steps__item blur-plate">
+            <div class="steps__info">
+              <h3 class="steps__subtitle">
+                Connect & Think Free
+              </h3>
+              <p class="steps__description">
+                Receive your VPN key and connect instantly
+              </p>
+            </div>
+            <span class="steps__number blur-plate">
+              <span class="steps__number-box blur-plate">
+                3
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="ready">
       <div class="container">
         <div class="ready__inner">
@@ -104,6 +236,56 @@
       </div>
     </section>
   </main>
+  @@include('../../components/footer.html', {
+  "extraDots": "..",
+  "footerHref": "#hero",
+  "footerAltlogo": "ZenoVPN Logo",
+  
+  "termsHref": "./terms-and-conditions.html",
+  "privacyHref": "./privacy-policy.html",
+  "refundHref": "./refund-policy.html",
+  "aboutHref": "./about-us.html",
+  
+  "termsText": "الشروط والأحكامs",
+  "privacyText": "سياسة الخصوصية",
+  "refundText": "سياسة الاسترداد",
+  "aboutText": "من نحن",
+  
+  "email": "info@zenovpn.com",
+  "telegramHref": "https://t.me/ZenoVPNBot",
+  "telegramText": "ابدأ عبر Telegram",
+  
+  "telegramHidden": "انتقل إلى قناة ZenoVPN على Telegram",
+  "instagramHref": "https://t.me/ZenoVPNBot",
+  "instagramHidden": "انتقل إلى صفحة ZenoVPN على Instagram",
+  
+  "xHref": "https://t.me/ZenoVPNBot",
+  "xHidden": "انتقل إلى قناة ZenoVPN X",
+  
+  "facebookHref": "https://t.me/ZenoVPNBot",
+  "facebookHidden": "انتقل إلى صفحة ZenoVPN على Facebook",
+  
+  "tiktokHref": "https://t.me/ZenoVPNBot",
+  "tiktokHidden": "انتقل إلى صفحة ZenoVPN على TikTok",
+  
+  "copyright": "© 2025 Zeno VPN. جميع الحقوق محفوظة."
+  })
+  @@include('../../components/go-top.html', {
+  "extraDots": "..",
+  "target": "#header",
+  "accessibility": "العودة إلى الأعلى"
+  })
+  
+  @@include('../../components/cookie.html', {
+  "extraDots": "..",
+  "cookieNotice": "إشعار ملفات تعريف.",
+  "cookieTextLeft": "يستخدم موقعنا سياسة ملفات تعريف الارتباط",
+  "cookieLink": "لضمان حصولك",
+  "cookieTextRight": "على أفضل تجربة ممكنة.",
+  "privacyHref": "./privacy-policy.html",
+  "accept": "يقبل",
+  "accessibility": "إغلاق إشعار ملفات تعريف الارتباط"
+  })
   <script src="../js/main.min.js"></script>
 </body>
 
