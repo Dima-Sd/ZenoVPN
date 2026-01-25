@@ -504,6 +504,9 @@
       font-size: 14px;
     }
   }
+  .reviews-slider {
+    touch-action: auto;
+  }
 
   .swiper-slide-active {
     .review-card__inner.blur-plate {
