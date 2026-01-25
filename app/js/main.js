@@ -399,6 +399,7 @@ const initSwiper = () => {
     breakpoints: {
       0: {
         direction: 'vertical',
+        allowTouchMove: false,
         coverflowEffect: {
           stretch: 248,
           depth: 204,
