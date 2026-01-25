@@ -23,9 +23,70 @@ html[dir="rtl"] {
     &__title {
       display: flex;
       flex-direction: column;
- /*      .accent {
-        order: 1;
-      } */
+    }
+  }
+  .plan {
+    &__title {
+      text-align: right;
+      .accent {
+        display: block;
+        color: $light;
+      }
+    }
+    &__item.blur-plate {
+      background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+    }
+  }
+  .plan-card {
+    &::after {
+      filter: blur(6px);
+    }
+    &--annual {
+      &::after {
+        box-shadow: 4px 4px 170px #12181d inset;
+      }
+    }
+    &--monthly {
+      &::after {
+        box-shadow: 4px 4px 170px #161e24 inset;
+      }
+    }
+
+    &--trial{
+      &::after {
+      box-shadow: 4px 4px 170px #1d272e inset;
+      }
+    }
+    &__icon {
+      transform: rotate(180deg);
+    }
+  }
+  .network {
+    &__title {
+      text-align: right;
+    }
+  }
+  .countries {
+    &__inner {
+      padding: 0;
+      flex-direction: row-reverse;
+    }
+  }
+  .reviews {
+    &__wrapper {
+      &::before {
+        right: auto;
+        left: -174px;
+      }
+    }
+    &__slider {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+    &__img {
+      transform: scale(-1,1);
+      right: auto;
+      left: 7px;
     }
   }
 
@@ -52,6 +113,24 @@ html[dir="rtl"] {
     }
   }
 
+  @media(max-width: 1200px) {
+    .plan {
+      &__title {
+        text-align: center;
+        .accent {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  @media (max-width: 1064px) {
+    .reviews {
+      &__slider {
+        margin-right: 0;
+      }
+    }
+  }
+
   @media(max-width: 1048px) {
     .ready {
       &__inner {
@@ -73,6 +152,14 @@ html[dir="rtl"] {
         left: auto;
       }
     }
+    .network {
+      &__title {
+        text-align: center;
+      }
+      &__inner {
+        padding: 0;
+      }
+    }
   }
 
   @media(max-width: 928px) {
@@ -90,10 +177,6 @@ html[dir="rtl"] {
       &__inner {
         &::before {
           right: -430px;
-  /*         background-size: cover;
-          left: 0;
-          right: -20%;
-          width: auto; */
         }
       }
 
@@ -148,6 +231,12 @@ html[dir="rtl"] {
         }
       }
   
+    }
+    .plan-card {
+      flex-direction: row-reverse;
+      &__info-price {
+        justify-content: flex-end;
+      }
     }
   }
   @media (max-width: 440px) {
