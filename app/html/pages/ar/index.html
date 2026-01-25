@@ -14,6 +14,7 @@
 "extraDots": "..",
 "altLogo": "Логотип ZenoVPN",
 "logoHref": "#",
+"ctaText": "افتح VPN",
 "currentAr": "current",
 "langHrefEn": "../",
 "langHrefRu": "../ru",
@@ -111,7 +112,7 @@
     <section class="steps section" id="steps">
       <div class="container steps__container">
         <h2 class="steps__title title">
-          بسيطة <span class="accent">ابدأ في 3</span> خطوات
+            <span class="accent ltr">3</span> <span class="accent">ابدأ في</span>خطوات بسيطة
         </h2>
         <ul class="steps__list">
           <li class="steps__item blur-plate">
@@ -150,7 +151,7 @@
                 تواصل وفكر بحرية
               </h3>
               <p class="steps__description">
-                احصل على مفتاح VPN الخاص بك واتصل على
+                استلم مفتاح الـVPN واتصل فورًا
               </p>
             </div>
             <span class="steps__number blur-plate">
@@ -168,7 +169,9 @@
           أداء ZenoVPN في الوقت الفعلي وموثوقية الاتصال
         </h2>
         <div class="metrics__header">
-          <h2 class="metrics__title title">الأداء في الوقت الحقيقي</h2>
+          <h2 class="metrics__title title">
+            الأداء في الوقت الحقيقي
+          </h2>
           <ul class="metrics__list">
             <li class="metrics__item">
               <span class="metrics__item-title">غير محدود</span>
@@ -425,10 +428,12 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--trial",
             "title": "فترة تجريبية",
+            "ctaText": "ابدأ",
             "extraDots": "..",
             "period": "شهر واحد",
             "price": "مجانًا",
             "showDiscount": false,
+            "badgeDiscountText": "وفّر $10",
             "showPopular": false
             })
           </li>
@@ -436,10 +441,12 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--monthly",
             "title": "شهري",
+            "ctaText": "ابدأ",
             "extraDots": "..",
             "period": "شهر واحد",
             "price": "$10",
             "showDiscount": false,
+            "badgeDiscountText": "وفّر $10",
             "showPopular": false
             })
           </li>
@@ -447,11 +454,13 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--semi-annual",
             "title": "نصف سنوي",
+            "ctaText": "ابدأ",
             "extraDots": "..",
             "period": "6 أشهر",
             "price": "$20",
             "badgePopularText": "الأكثر شيوعًا",
             "showDiscount": true,
+            "badgeDiscountText": "وفّر $10",
             "showPopular": true
             })
           </li>
@@ -459,10 +468,12 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--annual",
             "title": "سنوي",
+            "ctaText": "ابدأ",
             "extraDots": "..",
             "period": "12 شهرًا",
             "price": "$30",
             "showDiscount": true,
+            "badgeDiscountText": "وفّر $10",
             "showPopular": false
             })
           </li>
@@ -490,7 +501,7 @@
                             height="56" loading="lazy" />
                         </picture>
                         <div class="review-card__user">
-                          <p class="review-card__user-name">Robert F.</p>
+                          <p class="review-card__user-name">.Robert F</p>
                           <p class="review-card__user-location">Mumbai, India</p>
                         </div>
                       </div>
@@ -539,7 +550,7 @@
                             height="56" loading="lazy" />
                         </picture>
                         <div class="review-card__user">
-                          <p class="review-card__user-name">Robert F.</p>
+                          <p class="review-card__user-name">.Robert F</p>
                           <p class="review-card__user-location">Mumbai, India</p>
                         </div>
                       </div>
@@ -588,7 +599,7 @@
                             height="56" loading="lazy" />
                         </picture>
                         <div class="review-card__user">
-                          <p class="review-card__user-name">Robert F.</p>
+                          <p class="review-card__user-name">.Robert F</p>
                           <p class="review-card__user-location">Mumbai, India</p>
                         </div>
                       </div>
@@ -668,7 +679,7 @@
                   loading="lazy" />
               </picture>
               <div class="reviews__stat-content">
-                <span class="reviews__stat-num">15K+</span>
+                <span class="reviews__stat-num">+15K</span>
                 <span class="reviews__stat-name">مستخدمون نشطون</span>
               </div>
             </div>
@@ -1081,7 +1092,7 @@
             </button>
             <div class="faq__inner" data-accordion-content>
               <h3 class="faq__subtitle">
-                كم عدد الأجهزة التي يمكنني توصيلها؟
+                كم جهازًا يمكنني توصيله؟
               </h3>
               <p class="faq__answer">
                 كمية غير محدودة
@@ -1099,7 +1110,7 @@
             </button>
             <div class="faq__inner" data-accordion-content>
               <h3 class="faq__subtitle">
-                ما هي السرعة التي تضمنونها؟
+                ما السرعة التي تضمنونها؟ 
               </h3>
               <p class="faq__answer">
                 كمية غير محدودة
@@ -1117,7 +1128,7 @@
             </button>
             <div class="faq__inner" data-accordion-content>
               <h3 class="faq__subtitle">
-                هل تحجب الإعلانات؟
+                هل تقومون بحظر الإعلانات؟  
               </h3>
               <p class="faq__answer">
               كمية غير محدودة
@@ -1153,7 +1164,7 @@
             </button>
             <div class="faq__inner" data-accordion-content>
               <h3 class="faq__subtitle">
-                ما هي طرق الدفع التي تقبلونها؟
+                ما هي طرق الدفع التي تقبلونها؟ 
               </h3>
               <p class="faq__answer">
                 كمية غير محدودة
@@ -1227,7 +1238,7 @@
             </div>
             @@include('../../components/cta.html', {
             "ctaClass":"ready__cta",
-            "ctaText": "ابدأ في Telegram",
+            "ctaText": "ابدأ عبر Telegram",
             "ctaWidth": "24",
             "ctaHeight": "24",
             "ctaIcon": "telegram",
@@ -1257,7 +1268,7 @@
   
   "email": "info@zenovpn.com",
   "telegramHref": "https://t.me/ZenoVPNBot",
-  "telegramText": "ابدأ عبر Telegram",
+  "telegramText": "ZenoVPNBot@",
   
   "telegramHidden": "انتقل إلى قناة ZenoVPN على Telegram",
   "instagramHref": "https://t.me/ZenoVPNBot",
@@ -1280,7 +1291,7 @@
   "accessibility": "العودة إلى الأعلى"
   })
   
-  @@include('../../components/cookie.html', {
+@@include('../../components/cookie.html', {
   "extraDots": "..",
   "cookieNotice": "إشعار ملفات تعريف.",
   "cookieTextLeft": "يستخدم موقعنا سياسة ملفات تعريف الارتباط",
@@ -1289,7 +1300,7 @@
   "privacyHref": "./privacy-policy.html",
   "accept": "يقبل",
   "accessibility": "إغلاق إشعار ملفات تعريف الارتباط"
-  })
+})
   <script src="../js/main.min.js"></script>
 </body>
 

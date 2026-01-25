@@ -9,6 +9,7 @@ html[dir="rtl"] {
     }
 
   }
+
   .menu {
     &__list {
       margin-right: 0;
@@ -16,6 +17,7 @@ html[dir="rtl"] {
     }
 
   }
+
   .user-menu {
     margin-left: 0;
     margin-right: auto;
@@ -27,27 +29,36 @@ html[dir="rtl"] {
         margin-left: 0;
       }
     }
+
     .menu {
       &__list {
         right: auto;
         left: 0;
       }
+
+      &__link {
+        text-align: left;
+      }
     }
+
     .user-menu {
-      margin-left: 8px;
+      margin-left: 16px;
     }
   }
 
-}
-
-@media(max-width: 576px) {
-  .switcher-lang {
-    &__link {
-      &::after {
-        left: auto;
-        right: 50%;
-        transform: translate(50%, -50%);
+  @media(max-width: 576px) {
+    .switcher-lang {
+      &__link {
+        &::after {
+          left: auto;
+          right: 50%;
+          transform: translate(50%, -50%);
+        }
       }
+    }
+
+    .user-menu {
+      margin-left: 8px;
     }
   }
 }

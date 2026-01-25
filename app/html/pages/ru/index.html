@@ -15,6 +15,7 @@
   "altLogo": "Логотип ZenoVPN",
   "logoHref": "#",
   "currentRu": "current",
+  "ctaText": "Открыть VPN",
   "langHrefAr": "../ar/",
   "langHrefEn": "../",
   "srcLang": "Ru",
@@ -425,8 +426,10 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--trial",
             "title": "Пробный",
+            "ctaText": "Начать",
             "extraDots": "..",
             "period": "1 месяц",
+            "badgeDiscountText": "Экономия $10",
             "price": "Бесплатно",
             "showDiscount": false,
             "showPopular": false
@@ -436,8 +439,10 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--monthly",
             "title": "Ежемесячно",
+            "ctaText": "Начать",
             "extraDots": "..",
             "period": "1 месяц",
+            "badgeDiscountText": "Экономия $10",
             "price": "$10",
             "showDiscount": false,
             "showPopular": false
@@ -447,8 +452,10 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--semi-annual",
             "title": "На полгода",
+            "ctaText": "Начать",
             "extraDots": "..",
             "period": "6 месяцев",
+            "badgeDiscountText": "Экономия $10",
             "badgePopularText": "Самый популярный",
             "price": "$20",
             "showDiscount": true,
@@ -459,8 +466,10 @@
             @@include('../../components/plan-card.html', {
             "planCardClass": "plan-card--annual",
             "title": "Annual",
+            "ctaText": "Начать",
             "extraDots": "..",
             "period": "12 months",
+            "badgeDiscountText": "Экономия $10",
             "price": "$30",
             "showDiscount": true,
             "showPopular": false
@@ -718,7 +727,7 @@
                 <span class="accent">Глобальная сеть</span> серверов
               </h2>
               <div class="network__location">
-                <p class="network__location-label">Ваше местоположение</p>
+                <p class="network__location-label">Ваше <br> местоположение</p>
                 <div class="network__location-box">
                 </div>
               </div>

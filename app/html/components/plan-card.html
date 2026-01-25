@@ -7,12 +7,12 @@
             @@period
         </span>
         <div class="plan-card__info-price">
-            <span class="plan-card__price">
+        <span class="plan-card__price">
                 @@price
-            </span>
+        </span>
         @@if (showDiscount === true) {
             @@include('../components/badges/badge-discount.html', {
-            "text": "Save $10"
+            "badgeDiscountText": "@@badgeDiscountText"
             })
         }
         </div>
@@ -23,9 +23,9 @@
         })
         }
     </div>
-            @@include('./cta.html', {
+        @@include('./cta.html', {
             "ctaClass": "plan-card__cta",
-            "ctaText": "Get Started",
+            "ctaText": "@@ctaText",
             "ctaTextClass": "plan-card__cta-text",
             "ctaIconClass": "plan-card__icon",
             "extraDots": "@@extraDots",

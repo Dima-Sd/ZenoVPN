@@ -7,70 +7,92 @@ html[dir="rtl"] {
       &::before {
         right: auto;
         left: 0;
-        transform: scale3d(-1 , 1, 1)
+        transform: scale3d(-1, 1, 1)
       }
     }
+
     &__cta-text {
       max-width: 209px;
       width: 100%;
       text-align: center;
     }
+
     &__cta-icon {
       transform: rotate(180deg);
     }
   }
+
   .steps {
     &__title {
       display: flex;
       flex-direction: column;
     }
   }
+
   .plan {
     &__title {
       text-align: right;
+
       .accent {
         display: block;
       }
     }
+
+    &__advantages {
+      padding-left: 41px;
+      padding-right: 0;
+    }
+
     &__item.blur-plate {
       background: linear-gradient(75.18deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
     }
   }
+
   .plan-card {
     &::after {
       filter: blur(6px);
     }
+
     &--annual {
       &::after {
         box-shadow: 4px 4px 170px #12181d inset;
       }
     }
+
     &--monthly {
       &::after {
         box-shadow: 4px 4px 170px #161e24 inset;
       }
     }
 
-    &--trial{
+    &--trial {
       &::after {
-      box-shadow: 4px 4px 170px #1d272e inset;
+        box-shadow: 4px 4px 170px #1d272e inset;
       }
     }
+
+    &__price {
+      order: 1;
+    }
+
     &__icon {
       transform: rotate(180deg);
     }
   }
+
   .network {
     &__title {
       text-align: right;
     }
   }
+
   .countries {
     &__inner {
       padding: 0;
       flex-direction: row-reverse;
     }
   }
+
   .reviews {
     &__wrapper {
       &::before {
@@ -78,25 +100,30 @@ html[dir="rtl"] {
         left: -174px;
       }
     }
+
     &__slider {
       margin-left: 0;
       margin-right: 15px;
     }
+
     &__img {
-      transform: scale(-1,1);
+      transform: scale(-1, 1);
       right: auto;
       left: 7px;
     }
+
     .review-card {
       direction: rtl;
       text-align: right;
     }
   }
+
   .faq {
     &__inner {
       padding-right: 0;
       padding-left: 42px;
     }
+
     &__icon {
       right: auto;
       left: 18px;
@@ -114,7 +141,7 @@ html[dir="rtl"] {
         left: auto;
         right: -298px;
         bottom: -109px;
-     }
+      }
     }
 
     &__img {
@@ -129,13 +156,20 @@ html[dir="rtl"] {
   @media(max-width: 1200px) {
     .plan {
       &__title {
+        font-size: 80px;
         text-align: center;
+
         .accent {
           display: inline-block;
         }
       }
+
+      &__advantages {
+        padding-left: 0;
+      }
     }
   }
+
   @media (max-width: 1064px) {
     .reviews {
       &__slider {
@@ -152,23 +186,27 @@ html[dir="rtl"] {
       }
     }
   }
+
   @media (max-width: 992px) {
     .hero {
       &::before {
         left: 0;
         right: auto;
         bottom: -22px;
-        transform: scale(-1,1);
+        transform: scale(-1, 1);
       }
+
       &::after {
         right: calc(50% - 80px);
         left: auto;
       }
     }
+
     .network {
       &__title {
         text-align: center;
       }
+
       &__inner {
         padding: 0;
       }
@@ -199,6 +237,7 @@ html[dir="rtl"] {
       }
     }
   }
+
   @media(max-width: 767px) {
     .ready {
       &__inner {
@@ -222,36 +261,49 @@ html[dir="rtl"] {
         left: 50%;
         top: calc(50% - 86px);
       }
+
       &::after {
         right: auto;
         left: 50%;
       }
     }
+
     .steps {
       &__info {
         text-align: right;
       }
     }
+
     .metrics {
       &__card {
         &--upload {
           margin-left: 0;
           margin-right: auto;
         }
+
         &--latency {
           margin-right: 0;
           margin-left: auto;
         }
       }
-  
+
     }
+
+    .plan {
+      &__title {
+        font-size: 40px;
+      }
+    }
+
     .plan-card {
       flex-direction: row-reverse;
+
       &__info-price {
         justify-content: flex-end;
       }
     }
   }
+
   @media (max-width: 440px) {
     .hero {
       &::before {
@@ -275,6 +327,7 @@ html[dir="rtl"] {
           z-index: -1;
         }
       }
+
       &__item-accent {
         text-wrap: wrap;
       }

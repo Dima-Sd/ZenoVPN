@@ -4,21 +4,29 @@ html[dir="rtl"] {
       margin-right: 0;
       margin-left: 12px;
     }
+
     &__content {
       margin-left: auto;
       margin-right: 0;
       padding-left: 10px;
       padding-right: 0;
     }
+
     &__actions {
       max-width: 142px;
       width: 100%;
     }
+
+    &__text--bold {
+      padding-right: 0;
+      padding-left: 4px;
+    }
+
     &__accept {
-      max-width: 90px;
-      width: 100%;
+      padding: 10px 42px;
     }
   }
+
   @media (max-width: 992px) {
     .cookie {
       &__content {
@@ -26,30 +34,40 @@ html[dir="rtl"] {
       }
     }
   }
+
   @media (max-width: 576px) {
     .cookie {
       &__content {
         padding-left: 32px;
       }
+
       &__accept {
         max-width: 100%;
       }
+
       &__text {
         text-wrap: balance;
       }
+
+      &__text--bold {
+        padding-left: 0;
+      }
     }
   }
- @media (max-width: 365px)  {
-  .cookie {
-    &__content {
-      padding-left: 0;
-    }
-    &__actions {
-      max-width: 100%;
-    }
-    &__accept {
-      max-width: 50%;
+
+  @media (max-width: 365px) {
+    .cookie {
+      &__content {
+        padding-left: 0;
+      }
+
+      &__actions {
+        max-width: 100%;
+      }
+
+      &__accept {
+        max-width: 50%;
+      }
     }
   }
- }
 }
