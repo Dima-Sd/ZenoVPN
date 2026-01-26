@@ -204,7 +204,7 @@
           /* Только Firefox */
       @-moz-document url-prefix() {
         &.blur-plate {
-          background-color: rgba($color: $dark, $alpha: .8);
+          background-color: rgba($color: $dark, $alpha: .9);
         }
       }
       
