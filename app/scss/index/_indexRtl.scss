@@ -203,16 +203,21 @@ html[dir="rtl"] {
         transform: scale(-1, 1);
       } */
 
-      &::after {
+  /*     &::after {
         right: calc(50% - 80px);
         left: auto;
-      }
+      } */
+
       &__advantages {
         &::before {
           left: 0;
           right: auto;
           bottom: -20px;
           transform: scale(-1, 1);
+        }
+        &::after {
+          left: auto;
+          right: 30%;
         }
       }
     }
@@ -286,12 +291,12 @@ html[dir="rtl"] {
           right: 50%;
           transform: translateX(50%);
         }
+        &::after {
+          right: auto;
+          left: 50%;
+        }
       }
 
-      &::after {
-        right: auto;
-        left: 50%;
-      }
     }
 
     .steps {

@@ -86,10 +86,17 @@
 
     &__cta {
         gap: 6px;
+        max-width: 270px; // додав розмір для коректного outline, оскільки він розягувався на ширину __headline
+        width: 100%; // додав розмір для коректного outline, оскільки він розягувався на ширину __headline
     }
 
     &__cta-text {
         padding: 16px 54px;
+        max-width: 209px; // додав розмір для коректного outline, оскільки він розягувався на ширину __headline
+        width: 100%; // додав розмір для коректного outline, оскільки він розягувався на ширину __headline
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__cta-icon {
@@ -293,7 +300,7 @@
             bottom: 110px;
             transform: rotate(90deg);
         } */
-
+         
         &__inner {
             flex-direction: column;
         }
@@ -405,6 +412,7 @@
 
         &__cta {
             justify-content: center;
+            margin: 0 auto; // центрування
         }
 
         &__item {
