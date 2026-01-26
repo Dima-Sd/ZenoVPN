@@ -220,27 +220,36 @@ window.addEventListener('scroll', () => {
   };
 
   /* ================= METRICS: OBSERVER ================= */
+
   const initMetricsObserver = () => {
-    const targets = document.querySelectorAll('.metrics, .metric-card');
-    if (!targets.length) return;
+  const targets = document.querySelectorAll('.metrics, .metric-card');
+  if (!targets.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-          animateNumbers(entry.target.querySelectorAll('[data-count-num]'));
-          observer.unobserve(entry.target);
-          
+        const el = entry.target;
+
+        //  анимация чисел
+        animateNumbers(el.querySelectorAll('[data-count-num]'));
+
+        //  анимация SVG прогрессов
+        el.querySelectorAll('.metric-card__progress-bar').forEach((path) => {
+          drawPath(path, 1500);
         });
-      },
-      
-      
-      { threshold: 0.5 }
-    );
 
-    targets.forEach((el) => observer.observe(el));
-  };
+        // отписываемся, чтобы не повторялось
+        observer.unobserve(el);
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+};
+
 
   /* ================= SVG PATH DRAW ================= */
   const drawPath = (path, duration = 1500) => {
