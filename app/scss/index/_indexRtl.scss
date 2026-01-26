@@ -332,13 +332,13 @@ html[dir="rtl"] {
     }
   }
 
-  @media (max-width: 440px) {
+/*   @media (max-width: 440px) {
     .hero {
       &::before {
         top: calc(50% - 106px);
       }
     }
-  }
+  } */
 
   @media(max-width: 568px) {
     .ready {
