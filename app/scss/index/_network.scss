@@ -273,5 +273,17 @@
         border-radius: 32px;
       }
     }
+    &__btn-text {
+      display: none;
+      &--all {
+
+      }
+      &--less {
+        
+      }
+      &.is-show {
+        display: block;
+      }
+    }
   }
 }

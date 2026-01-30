@@ -486,11 +486,21 @@ initSwiper();
   /* ================= NETWORK: SHOW ALL COUNTRIES ================= */
   const countries = document.querySelector('.countries__inner');
   const toggleBtn = document.querySelector('.countries__btn');
+  const textAll = toggleBtn.querySelector('.countries__btn-text--all');
+  const textLess = toggleBtn.querySelector('.countries__btn-text--less');
 
-  if (countries && toggleBtn) {
+  if (countries && toggleBtn && textAll && textLess) {
     toggleBtn.addEventListener('click', () => {
-      countries.classList.toggle('is-open');
-      toggleBtn.classList.toggle('is-open');
+     const isOpen = countries.classList.toggle('is-open');
+     toggleBtn.classList.toggle('is-open', isOpen);
+     
+    if (isOpen) {
+      textAll.classList.remove('is-show');
+      textLess.classList.add('is-show');
+    } else {
+      textLess.classList.remove('is-show');
+      textAll.classList.add('is-show');
+    }
     });
   }
 
