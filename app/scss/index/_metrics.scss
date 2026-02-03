@@ -241,6 +241,7 @@
   .metrics {
     &__cards {
       flex-wrap: wrap;
+      align-items: stretch;
     }
 
     &__card {
@@ -264,7 +265,8 @@
         flex: 1 1 260px;
         margin-left: auto;
         justify-content: flex-end;
-        max-width: calc((100% - 24px) / 2);
+        max-width: calc((100% - 18px) / 2);
+        height: auto;
       }
 
       &--latency {
@@ -272,11 +274,22 @@
         flex: 1 1 260px;
         margin-right: auto;
         justify-content: flex-start;
-        max-width: calc((100% - 24px) / 2);
+        max-width: calc((100% - 18px) / 2);
+        height: auto;
+      }
+    }
+    &__card-inner {
+      height: 100%;
+    }
+  }
+    .metric-card{
+      &--upload,
+      &--latency {
+        height: 100%;
+        justify-content: space-between;
       }
     }
   }
-}
 
 @media(max-width:768px) {
   .metrics {
@@ -365,7 +378,6 @@
     }
 
     &__card {
-
       &--upload,
       &--latency {
         flex: 0 0 171px;
@@ -431,8 +443,8 @@
     &--upload,
     &--latency {
       padding: 50px 10px 10px;
-      width: 171px;
-      flex: 0 0 171px;
+     // width: 171px;
+      flex: 0 1 171px;
 
       .metric-card__value-num {
         font-size: 18px;
@@ -444,6 +456,9 @@
 
       .metric-card__progress-line {
         width: 100%;
+       // .metric-card__progress-bar{
+       //   stroke-width: 12;
+       // }
       }
     }
 
@@ -476,6 +491,26 @@
     }
   }
 }
+/* @media (max-width: 476px) {
+  .metric-card {
+
+  
+      &--upload,
+      &--latency {
+        .metric-card__progress-bar {
+          stroke-width: 14;
+        }
+      }
+  
+      &__progress-box {
+  
+        &--upload,
+        &--latency {
+          bottom: -24px;
+        }
+      }
+  }
+} */
 
 @media (max-width: 389px) {
   .metrics {

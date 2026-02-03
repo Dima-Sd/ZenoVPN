@@ -125,6 +125,22 @@
             padding-right: 0;
             gap: 48px;
         }
+        /* Нові стилі */
+        &__advantages-inner {
+          max-width: 704px;
+          width: 100%;
+          margin: 0 auto;
+          align-items: stretch;
+          justify-content: center;
+          height: auto;
+        }
+        &__advantages-list {
+          flex: 1 1 50%;
+          height: auto;
+        }
+        &__advantages-item {
+          height: 100%;
+        }
     }
 }
 
@@ -142,9 +158,9 @@
             margin-bottom: 80px;
         }
 
-        &__advantages-inner {
-            padding: 0 27px;
-        }
+       // &__advantages-inner {
+       //     padding: 0 27px;
+       // }
 
         &__item {
             max-width: calc((100% - 24px) / 2);
@@ -184,10 +200,10 @@
             gap: 0 16px;
         }
 
-        &__advantages-list {
-            max-width: 171px;
-            width: 100%;
-        }
+      //  &__advantages-list {
+      //      max-width: 171px;
+      //      width: 100%;
+      //  }
 
         &__advantages-item {
             flex-direction: column;
